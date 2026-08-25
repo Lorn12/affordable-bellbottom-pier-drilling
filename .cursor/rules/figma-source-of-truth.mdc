@@ -1,0 +1,25 @@
+---
+description: Figma is the visual source of truth. Read frames and tokens before visual changes.
+alwaysApply: true
+---
+
+# Figma is the source of truth
+
+Before changing layout, type, color, spacing, or images:
+
+1. Load the Figma design-to-code skill.
+2. Read the relevant frame(s) and variable definitions from the live file.
+3. Use those values. Do not substitute nearby Tailwind defaults.
+
+File: [Affordable Bellbottom Pier Drilling](https://www.figma.com/design/rNBkruQcCGz3s7uz1xn0bR/Affordable-Bellbottom-Pier-Drilling)
+
+Known homepage frames (confirm in Figma if they move):
+
+- Desktop: `5162:587` (1440 wide)
+- Mobile: `5162:925` (400 wide)
+
+Same token names can have different values on desktop vs mobile. Apply the value for the breakpoint you are implementing.
+
+Do not invent a tablet layout. There is no tablet frame unless the user says they added one and gives the node. Until then, do not invent a middle breakpoint “from” desktop and mobile.
+
+If the user points at a mismatch, read that section’s node. Do not guess which section they mean.

@@ -1,0 +1,22 @@
+---
+description: Homepage-only scope and HTML + Tailwind stack unless the user asks otherwise.
+alwaysApply: true
+---
+
+# Homepage scope and stack
+
+This repo is HTML + Tailwind (Vite). Do not introduce WordPress, React, or another stack unless the user asks for it.
+
+**Live now:** Home only (`index.html`), plus same-page jumps and the phone number.
+
+**Stay “coming soon”** until the user says otherwise:
+
+- About
+- Services (dropdown and “explore” links)
+- Projects
+- Careers
+- Contact
+
+Keep those items visible in the menu. Do not build inner pages or invent their layouts.
+
+Do not change hosting or domain setup unless the user asks.

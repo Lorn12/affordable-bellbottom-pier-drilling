@@ -1,0 +1,16 @@
+---
+description: After UI changes, verify the live page in the browser before calling the work done.
+alwaysApply: true
+---
+
+# Verify UI in the browser
+
+After any change to layout, styling, routing, or rendered content:
+
+1. Open the local preview and use the changed flow the way a visitor would.
+2. A single screenshot is not enough — confirm behavior, not only appearance.
+3. Check other sections that share the same header, tokens, or assets.
+4. Check empty, error, and coming-soon states you touched.
+5. If layout changed, check desktop and mobile. Do not check a tablet layout unless the user has provided a tablet Figma frame.
+
+If browser tools are unavailable, say what you could not verify.

@@ -1,0 +1,18 @@
+---
+description: Never assume or guess. Stop and ask when information is missing.
+alwaysApply: true
+---
+
+# Ask — do not guess
+
+If a fact is missing, stop and ask. Do not invent copy, layout, breakpoints, colors, type, spacing, page structure, or product decisions.
+
+Ask when any of these are unknown:
+
+- Which Figma frame or section to match
+- Whether a tablet (or other) breakpoint exists in Figma
+- Whether a menu page should be real or stay “coming soon”
+- Hosting, domain, or CMS choices
+- Content the Figma file does not contain
+
+If two readings of Figma conflict, ask which one to follow. Do not pick.
