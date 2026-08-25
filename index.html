@@ -3,20 +3,537 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Affordable Bellbottom Pier Drilling" />
-    <title>Affordable Bellbottom Pier Drilling</title>
+    <meta
+      name="description"
+      content="Affordable Bellbottom Pier Drilling provides straight-shaft and belled pier drilling for residential and commercial projects throughout Greater Houston."
+    />
+    <meta name="theme-color" content="#0b0b0b" />
+    <title>Affordable Bellbottom Pier Drilling | Greater Houston</title>
+    <link rel="icon" href="/assets/logo-drill.svg" type="image/svg+xml" />
   </head>
-  <body>
-    <a href="#main">Skip to main content</a>
-    <header>
-      <p>Affordable Bellbottom Pier Drilling</p>
-      <!-- Homepage menu will match Figma. Other page links will be visible but not live yet. -->
-    </header>
-    <main id="main">
-      <p>
-        Homepage coming next, matching the Figma desktop and mobile designs.
+  <body class="bg-white text-neutral-800 antialiased">
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div class="sr-only" data-status role="status" aria-live="polite"></div>
+
+    <div class="bg-ink text-white">
+      <p class="flex items-center justify-center gap-2 px-5 py-3 text-center text-base">
+        <img src="/assets/phone.svg" alt="" width="16" height="16" class="size-4" />
+        <span class="font-semibold text-neutral-300">CALL TODAY</span>
+        <a class="font-bold text-white hover:underline" href="tel:+12813523077">(281) 352-3077</a>
       </p>
+    </div>
+
+    <header
+      class="site-header sticky top-0 z-40 min-h-[93px] bg-transparent text-white shadow-[0_7px_10px_rgba(0,0,0,0.09),0_40px_80px_rgba(0,0,0,0.3)] backdrop-blur-[50px]"
+      data-site-header
+    >
+      <div class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-3 lg:px-20">
+        <a class="flex items-center gap-1" href="/" aria-current="page">
+          <img src="/assets/logo-drill.svg" alt="" width="50" height="50" class="size-[34px] lg:size-[50px]" />
+          <span class="leading-tight">
+            <span class="block font-logo text-[8px] font-bold text-lime lg:text-[10px]">AFFORDABLE BELLBOTTOM</span>
+            <span class="block font-logo text-[15px] font-extrabold tracking-[0.45px] text-white lg:text-[18px] lg:tracking-[0.54px]">PIER DRILLING</span>
+          </span>
+        </a>
+
+        <nav class="hidden items-center gap-[60px] lg:flex" aria-label="Primary">
+          <ul class="flex items-center gap-10 text-base font-medium text-neutral-200">
+            <li><a class="hover:text-white" href="/" aria-current="page">Home</a></li>
+            <li><a class="coming-soon hover:text-white" href="#" aria-disabled="true">About</a></li>
+            <li>
+              <a class="coming-soon inline-flex items-center gap-1 hover:text-white" href="#" aria-disabled="true">
+                Services
+                <img src="/assets/chevron-down.svg" alt="" width="10" height="6" />
+              </a>
+            </li>
+            <li><a class="coming-soon hover:text-white" href="#" aria-disabled="true">Projects</a></li>
+            <li><a class="coming-soon hover:text-white" href="#" aria-disabled="true">Careers</a></li>
+            <li><a class="coming-soon hover:text-white" href="#" aria-disabled="true">Contact</a></li>
+          </ul>
+          <a class="rounded border border-white px-6 py-2 text-sm font-medium text-white hover:bg-white hover:text-ink" href="#quote">
+            Request Quote
+          </a>
+        </nav>
+
+        <button
+          class="rounded p-1 lg:hidden"
+          type="button"
+          data-menu-button
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <img src="/assets/hamburger.svg" alt="" width="24" height="24" />
+          <span class="sr-only">Open menu</span>
+        </button>
+      </div>
+    </header>
+
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 z-50 bg-ink/95 p-6 text-white lg:hidden"
+      hidden
+      aria-hidden="true"
+      data-mobile-menu
+      role="dialog"
+      aria-modal="true"
+      aria-label="Site menu"
+    >
+      <div class="mb-8 flex items-center justify-between">
+        <p class="font-logo font-extrabold">Menu</p>
+        <button class="rounded border border-white px-3 py-1 text-sm" type="button" data-menu-close>Close</button>
+      </div>
+      <nav aria-label="Mobile">
+        <ul class="space-y-4 text-xl font-medium">
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a class="coming-soon" href="#" aria-disabled="true">About</a></li>
+          <li><a class="coming-soon" href="#" aria-disabled="true">Services</a></li>
+          <li><a class="coming-soon" href="#" aria-disabled="true">Projects</a></li>
+          <li><a class="coming-soon" href="#" aria-disabled="true">Careers</a></li>
+          <li><a class="coming-soon" href="#" aria-disabled="true">Contact</a></li>
+        </ul>
+        <a class="mt-8 inline-block rounded bg-lime px-8 py-2.5 font-medium text-neutral-800" href="#quote">Request Quote</a>
+      </nav>
+    </div>
+
+    <main id="main">
+      <section class="relative -mt-[93px] overflow-hidden bg-ink text-white" aria-labelledby="hero-heading" data-hero>
+        <div class="absolute inset-0" aria-hidden="true">
+          <img class="h-full w-full object-cover opacity-[0.12]" src="/assets/hero.png" alt="" />
+          <img class="absolute inset-0 h-full w-full object-cover opacity-20" src="/assets/hero-grid.png" alt="" />
+          <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-neutral-600/20"></div>
+        </div>
+        <div class="relative mx-auto flex min-h-[861px] max-w-[1440px] flex-col gap-10 px-5 pb-[100px] pt-[200px] lg:px-20 lg:pb-[200px]">
+          <div class="flex max-w-[720px] flex-col gap-6">
+            <p class="font-header text-xl font-medium leading-[1.4]">
+              <span class="text-lime">●</span>
+              Based in Hockley • Serving Greater Houston
+            </p>
+            <h1 id="hero-heading" class="text-[40px] font-bold leading-none tracking-[0.72px] lg:text-[72px]">
+              Pier Drilling &amp; Belled Pier Drilling in Greater Houston
+            </h1>
+            <p class="text-base leading-[1.75] text-neutral-200">
+              Affordable Bellbottom Pier Drilling provides straight-shaft and belled pier drilling for residential and commercial projects. We work directly with customers and as a subcontractor for concrete contractors, home builders, and pool companies throughout Greater Houston.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-6">
+            <a class="rounded bg-lime px-8 py-2.5 text-base font-medium text-neutral-800" href="#quote">Request a Quote</a>
+            <a class="rounded border border-white px-8 py-2.5 text-base font-medium text-white" href="#services">View Services</a>
+          </div>
+          <figure class="w-full max-w-[282px] rounded-lg bg-[rgba(26,26,26,0.52)] p-4 backdrop-blur-[2px] lg:absolute lg:right-20 lg:bottom-10 lg:mt-0 lg:max-w-[282px]">
+            <blockquote class="text-xs leading-[1.5] text-neutral-200">
+              “Looked all over town and never found the bell for piers. BUT Affordable Bellbottom helped me in getting the job done. Thank You so much!”
+            </blockquote>
+            <figcaption class="mt-2 flex items-center gap-2">
+              <img class="size-7 rounded-full object-cover" src="/assets/review-avatar.png" alt="" width="28" height="28" />
+              <span>
+                <span class="block text-[10px] font-medium text-neutral-300">Gladiators Construction</span>
+                <img src="/assets/stars.svg" alt="5 out of 5 stars" width="66" height="10" class="h-2.5 w-[66px]" />
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="bg-ink py-10 text-white" aria-label="Capabilities">
+        <div class="mx-auto flex max-w-[1440px] flex-col gap-6 px-5 lg:flex-row lg:items-center lg:justify-between lg:px-[140px]">
+          <p class="font-accent max-w-[233px] text-lg font-medium">Capabilities for Greater Houston Projects</p>
+          <ul class="flex gap-8 overflow-x-auto pb-2 text-sm font-bold text-neutral-200 lg:flex-1 lg:justify-between lg:overflow-visible lg:pb-0 lg:text-base">
+            <li class="flex min-w-[145px] items-center gap-3">
+              <img src="/assets/icon-building.svg" alt="" width="42" height="42" class="size-8 lg:size-[42px]" />
+              <span>Residential &amp;<br />Commercial</span>
+            </li>
+            <li class="flex min-w-[129px] items-center gap-3">
+              <img src="/assets/icon-drilling.svg" alt="" width="46" height="46" class="size-8 lg:size-[46px]" />
+              <span>Soil &amp; Rock<br />Drilling</span>
+            </li>
+            <li class="flex min-w-[145px] items-center gap-3">
+              <img src="/assets/icon-trending.svg" alt="" width="41" height="41" class="size-8 lg:size-[41px]" />
+              <span>Tight-Access<br />Capable</span>
+            </li>
+            <li class="flex min-w-[167px] items-center gap-3">
+              <img src="/assets/icon-insured.svg" alt="" width="42" height="42" class="size-8 lg:size-[42px]" />
+              <span>General Liability<br />Insured</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="services" class="bg-white px-5 py-[100px] lg:px-20" aria-labelledby="services-heading">
+        <div class="mx-auto max-w-[1280px]">
+          <div class="mb-20 grid gap-6 lg:grid-cols-2 lg:items-end">
+            <div>
+              <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Our Services</p>
+              <h2 id="services-heading" class="mt-6 max-w-[620px] text-[32px] font-bold leading-[1.2] lg:text-[42px]">
+                Pier Drilling Services for Residential &amp; Commercial Projects
+              </h2>
+            </div>
+            <div class="lg:text-right">
+              <p class="ml-auto max-w-[505px] leading-[1.75]">
+                Across Greater Houston, we provide pier drilling, belled pier drilling, and concrete pour assistance for residential and commercial projects.
+              </p>
+              <a class="coming-soon mt-6 inline-flex items-center gap-2 font-medium text-lime-dark" href="#" aria-disabled="true">
+                View All Services
+                <img src="/assets/chevron-right.svg" alt="" width="16" height="16" />
+              </a>
+            </div>
+          </div>
+          <div class="grid gap-6 md:grid-cols-3">
+            <article>
+              <img class="h-[280px] w-full rounded-lg object-cover lg:h-[411px]" src="/assets/service-pier.png" alt="Skid steer drilling a pier on a jobsite" width="411" height="411" />
+              <h3 class="mt-6 text-2xl font-bold">Pier Drilling</h3>
+              <p class="mt-6 leading-[1.75]">
+                Straight-shaft pier drilling for residential and commercial foundation and construction projects. We review project plans, required dimensions, site access, and ground conditions before drilling begins.
+              </p>
+              <a class="coming-soon mt-6 inline-block rounded bg-lime px-6 py-2 text-sm font-medium text-neutral-800" href="#" aria-disabled="true">Explore Pier Drilling</a>
+            </article>
+            <article>
+              <img class="h-[280px] w-full rounded-lg object-cover lg:h-[411px]" src="/assets/service-belled.png" alt="Auger drilling a belled pier" width="411" height="411" />
+              <h3 class="mt-6 text-2xl font-bold">Belled Pier Drilling</h3>
+              <p class="mt-6 leading-[1.75]">
+                Belled pier drilling for residential and commercial projects whose approved plans call for a widened pier base. We review project requirements, site access, and soil or rock conditions before drilling.
+              </p>
+              <a class="coming-soon mt-6 inline-block rounded bg-lime px-6 py-2 text-sm font-medium text-neutral-800" href="#" aria-disabled="true">Explore Belled Piers</a>
+            </article>
+            <article>
+              <img class="h-[280px] w-full rounded-lg object-cover lg:h-[411px]" src="/assets/service-pour.png" alt="Crew pouring concrete into a drilled pier" width="411" height="411" />
+              <h3 class="mt-6 text-2xl font-bold">Concrete Pour Assistance</h3>
+              <p class="mt-6 leading-[1.75]">
+                We assist concrete contractors with pouring drilled piers using a modified bucket. Permits, layout, rebar, spoil removal, and cleanup remain the responsibility of the client or general contractor.
+              </p>
+              <a class="coming-soon mt-6 inline-block rounded bg-lime px-6 py-2 text-sm font-medium text-neutral-800" href="#" aria-disabled="true">Explore Pour Assistance</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark-pattern relative text-white" aria-labelledby="equipment-heading">
+        <div class="relative mx-auto grid max-w-[1440px] items-center gap-10 px-5 py-[100px] lg:grid-cols-2 lg:px-20">
+          <div>
+            <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Equipment &amp; Capabilities</p>
+            <h2 id="equipment-heading" class="mt-6 text-[32px] font-bold leading-[1.2] lg:text-[42px]">
+              Compact Equipment for Tight-Access Pier Drilling
+            </h2>
+            <p class="mt-6 max-w-[658px] leading-[1.75] text-neutral-200">
+              Affordable Bellbottom uses skid steers and a compact excavator for straight-shaft and belled pier drilling on residential and commercial jobsites. Equipment and drilling tools are selected based on site access, project requirements, pier dimensions, and ground conditions.
+            </p>
+            <ul class="mt-10 space-y-6">
+              <li>
+                <p class="flex items-start gap-2 font-medium">
+                  <img src="/assets/check.svg" alt="" width="24" height="24" class="mt-0.5 size-6" />
+                  Tight-Access Jobsites
+                </p>
+                <p class="mt-1 leading-[1.75] text-neutral-400">
+                  Compact equipment can access gated yards and limited side-yard spaces, subject to the conditions of each jobsite.
+                </p>
+              </li>
+              <li>
+                <p class="flex items-start gap-2 font-medium">
+                  <img src="/assets/check.svg" alt="" width="24" height="24" class="mt-0.5 size-6" />
+                  Soil &amp; Rock Drilling
+                </p>
+                <p class="mt-1 leading-[1.75] text-neutral-400">
+                  Equipment and drilling tools are selected based on the project requirements, location, and whether the site contains standard soil or rock.
+                </p>
+              </li>
+              <li>
+                <p class="flex items-start gap-2 font-medium">
+                  <img src="/assets/check.svg" alt="" width="24" height="24" class="mt-0.5 size-6" />
+                  Concrete Pour Support
+                </p>
+                <p class="mt-1 leading-[1.75] text-neutral-400">
+                  A modified bucket can be used to assist the concrete contractor with pouring the drilled piers.
+                </p>
+              </li>
+            </ul>
+            <a class="mt-10 inline-block rounded bg-lime px-8 py-2.5 font-medium text-neutral-800" href="#quote">Discuss Your Project</a>
+          </div>
+          <div class="relative mx-auto h-[420px] w-full max-w-[524px] lg:h-[760px]">
+            <div class="h-[220px] w-full max-w-[464px] overflow-hidden rounded-2xl lg:h-[458px] lg:w-[464px]">
+              <img class="h-full w-full object-cover object-[center_top]" src="/assets/equipment-main.png" alt="Compact excavator with an auger on a jobsite" width="464" height="458" />
+            </div>
+            <div class="absolute top-[200px] right-0 size-[200px] overflow-hidden rounded-[20px] shadow-[2px_10px_40px_-4px_rgba(11,11,11,0.2)] lg:top-[400px] lg:left-[160px] lg:right-auto lg:size-[360px]">
+              <img class="h-full w-[270%] max-w-none object-cover object-[62%_center]" src="/assets/equipment-inset.png" alt="Workers pouring concrete into a drilled pier" width="360" height="360" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white px-5 py-20 lg:px-20" aria-labelledby="serve-heading">
+        <div class="mx-auto max-w-[1280px]">
+          <div class="mb-20 grid gap-6 lg:grid-cols-2 lg:items-end">
+            <div>
+              <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Who We Serve</p>
+              <h2 id="serve-heading" class="mt-6 max-w-[620px] text-[32px] font-bold leading-[1.2] lg:text-[42px]">
+                Pier Drilling Support for Contractors, Builders &amp; Direct Clients
+              </h2>
+            </div>
+            <div class="lg:text-right">
+              <p class="ml-auto max-w-[619px] leading-[1.75]">
+                We work directly with residential and commercial clients and as a subcontractor for concrete contractors, home builders, and pool companies throughout Greater Houston.
+              </p>
+              <a class="mt-6 inline-flex items-center gap-2 font-medium text-lime-dark" href="#quote">
+                Discuss Your Project
+                <img src="/assets/chevron-right.svg" alt="" width="16" height="16" />
+              </a>
+            </div>
+          </div>
+          <div class="grid gap-10 md:grid-cols-2">
+            <article class="flex items-center gap-6 rounded-[20px] bg-neutral-200 px-6 py-12">
+              <img class="size-[120px] shrink-0 rounded object-cover shadow-[0_4px_20px_-4px_rgba(11,11,11,0.2)]" src="/assets/serve-concrete.png" alt="" width="120" height="120" />
+              <div>
+                <h3 class="text-2xl font-bold lg:text-4xl">Concrete Contractors</h3>
+                <p class="mt-4 leading-[1.75] text-neutral-600">
+                  Straight-shaft and belled pier drilling based on approved plans, required dimensions, site access, and ground conditions. We can also assist with pouring drilled piers using a modified bucket.
+                </p>
+              </div>
+            </article>
+            <article class="flex items-center gap-6 rounded-[20px] bg-neutral-200 px-6 py-12">
+              <img class="size-[120px] shrink-0 rounded object-cover shadow-[0_4px_20px_-4px_rgba(11,11,11,0.2)]" src="/assets/serve-builders.png" alt="" width="120" height="120" />
+              <div>
+                <h3 class="text-2xl font-bold lg:text-4xl">Home Builders</h3>
+                <p class="mt-4 leading-[1.75] text-neutral-600">
+                  Pier drilling support for residential construction projects, including jobsites with gated yards or limited side-yard access, subject to site review.
+                </p>
+              </div>
+            </article>
+            <article class="flex items-center gap-6 rounded-[20px] bg-neutral-200 px-6 py-12">
+              <img class="size-[120px] shrink-0 rounded object-cover shadow-[0_4px_20px_-4px_rgba(11,11,11,0.2)]" src="/assets/serve-pool.png" alt="" width="120" height="120" />
+              <div>
+                <h3 class="text-2xl font-bold lg:text-4xl">Pool Companies</h3>
+                <p class="mt-4 leading-[1.75] text-neutral-600">
+                  Pier drilling for pool-related construction where compact equipment and tight-access capabilities may be required.
+                </p>
+              </div>
+            </article>
+            <article class="flex items-center gap-6 rounded-[20px] bg-neutral-200 px-6 py-12">
+              <img class="size-[120px] shrink-0 rounded object-cover shadow-[0_4px_20px_-4px_rgba(11,11,11,0.2)]" src="/assets/serve-clients.png" alt="" width="120" height="120" />
+              <div>
+                <h3 class="text-2xl font-bold lg:text-4xl">Residential &amp; Commercial Clients</h3>
+                <p class="mt-4 leading-[1.75] text-neutral-600">
+                  Direct pier drilling support for residential and commercial projects. Scope, access, soil or rock conditions, and project responsibilities are reviewed before scheduling.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="dark-pattern text-white" aria-labelledby="process-heading">
+        <div class="mx-auto max-w-[1440px] px-5 py-20 lg:px-20">
+          <div class="mb-20 grid gap-6 lg:grid-cols-2 lg:items-end">
+            <div>
+              <p class="font-header text-xl font-medium"><span class="text-lime">●</span> How We Work</p>
+              <h2 id="process-heading" class="mt-3.5 text-[32px] font-bold leading-[1.2] lg:text-[42px]">
+                Clear Coordination From Project Review Through Drilling
+              </h2>
+            </div>
+            <p class="max-w-[522px] leading-[1.75] text-neutral-200 lg:ml-auto">
+              We review the available project information, confirm site and access requirements, and coordinate the drilling scope with the customer, contractor, or project team before work begins.
+            </p>
+          </div>
+          <div class="grid items-start gap-10 lg:grid-cols-2">
+            <ol class="space-y-6">
+              <li>
+                <p class="text-xl font-medium">01 — <span class="text-base">Review the Project</span></p>
+                <p class="mt-1 leading-[1.75] text-neutral-400">
+                  We review plans, pier requirements, project location, access conditions, and known soil or rock conditions to understand the drilling scope.
+                </p>
+              </li>
+              <li>
+                <p class="text-xl font-medium">02 — <span class="text-base">Confirm Responsibilities</span></p>
+                <p class="mt-1 leading-[1.75] text-neutral-400">
+                  We clarify what Affordable Bellbottom will handle and what remains with the client or general contractor, including permits, layout, rebar cages, spoil removal, and cleanup.
+                </p>
+              </li>
+              <li>
+                <p class="text-xl font-medium">03 — <span class="text-base">Coordinate the Work</span></p>
+                <p class="mt-1 leading-[1.75] text-neutral-400">
+                  We coordinate drilling needs, site access, and project timing with the customer or contractor so everyone understands the next steps before mobilization.
+                </p>
+              </li>
+              <li>
+                <p class="text-xl font-medium">04 — <span class="text-base">Support the Next Phase</span></p>
+                <p class="mt-1 leading-[1.75] text-neutral-400">
+                  After drilling is complete, we can assist the concrete contractor with pouring the piers using a modified bucket when that support is part of the project scope.
+                </p>
+              </li>
+            </ol>
+            <div class="relative">
+              <img class="w-full rounded-[20px] object-cover shadow-[2px_10px_40px_-4px_rgba(11,11,11,0.2)]" src="/assets/how-we-work.png" alt="Bellbottom drilling bucket over a pier hole" width="620" height="472" />
+              <a class="absolute right-4 bottom-4 rounded bg-lime px-8 py-2.5 font-medium text-neutral-800" href="#quote">Request Your Quote</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white px-5 py-20 lg:px-20" aria-labelledby="planning-heading">
+        <div class="mx-auto grid max-w-[1280px] gap-10 lg:grid-cols-2">
+          <div>
+            <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Project Planning</p>
+            <h2 id="planning-heading" class="mt-9 text-[32px] font-bold leading-[1.2] lg:text-[42px]">
+              The Right Details Help Us Prepare for the Work
+            </h2>
+            <p class="mt-9 max-w-[517px] leading-[1.75]">
+              Every drilling project is different. Sharing accurate site information, plans, access conditions, and pier requirements helps us review the scope before scheduling and mobilization.
+            </p>
+            <a class="mt-20 inline-block rounded bg-lime px-8 py-2.5 font-medium text-neutral-800" href="#quote">Discuss Your Project</a>
+          </div>
+          <dl class="space-y-6">
+            <div>
+              <dt class="text-2xl">Project Location</dt>
+              <dd class="mt-1 leading-[1.75] text-neutral-600">
+                Provide the jobsite address so we can review service-area availability, access conditions, and mobilization requirements.
+              </dd>
+            </div>
+            <div>
+              <dt class="text-2xl">Plans &amp; Pier Requirements</dt>
+              <dd class="mt-1 leading-[1.75] text-neutral-600">
+                Share available plans, pier count, diameter, depth, bell dimensions, and any engineering requirements you have.
+              </dd>
+            </div>
+            <div>
+              <dt class="text-2xl">Site Access &amp; Ground Conditions</dt>
+              <dd class="mt-1 leading-[1.75] text-neutral-600">
+                Let us know about gates, side-yard access, limited work areas, or known soil and rock conditions that may affect equipment setup or drilling.
+              </dd>
+            </div>
+            <div>
+              <dt class="text-2xl">Project Responsibilities</dt>
+              <dd class="mt-1 leading-[1.75] text-neutral-600">
+                Permits, layout, rebar cages, spoil removal, and cleanup are handled by the client or general contractor unless otherwise confirmed before the project.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="dark-pattern text-white" aria-labelledby="work-heading">
+        <div class="mx-auto max-w-[1440px] px-5 py-20 lg:px-20">
+          <div class="mb-20 grid gap-6 lg:grid-cols-2 lg:items-end">
+            <div>
+              <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Our Work</p>
+              <h2 id="work-heading" class="mt-6 text-[32px] font-bold leading-[1.2] lg:text-[42px]">Pier Drilling Projects</h2>
+            </div>
+            <p class="max-w-[517px] leading-[1.75] text-neutral-200 lg:ml-auto">
+              See examples of straight-shaft and belled pier drilling for residential, commercial, builder, contractor, and pool-related projects throughout Greater Houston.
+            </p>
+          </div>
+          <div class="grid gap-10 md:grid-cols-3">
+            <a class="coming-soon group relative block h-[450px] overflow-hidden rounded-lg" href="#" aria-disabled="true">
+              <img class="h-full w-full object-cover" src="/assets/work-pool.png" alt="Pier drilling for a pool company project" />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <img class="absolute top-4 right-4 size-[42px]" src="/assets/arrow-up-right.svg" alt="" />
+              <span class="absolute bottom-6 left-4">
+                <span class="block text-xl font-medium">Pool Company</span>
+                <span class="block text-neutral-200">Greater Houston, TX</span>
+              </span>
+            </a>
+            <a class="coming-soon group relative block h-[450px] overflow-hidden rounded-lg" href="#" aria-disabled="true">
+              <img class="h-full w-full object-cover" src="/assets/work-belled.png" alt="Belled pier drilling on a construction site" />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <img class="absolute top-3 right-4 size-[42px]" src="/assets/arrow-up-right.svg" alt="" />
+              <span class="absolute bottom-6 left-6">
+                <span class="block text-xl font-medium">Belled Pier Drilling</span>
+                <span class="block text-neutral-200">Greater Houston, TX</span>
+              </span>
+            </a>
+            <a class="coming-soon group relative block h-[450px] overflow-hidden rounded-lg" href="#" aria-disabled="true">
+              <img class="h-full w-full object-cover" src="/assets/work-pour.png" alt="Concrete pour assistance on drilled piers" />
+              <div class="absolute inset-0 bg-black/20"></div>
+              <img class="absolute top-2.5 right-4 size-[42px]" src="/assets/arrow-up-right.svg" alt="" />
+              <span class="absolute bottom-6 left-6">
+                <span class="block text-xl font-medium">Concrete Pour Assistance</span>
+                <span class="block text-[#fcfcfc]">Greater Houston, TX</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="quote" class="bg-white px-5 py-20 lg:px-20" aria-labelledby="quote-heading">
+        <div class="dark-pattern mx-auto max-w-[1280px] rounded-[20px] p-8 text-white lg:p-[60px]">
+          <div class="grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Project Planning</p>
+              <h2 id="quote-heading" class="mt-6 text-[32px] font-bold leading-[1.2] lg:text-[42px]">
+                Ready to Discuss Your Pier Drilling Needs?
+              </h2>
+            </div>
+            <div>
+              <p class="max-w-[457px] leading-[1.75] text-neutral-200">
+                Tell us where the project is located, what service you need, and any pier specifications or plans you already have. We’ll review the information and follow up if additional details are needed.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-6">
+                <a class="rounded bg-lime px-8 py-2.5 font-medium text-neutral-800" href="tel:+12813523077">Request a Quote</a>
+                <a class="rounded border border-white px-8 py-2.5 font-medium text-white" href="tel:+12813523077">Call 281-352-3077</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="dark-pattern text-white">
+      <div class="mx-auto max-w-[1440px] px-5 py-[100px] lg:px-20">
+        <div class="flex flex-col gap-16 lg:flex-row lg:justify-between">
+          <div class="max-w-[500px]">
+            <a class="flex items-center gap-2" href="/">
+              <img src="/assets/logo-drill.svg" alt="" width="81" height="81" class="size-16 lg:size-[81px]" />
+              <span>
+                <span class="block font-logo text-base font-bold text-lime">AFFORDABLE BELLBOTTOM</span>
+                <span class="block font-logo text-[29px] font-extrabold tracking-[0.87px]">PIER DRILLING</span>
+              </span>
+            </a>
+            <p class="mt-6 text-[32px] font-bold leading-[1.2] lg:text-[42px]">
+              Pier Drilling &amp;<br />Belled Pier Drilling
+            </p>
+            <a class="mt-6 inline-block rounded bg-lime px-8 py-2.5 font-medium text-neutral-800" href="#quote">Get a Quote Today</a>
+          </div>
+          <div class="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div>
+              <h2 class="text-xl font-medium">Services</h2>
+              <ul class="mt-4 space-y-2 text-neutral-300">
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Pier drilling</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Belled drilling</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Concrete assist</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Residential</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Pool work</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xl font-medium">Company</h2>
+              <ul class="mt-4 space-y-2 text-neutral-300">
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">About us</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Projects</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Careers</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Contact</a></li>
+                <li><a class="py-1 hover:text-white" href="#quote">Request quote</a></li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-xl font-medium">Contact</h2>
+              <ul class="mt-4 space-y-2 text-neutral-300">
+                <li><a class="py-1 hover:text-white" href="tel:+12813523077">Call us</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Email us</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Service area</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Business hours</a></li>
+                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Get directions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-neutral-300/40 px-5 py-5 lg:px-20">
+        <div class="mx-auto flex max-w-[1440px] flex-col gap-4 text-sm leading-[1.75] text-neutral-300 lg:flex-row lg:items-center lg:justify-between">
+          <p>Copyright @ 2026 Affordable Bellbottom Pier Drilling, All rights reserved.</p>
+          <p class="flex gap-[50px]">
+            <a class="coming-soon" href="#" aria-disabled="true">Terms &amp; Conditions</a>
+            <a class="coming-soon" href="#" aria-disabled="true">Privacy Policy</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

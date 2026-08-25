@@ -1,1 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500&family=Inter:wght@500;700&family=Montserrat:wght@700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --color-ink: #0b0b0b;
+  --color-lime: #32cd32;
+  --color-lime-dark: #1a691a;
+  --color-neutral-100: #ffffff;
+  --color-neutral-200: #f1f1f1;
+  --color-neutral-300: #c8c8c8;
+  --color-neutral-400: #a1a1a1;
+  --color-neutral-600: #595959;
+  --color-neutral-800: #1a1a1a;
+  --font-header: Inter, system-ui, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-logo: Montserrat, system-ui, sans-serif;
+  --font-accent: "Hanken Grotesk", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-neutral-800);
+  background: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-header);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  background: var(--color-lime);
+  color: var(--color-neutral-800);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.dark-pattern {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--color-ink);
+}
+
+.dark-pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url("/assets/hero-grid.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.16;
+}
+
+.dark-pattern::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(102, 102, 102, 0.2));
+}
+
+.dark-pattern > * {
+  position: relative;
+  z-index: 1;
+}
+
+.site-header.header-solid {
+  background-color: rgb(11 11 11 / 0.8);
+}
+
+.coming-soon[aria-disabled="true"] {
+  cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
