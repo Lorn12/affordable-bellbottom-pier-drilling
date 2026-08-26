@@ -5,12 +5,13 @@ const menu = document.querySelector("[data-mobile-menu]");
 const menuClose = document.querySelector("[data-menu-close]");
 const status = document.querySelector("[data-status]");
 const siteHeader = document.querySelector("[data-site-header]");
-const hero = document.querySelector("[data-hero]");
+const headerSolidAt = document.querySelector("[data-header-solid-at]");
 
 function updateHeaderSurface() {
-  if (!siteHeader || !hero) return;
-  const heroBottom = hero.getBoundingClientRect().bottom;
-  siteHeader.classList.toggle("header-solid", heroBottom <= siteHeader.offsetHeight);
+  if (!siteHeader || !headerSolidAt) return;
+  const headerBottom = siteHeader.getBoundingClientRect().bottom;
+  const solidStart = headerSolidAt.getBoundingClientRect().top;
+  siteHeader.classList.toggle("header-solid", solidStart <= headerBottom);
 }
 
 updateHeaderSurface();

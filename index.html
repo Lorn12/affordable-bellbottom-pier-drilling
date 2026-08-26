@@ -24,15 +24,15 @@
     </div>
 
     <header
-      class="site-header sticky top-0 z-40 min-h-[93px] bg-transparent text-white shadow-[0_7px_10px_rgba(0,0,0,0.09),0_40px_80px_rgba(0,0,0,0.3)] backdrop-blur-[50px]"
+      class="site-header sticky top-0 z-40 bg-transparent py-3 text-white"
       data-site-header
     >
-      <div class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-3 lg:px-20">
-        <a class="flex items-center gap-1" href="/" aria-current="page">
+      <div class="mx-auto flex h-[34px] max-w-[1440px] items-center justify-between px-5 lg:h-[69px] lg:px-20">
+        <a class="flex h-[34px] items-center lg:h-[55px]" href="/" aria-current="page">
           <img src="/assets/logo-drill.svg" alt="" width="50" height="50" class="size-[34px] lg:size-[50px]" />
-          <span class="leading-tight">
+          <span class="leading-none">
             <span class="block font-logo text-[8px] font-bold text-lime lg:text-[10px]">AFFORDABLE BELLBOTTOM</span>
-            <span class="block font-logo text-[15px] font-extrabold tracking-[0.45px] text-white lg:text-[18px] lg:tracking-[0.54px]">PIER DRILLING</span>
+            <span class="mt-0.5 block font-logo text-[15px] font-extrabold tracking-[0.45px] text-white lg:text-[18px] lg:tracking-[0.54px]">PIER DRILLING</span>
           </span>
         </a>
 
@@ -56,7 +56,7 @@
         </nav>
 
         <button
-          class="rounded p-1 lg:hidden"
+          class="flex size-6 items-center justify-center lg:hidden"
           type="button"
           data-menu-button
           aria-expanded="false"
@@ -96,7 +96,7 @@
     </div>
 
     <main id="main">
-      <section class="relative -mt-[93px] overflow-hidden bg-ink text-white" aria-labelledby="hero-heading" data-hero>
+      <section class="relative -mt-[58px] overflow-hidden bg-ink text-white lg:-mt-[93px]" aria-labelledby="hero-heading" data-hero>
         <div class="absolute inset-0" aria-hidden="true">
           <img class="h-full w-full object-cover opacity-[0.12]" src="/assets/hero.png" alt="" />
           <img class="absolute inset-0 h-full w-full object-cover opacity-20" src="/assets/hero-grid.png" alt="" />
@@ -134,7 +134,7 @@
         </div>
       </section>
 
-      <section class="bg-ink py-10 text-white" aria-label="Capabilities">
+      <section class="bg-ink py-10 text-white" aria-label="Capabilities" data-header-solid-at>
         <div class="mx-auto flex max-w-[1440px] flex-col gap-6 px-5 lg:flex-row lg:items-center lg:justify-between lg:px-[140px]">
           <p class="font-accent max-w-[233px] text-lg font-medium">Capabilities for Greater Houston Projects</p>
           <ul class="flex gap-8 overflow-x-auto pb-2 text-sm font-bold text-neutral-200 lg:flex-1 lg:justify-between lg:overflow-visible lg:pb-0 lg:text-base">

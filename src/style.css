@@ -89,6 +89,10 @@ h3 {
 
 .site-header.header-solid {
   background-color: rgb(11 11 11 / 0.8);
+  backdrop-filter: blur(50px);
+  box-shadow:
+    0 7px 10px rgba(0, 0, 0, 0.09),
+    0 40px 80px rgba(0, 0, 0, 0.3);
 }
 
 .coming-soon[aria-disabled="true"] {
