@@ -7,11 +7,18 @@ const status = document.querySelector("[data-status]");
 const siteHeader = document.querySelector("[data-site-header]");
 const headerSolidAt = document.querySelector("[data-header-solid-at]");
 
+const headerSolidClasses = (siteHeader?.dataset.solidClass || "header-solid")
+  .split(/\s+/)
+  .filter(Boolean);
+
 function updateHeaderSurface() {
   if (!siteHeader || !headerSolidAt) return;
   const headerBottom = siteHeader.getBoundingClientRect().bottom;
   const solidStart = headerSolidAt.getBoundingClientRect().top;
-  siteHeader.classList.toggle("header-solid", solidStart <= headerBottom);
+  const isSolid = solidStart <= headerBottom;
+  headerSolidClasses.forEach((className) => {
+    siteHeader.classList.toggle(className, isSolid);
+  });
 }
 
 updateHeaderSurface();

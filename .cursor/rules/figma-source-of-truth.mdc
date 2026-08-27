@@ -16,10 +16,17 @@ File: [Affordable Bellbottom Pier Drilling](https://www.figma.com/design/rNBkruQ
 Known homepage frames (confirm in Figma if they move):
 
 - Desktop: `5162:587` (1440 wide)
+- Tablet draft: `5435:27` (768 wide) — cloned from desktop to start tablet; refine in Figma, do not invent extra tablet layouts
 - Mobile: `5162:925` (400 wide)
 
 Same token names can have different values on desktop vs mobile. Apply the value for the breakpoint you are implementing.
 
-Do not invent a tablet layout. There is no tablet frame unless the user says they added one and gives the node. Until then, do not invent a middle breakpoint “from” desktop and mobile.
+Code breakpoints for this site:
+
+- Full nav: `lg` (1024px and up)
+- Desktop type and header chrome (logo size, hero type, heading sizes): `md` (768px and up), including tablet with hamburger
+- Mobile type and header chrome: below 768px, from the 400 mobile frame
+
+Keep the current menu overlay behavior (clear on hero, blurred bar after companies). Do not revert those.
 
 If the user points at a mismatch, read that section’s node. Do not guess which section they mean.

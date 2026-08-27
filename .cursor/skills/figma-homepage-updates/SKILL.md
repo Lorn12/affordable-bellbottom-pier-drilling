@@ -9,7 +9,7 @@ description: Matches this site’s homepage to the Figma file (tokens, frames, a
 
 1. If the target section, breakpoint, or Figma node is unclear, **ask**. Do not assume.
 2. Load the Figma MCP skill `figma-design-to-code` before calling `get_design_context`.
-3. Call `get_variable_defs` on the frame you are implementing (desktop `5162:587` and/or mobile `5162:925` unless the user gives a different node).
+3. Call `get_variable_defs` on the frame you are implementing (desktop `5162:587`, tablet `5435:27`, and/or mobile `5162:925` unless the user gives a different node).
 4. Call `get_design_context` on the **section** node, not only the full page, when the page is too large.
 5. Compare tokens to `src/style.css` and the markup. Change the site to match Figma, not the reverse, unless the user asks to update Figma.
 
@@ -17,8 +17,11 @@ File: `https://www.figma.com/design/rNBkruQcCGz3s7uz1xn0bR/Affordable-Bellbottom
 
 ## Breakpoints
 
-- Desktop and mobile: implement from those frames and their variable values.
-- Tablet: **stop and ask** if the user wants tablet work. Do not invent a layout. Only implement tablet after they provide a frame node.
+- Desktop: 1440 frame `5162:587`. Full nav from 1024px up (`lg`).
+- Tablet: 768 frame `5435:27` (draft cloned from desktop). Hamburger below 1024px. Desktop type from 768px up (`md`).
+- Mobile: 400 frame `5162:925`. Mobile type below 768px.
+
+Keep existing menu overlay behavior. Do not invent extra tablet section layouts beyond that frame.
 
 ## Assets
 
