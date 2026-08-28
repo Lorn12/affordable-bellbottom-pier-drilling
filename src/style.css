@@ -99,6 +99,19 @@ h3 {
   cursor: default;
 }
 
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-marquee {
+  animation: logo-marquee 28s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -109,5 +122,9 @@ h3 {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .logo-marquee-track {
+    overflow-x: auto;
   }
 }
