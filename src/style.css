@@ -15,6 +15,8 @@
   --font-body: "Source Sans 3", system-ui, sans-serif;
   --font-logo: Montserrat, system-ui, sans-serif;
   --font-accent: "Hanken Grotesk", system-ui, sans-serif;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1030px;
 }
 
 html {
@@ -54,6 +56,20 @@ h3 {
   top: 1rem;
 }
 
+.skip-link:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+}
+
+#main:focus,
+#main:focus-visible {
+  outline: none;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
 .dark-pattern {
   position: relative;
   isolation: isolate;
@@ -67,7 +83,7 @@ h3 {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url("/assets/hero-grid.png");
+  background-image: url("/assets/hero-grid-1920.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.16;
@@ -87,6 +103,22 @@ h3 {
   z-index: 1;
 }
 
+.hero-inner {
+  padding-top: calc(58px + 122px);
+}
+
+@media (min-width: 768px) {
+  .hero-inner {
+    padding-top: calc(93px + 107px);
+  }
+}
+
+@media (min-width: 1030px) {
+  .hero-inner {
+    padding-bottom: 200px;
+  }
+}
+
 .site-header.header-solid {
   background-color: rgb(11 11 11 / 0.8);
   backdrop-filter: blur(50px);
@@ -99,17 +131,23 @@ h3 {
   cursor: default;
 }
 
+.coming-soon[aria-disabled="true"].link-cta {
+  cursor: pointer;
+}
+
 @keyframes logo-marquee {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translate3d(calc(-1 * var(--marquee-shift, 50%)), 0, 0);
   }
 }
 
 .logo-marquee {
   animation: logo-marquee 28s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -126,5 +164,9 @@ h3 {
 
   .logo-marquee-track {
     overflow-x: auto;
+  }
+
+  .logo-marquee [aria-hidden="true"] {
+    display: none;
   }
 }

@@ -23,10 +23,12 @@ Same token names can have different values on desktop vs mobile. Apply the value
 
 Code breakpoints for this site:
 
-- Full nav: `lg` (1024px and up)
+- Full nav: `lg` (1030px and up)
 - Desktop type and header chrome (logo size, hero type, heading sizes): `md` (768px and up), including tablet with hamburger
 - Mobile type and header chrome: below 768px, from the 400 mobile frame
 
 Keep the current menu overlay behavior (clear on hero, blurred bar after companies). Do not revert those.
+
+Hero top padding is not the Figma section token. The header overlays the hero, so match the gap **under the nav** (see the figma-homepage-updates skill). Bottom padding is independent. Do not mix `md:pt-*` with `lg:py-*` on the hero inner box.
 
 If the user points at a mismatch, read that section’s node. Do not guess which section they mean.

@@ -1,0 +1,40 @@
+---
+description: Deferred SEO, crawl, and page work — remind Lauren when adding inner pages or when the site is almost done / launching.
+alwaysApply: true
+---
+
+# SEO and launch leftovers
+
+Do **not** start this work during routine homepage visual edits.
+
+**Bring this up** when any of these are true:
+
+- Lauren says the site is almost done, launching, or ready for SEO
+- Inner pages are being built (About, Services, Projects, Careers, Contact)
+- A form, quote flow, or careers application is added
+- Domain, hosting, or indexing is being set up
+
+Until then, homepage-only still applies: keep unfinished menu items as coming soon; do not invent layouts or business facts.
+
+## Do when pages exist
+
+- One unique H1, title, meta description, canonical, and Open Graph set per indexable page (do not reuse homepage metadata)
+- Crawlable `<a href>` for every nav and service item, including a Services dropdown
+- Indexable pages for: Pier Drilling, Belled Pier Drilling, Pool Pier Drilling, Home Foundation Pier Drilling, Concrete Pouring Assistance — plus a Services hub if that is the IA
+- Put those URLs in `public/sitemap.xml`; keep confirmation pages and placeholder Projects on `noindex`
+- Hosting must serve `public/404.html` with a real HTTP 404
+- Confirm canonical/OG/schema/robots/sitemap domain (`https://bellbottompierdrilling.com/` is assumed — verify)
+- Request a Quote CTA + accessible form (labels, `required`, errors not color-only, no confidential data in URLs, prevent double submit)
+- Keyboard-test desktop Services dropdown (`aria-expanded`, Escape) and mobile menu
+
+## Still needs client confirmation (do not guess)
+
+- Street address (required before `LocalBusiness` schema; no fake address)
+- Email, hours, directions, social URLs
+- Whether “General Liability Insured” and the Gladiators Construction quote/stars are approved to keep and/or mark up (do not add review schema unless confirmed)
+- Whether Our Work photos are real jobs
+- OG image 1200×630 if they want a dedicated social crop
+
+## Before launch checks
+
+Lighthouse/PageSpeed on home + service pages, Google Rich Results Test, no duplicate titles/H1s/canonicals, hero still `loading="eager"` + `fetchpriority="high"`.

@@ -17,11 +17,24 @@ File: `https://www.figma.com/design/rNBkruQcCGz3s7uz1xn0bR/Affordable-Bellbottom
 
 ## Breakpoints
 
-- Desktop: 1440 frame `5162:587`. Full nav from 1024px up (`lg`).
-- Tablet: 768 frame `5435:27` (draft cloned from desktop). Hamburger below 1024px. Desktop type from 768px up (`md`).
+- Desktop: 1440 frame `5162:587`. Full nav from 1030px up (`lg`).
+- Tablet: 768 frame `5435:27` (draft cloned from desktop). Hamburger below 1030px. Desktop type from 768px up (`md`).
 - Mobile: 400 frame `5162:925`. Mobile type below 768px.
 
 Keep existing menu overlay behavior. Do not invent extra tablet section layouts beyond that frame.
+
+## Hero top spacing (nav overlay)
+
+The header sits on top of the hero (`-mt-[58px]` mobile, `-mt-[93px]` from tablet up). Figma `section-xxl` top padding is measured from the **hero top**, including the area behind the menu. Do not paste that token as visible space under the nav.
+
+Match the **look**: `padding-top: header overlay + (Hero Content y − menu height)`.
+
+Implemented on `.hero-inner` in `src/style.css` (re-measure in Figma if those nodes move):
+
+- Mobile (below 768px): `58px + 122px` (content `5162:933` at y `180`)
+- Tablet and desktop (768px+): `93px + 107px` (content y `200` on `5435:37` / `5162:595`)
+
+Do not mix `md:pt-*` with `lg:py-*` on the same box; `padding-top` can lose to the `md` utility. Set hero top padding in CSS, and leave bottom padding as-is unless the user asks.
 
 ## Assets
 

@@ -25,13 +25,55 @@ updateHeaderSurface();
 window.addEventListener("scroll", updateHeaderSurface, { passive: true });
 window.addEventListener("resize", updateHeaderSurface);
 
+const logoMarqueeTrack = document.querySelector(".logo-marquee-track");
+const logoMarquee = document.querySelector(".logo-marquee");
+const logoMarqueeSet = logoMarquee?.querySelector("[data-marquee-set]");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+function updateLogoMarquee() {
+  if (!logoMarqueeTrack || !logoMarquee || !logoMarqueeSet) return;
+
+  logoMarquee.querySelectorAll("[data-marquee-clone]").forEach((node) => node.remove());
+
+  const setWidth = logoMarqueeSet.offsetWidth;
+  const trackWidth = logoMarqueeTrack.clientWidth;
+  if (!setWidth) return;
+
+  logoMarquee.style.setProperty("--marquee-shift", `${setWidth}px`);
+  logoMarquee.style.animationDuration = `${setWidth / 40}s`;
+
+  if (prefersReducedMotion.matches) return;
+
+  const copies = Math.max(2, Math.ceil((trackWidth + setWidth) / setWidth));
+  for (let i = 1; i < copies; i += 1) {
+    const clone = logoMarqueeSet.cloneNode(true);
+    clone.removeAttribute("data-marquee-set");
+    clone.setAttribute("data-marquee-clone", "");
+    clone.setAttribute("aria-hidden", "true");
+    logoMarquee.appendChild(clone);
+  }
+}
+
+updateLogoMarquee();
+window.addEventListener("resize", updateLogoMarquee);
+prefersReducedMotion.addEventListener("change", updateLogoMarquee);
+logoMarqueeSet?.querySelectorAll("img").forEach((img) => {
+  if (!img.complete) img.addEventListener("load", updateLogoMarquee);
+});
+document.fonts?.ready.then(updateLogoMarquee);
+
+function getMenuFocusable() {
+  if (!menu) return [];
+  return [...menu.querySelectorAll("a[href], button:not([disabled])")];
+}
+
 function openMenu() {
   if (!menu || !menuButton) return;
   menu.hidden = false;
   menu.setAttribute("aria-hidden", "false");
   menuButton.setAttribute("aria-expanded", "true");
   document.body.style.overflow = "hidden";
-  const first = menu.querySelector("a, button");
+  const first = getMenuFocusable()[0];
   first?.focus();
 }
 
@@ -44,15 +86,31 @@ function closeMenu() {
   menuButton.focus();
 }
 
+function trapMenuFocus(event) {
+  if (!menu || menu.hidden || event.key !== "Tab") return;
+  const focusable = getMenuFocusable();
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
 menuButton?.addEventListener("click", () => {
   const expanded = menuButton.getAttribute("aria-expanded") === "true";
   if (expanded) closeMenu();
-  else openMenu();
+  else openMenu(); 
 });
 
 menuClose?.addEventListener("click", closeMenu);
 
 document.addEventListener("keydown", (event) => {
+  trapMenuFocus(event);
   if (event.key === "Escape" && menu && !menu.hidden) {
     closeMenu();
   }
