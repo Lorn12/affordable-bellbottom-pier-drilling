@@ -144,6 +144,20 @@ h3 {
   }
 }
 
+.logo-marquee-track {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: clip;
+  contain: paint;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.logo-marquee-track::-webkit-scrollbar {
+  display: none;
+}
+
 .logo-marquee {
   animation: logo-marquee 28s linear infinite;
   will-change: transform;
@@ -164,6 +178,8 @@ h3 {
 
   .logo-marquee-track {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
   }
 
   .logo-marquee [aria-hidden="true"] {
