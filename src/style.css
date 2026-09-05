@@ -135,25 +135,13 @@ h3 {
   cursor: pointer;
 }
 
-.logo-marquee-track {
+.logo-marquee-fade {
   position: relative;
   max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: auto;
-  overscroll-behavior-x: none;
-  touch-action: pan-y;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  transform: translateZ(0);
 }
 
-.logo-marquee-track::-webkit-scrollbar {
-  display: none;
-}
-
-.logo-marquee-track::before,
-.logo-marquee-track::after {
+.logo-marquee-fade::before,
+.logo-marquee-fade::after {
   content: "";
   position: absolute;
   top: 0;
@@ -163,14 +151,29 @@ h3 {
   pointer-events: none;
 }
 
-.logo-marquee-track::before {
+.logo-marquee-fade::before {
   left: 0;
   background: linear-gradient(to right, var(--color-ink), transparent);
 }
 
-.logo-marquee-track::after {
+.logo-marquee-fade::after {
   right: 0;
   background: linear-gradient(to left, var(--color-ink), transparent);
+}
+
+.logo-marquee-track {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: auto;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.logo-marquee-track::-webkit-scrollbar {
+  display: none;
 }
 
 .logo-marquee {
