@@ -19,4 +19,10 @@ This repo is HTML + Tailwind (Vite). Do not introduce WordPress, React, or anoth
 
 Keep those items visible in the menu. Do not build inner pages or invent their layouts.
 
+**Until Lauren says otherwise:**
+
+- Quote / “Request a Quote” stays phone (`tel:+12813523077`). No quote form on Home. A Contact page (and any form) comes later.
+- Desktop **Services** is a jump to `#services`. A dropdown with a Services hub plus individual service pages comes later. Do not build that dropdown yet.
+- Only change the breakpoint or section Lauren named (e.g. desktop-only). Do not restyle tablet or mobile “while you are there.”
+
 Do not change hosting or domain setup unless the user asks.

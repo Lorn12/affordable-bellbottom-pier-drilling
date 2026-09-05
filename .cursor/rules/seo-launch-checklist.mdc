@@ -14,7 +14,9 @@ Do **not** start this work during routine homepage visual edits.
 - A form, quote flow, or careers application is added
 - Domain, hosting, or indexing is being set up
 
-Until then, homepage-only still applies: keep unfinished menu items as coming soon; do not invent layouts or business facts.
+Until then, homepage-only still applies: keep unfinished menu items as coming soon; do not invent layouts or business facts. Do not run a full SEO/GEO pass on Home alone unless Lauren asks.
+
+**Ask Lauren (or come back to this) when the site is almost done**, not during visual homepage tweaks. Planned later: Contact page + quote form; Services dropdown (hub + Pier Drilling, Belled Pier Drilling, Pool Pier Drilling, Home Foundation Pier Drilling, Concrete Pouring Assistance).
 
 ## Do when pages exist
 
@@ -24,8 +26,9 @@ Until then, homepage-only still applies: keep unfinished menu items as coming so
 - Put those URLs in `public/sitemap.xml`; keep confirmation pages and placeholder Projects on `noindex`
 - Hosting must serve `public/404.html` with a real HTTP 404
 - Confirm canonical/OG/schema/robots/sitemap domain (`https://bellbottompierdrilling.com/` is assumed — verify)
-- Request a Quote CTA + accessible form (labels, `required`, errors not color-only, no confidential data in URLs, prevent double submit)
+- Request a Quote CTA + accessible form (labels, `required`, errors not color-only, no confidential data in URLs, prevent double submit). Until then, quote buttons that call should not use an `aria-label` that hides the visible “Request a Quote” text
 - Keyboard-test desktop Services dropdown (`aria-expanded`, Escape) and mobile menu
+- Homepage a11y leftovers: coming-soon links still in tab order; Services chevron implies a menu it does not have yet
 
 ## Still needs client confirmation (do not guess)
 

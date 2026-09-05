@@ -32,3 +32,8 @@ Keep the current menu overlay behavior (clear on hero, blurred bar after compani
 Hero top padding is not the Figma section token. The header overlays the hero, so match the gap **under the nav** (see the figma-homepage-updates skill). Bottom padding is independent. Do not mix `md:pt-*` with `lg:py-*` on the hero inner box.
 
 If the user points at a mismatch, read that section’s node. Do not guess which section they mean.
+
+**Approved code exceptions** (do not revert to Figma without asking Lauren):
+
+- Who We Serve card titles: desktop `header-s` (24px, line-height 1.25), not Figma desktop `header-m` (36px). Tablet 24px and mobile 18px stay as those frames.
+- Cropped photos fill their frames with `object-cover` (no stretching), even when Figma exported width/height percentages.

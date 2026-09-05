@@ -11,7 +11,8 @@ description: Matches this site’s homepage to the Figma file (tokens, frames, a
 2. Load the Figma MCP skill `figma-design-to-code` before calling `get_design_context`.
 3. Call `get_variable_defs` on the frame you are implementing (desktop `5162:587`, tablet `5435:27`, and/or mobile `5162:925` unless the user gives a different node).
 4. Call `get_design_context` on the **section** node, not only the full page, when the page is too large.
-5. Compare tokens to `src/style.css` and the markup. Change the site to match Figma, not the reverse, unless the user asks to update Figma.
+5. Compare tokens to `src/style.css` and the markup. Change the site to match Figma, not the reverse, unless the user asks to update Figma **or** an approved exception below already applies.
+6. Change only the breakpoint Lauren asked for. Do not restyle tablet or mobile in the same pass.
 
 File: `https://www.figma.com/design/rNBkruQcCGz3s7uz1xn0bR/Affordable-Bellbottom-Pier-Drilling`
 
@@ -35,6 +36,11 @@ Implemented on `.hero-inner` in `src/style.css` (re-measure in Figma if those no
 - Tablet and desktop (768px+): `93px + 107px` (content y `200` on `5435:37` / `5162:595`)
 
 Do not mix `md:pt-*` with `lg:py-*` on the same box; `padding-top` can lose to the `md` utility. Set hero top padding in CSS, and leave bottom padding as-is unless the user asks.
+
+## Approved exceptions (code wins until Lauren updates Figma)
+
+- **Who We Serve** card `<h3>` titles: desktop `header-s` (24px Inter Bold, line-height 1.25), not desktop `header-m` 36px. Keep mobile 18px and tablet 24px from those frames.
+- **Photos** in overflow frames: keep Figma crop offsets if present, and always add `object-cover` so images do not stretch.
 
 ## Assets
 
