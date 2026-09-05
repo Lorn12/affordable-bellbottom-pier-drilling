@@ -28,13 +28,13 @@ window.addEventListener("resize", updateHeaderSurface);
 const logoMarqueeTrack = document.querySelector(".logo-marquee-track");
 const logoMarquee = document.querySelector(".logo-marquee");
 const logoMarqueeSet = logoMarquee?.querySelector("[data-marquee-set]");
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const MARQUEE_PX_PER_SECOND = 40;
 
 let marqueeSetWidth = 0;
 let marqueeOffset = 0;
 let marqueeLastTime = 0;
 let marqueeFrame = 0;
+let marqueeTimer = 0;
 let marqueeViewportWidth = window.innerWidth;
 
 function stopLogoMarquee() {
@@ -42,10 +42,14 @@ function stopLogoMarquee() {
     cancelAnimationFrame(marqueeFrame);
     marqueeFrame = 0;
   }
+  if (marqueeTimer) {
+    window.clearInterval(marqueeTimer);
+    marqueeTimer = 0;
+  }
 }
 
 function tickLogoMarquee(now) {
-  if (!logoMarqueeTrack || !marqueeSetWidth || prefersReducedMotion.matches) {
+  if (!logoMarqueeTrack || !marqueeSetWidth) {
     marqueeFrame = 0;
     return;
   }
@@ -59,9 +63,18 @@ function tickLogoMarquee(now) {
 }
 
 function startLogoMarquee() {
-  if (marqueeFrame || !marqueeSetWidth || prefersReducedMotion.matches) return;
-  marqueeLastTime = 0;
-  marqueeFrame = requestAnimationFrame(tickLogoMarquee);
+  if (!marqueeSetWidth) return;
+  if (!marqueeFrame) {
+    marqueeLastTime = 0;
+    marqueeFrame = requestAnimationFrame(tickLogoMarquee);
+  }
+  if (!marqueeTimer) {
+    marqueeTimer = window.setInterval(() => {
+      if (performance.now() - marqueeLastTime > 80) {
+        tickLogoMarquee(performance.now());
+      }
+    }, 50);
+  }
 }
 
 function updateLogoMarquee() {
@@ -77,8 +90,6 @@ function updateLogoMarquee() {
   if (!setWidth) return;
 
   marqueeSetWidth = setWidth;
-
-  if (prefersReducedMotion.matches) return;
 
   const copies = Math.max(2, Math.ceil((trackWidth + setWidth) / setWidth));
   for (let i = 1; i < copies; i += 1) {
@@ -106,7 +117,6 @@ window.addEventListener("orientationchange", () => {
   updateLogoMarquee();
 });
 window.addEventListener("pageshow", updateLogoMarquee);
-prefersReducedMotion.addEventListener("change", updateLogoMarquee);
 logoMarqueeSet?.querySelectorAll("img").forEach((img) => {
   if (!img.complete) img.addEventListener("load", updateLogoMarquee);
 });

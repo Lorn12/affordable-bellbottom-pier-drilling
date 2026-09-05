@@ -182,21 +182,4 @@ h3 {
   html {
     scroll-behavior: auto;
   }
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-
-  .logo-marquee-track {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
-  }
-
-  .logo-marquee [aria-hidden="true"] {
-    display: none;
-  }
 }
