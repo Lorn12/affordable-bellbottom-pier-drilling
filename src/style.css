@@ -138,9 +138,14 @@ h3 {
 .logo-marquee-track {
   position: relative;
   max-width: 100%;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: auto;
+  overscroll-behavior-x: none;
+  touch-action: pan-y;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  transform: translateZ(0);
 }
 
 .logo-marquee-track::-webkit-scrollbar {
@@ -171,7 +176,6 @@ h3 {
 .logo-marquee {
   will-change: transform;
   backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
 }
 
 @media (prefers-reduced-motion: reduce) {

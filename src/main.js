@@ -35,7 +35,7 @@ let marqueeSetWidth = 0;
 let marqueeOffset = 0;
 let marqueeLastTime = 0;
 let marqueeFrame = 0;
-let marqueeInView = true;
+let marqueeViewportWidth = window.innerWidth;
 
 function stopLogoMarquee() {
   if (marqueeFrame) {
@@ -45,7 +45,7 @@ function stopLogoMarquee() {
 }
 
 function tickLogoMarquee(now) {
-  if (!logoMarquee || !marqueeSetWidth || prefersReducedMotion.matches || !marqueeInView || document.hidden) {
+  if (!logoMarqueeTrack || !marqueeSetWidth || prefersReducedMotion.matches) {
     marqueeFrame = 0;
     return;
   }
@@ -54,12 +54,12 @@ function tickLogoMarquee(now) {
   const delta = Math.min((now - marqueeLastTime) / 1000, 0.05);
   marqueeLastTime = now;
   marqueeOffset = (marqueeOffset + MARQUEE_PX_PER_SECOND * delta) % marqueeSetWidth;
-  logoMarquee.style.transform = `translate3d(${-marqueeOffset}px, 0, 0)`;
+  logoMarqueeTrack.scrollLeft = marqueeOffset;
   marqueeFrame = requestAnimationFrame(tickLogoMarquee);
 }
 
 function startLogoMarquee() {
-  if (marqueeFrame || !marqueeSetWidth || prefersReducedMotion.matches || !marqueeInView || document.hidden) return;
+  if (marqueeFrame || !marqueeSetWidth || prefersReducedMotion.matches) return;
   marqueeLastTime = 0;
   marqueeFrame = requestAnimationFrame(tickLogoMarquee);
 }
@@ -69,7 +69,7 @@ function updateLogoMarquee() {
 
   stopLogoMarquee();
   logoMarquee.querySelectorAll("[data-marquee-clone]").forEach((node) => node.remove());
-  logoMarquee.style.transform = "translate3d(0, 0, 0)";
+  logoMarqueeTrack.scrollLeft = 0;
   marqueeOffset = 0;
 
   const setWidth = logoMarqueeSet.offsetWidth;
@@ -92,30 +92,25 @@ function updateLogoMarquee() {
   startLogoMarquee();
 }
 
+function onMarqueeViewportChange() {
+  if (window.innerWidth === marqueeViewportWidth) return;
+  marqueeViewportWidth = window.innerWidth;
+  updateLogoMarquee();
+}
+
 updateLogoMarquee();
-window.addEventListener("resize", updateLogoMarquee);
+requestAnimationFrame(() => requestAnimationFrame(updateLogoMarquee));
+window.addEventListener("resize", onMarqueeViewportChange);
+window.addEventListener("orientationchange", () => {
+  marqueeViewportWidth = window.innerWidth;
+  updateLogoMarquee();
+});
+window.addEventListener("pageshow", updateLogoMarquee);
 prefersReducedMotion.addEventListener("change", updateLogoMarquee);
 logoMarqueeSet?.querySelectorAll("img").forEach((img) => {
   if (!img.complete) img.addEventListener("load", updateLogoMarquee);
 });
 document.fonts?.ready.then(updateLogoMarquee);
-
-if (logoMarqueeTrack) {
-  const marqueeObserver = new IntersectionObserver(
-    ([entry]) => {
-      marqueeInView = entry.isIntersecting;
-      if (marqueeInView) startLogoMarquee();
-      else stopLogoMarquee();
-    },
-    { threshold: 0 }
-  );
-  marqueeObserver.observe(logoMarqueeTrack);
-}
-
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) stopLogoMarquee();
-  else startLogoMarquee();
-});
 
 function getMenuFocusable() {
   if (!menu) return [];
