@@ -135,47 +135,43 @@ h3 {
   cursor: pointer;
 }
 
-@keyframes logo-marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(calc(-1 * var(--marquee-shift, 50%)), 0, 0);
-  }
-}
-
 .logo-marquee-track {
   position: relative;
   max-width: 100%;
   overflow: hidden;
-  overflow-x: clip;
-  contain: paint;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 2.5rem,
-    #000 calc(100% - 2.5rem),
-    transparent
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    #000 2.5rem,
-    #000 calc(100% - 2.5rem),
-    transparent
-  );
 }
 
 .logo-marquee-track::-webkit-scrollbar {
   display: none;
 }
 
+.logo-marquee-track::before,
+.logo-marquee-track::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 2.5rem;
+  height: 100%;
+  pointer-events: none;
+}
+
+.logo-marquee-track::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-ink), transparent);
+}
+
+.logo-marquee-track::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-ink), transparent);
+}
+
 .logo-marquee {
-  animation: logo-marquee 28s linear infinite;
   will-change: transform;
   backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 @media (prefers-reduced-motion: reduce) {
