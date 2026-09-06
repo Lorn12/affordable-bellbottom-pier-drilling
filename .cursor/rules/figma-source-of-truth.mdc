@@ -13,11 +13,14 @@ Before changing layout, type, color, spacing, or images:
 
 File: [Affordable Bellbottom Pier Drilling](https://www.figma.com/design/rNBkruQcCGz3s7uz1xn0bR/Affordable-Bellbottom-Pier-Drilling)
 
-Known homepage frames (confirm in Figma if they move):
+Known homepage frames (confirm in Figma if they move). **Use the `-02` frames** as the visual source for new code work. The un-suffixed frames on the same page are the previous archive — do not mix them.
 
-- Desktop: `5162:587` (1440 wide)
-- Tablet draft: `5435:27` (768 wide) — cloned from desktop to start tablet; refine in Figma, do not invent extra tablet layouts
-- Mobile: `5162:925` (400 wide)
+- Desktop: `Homepage Desktop-02` `5869:34` (1440 wide). Archive: `5162:587`
+- Tablet: `Homepage Tablet-02` `5869:721` (768 wide). Archive: `5435:27`
+- Mobile: `Homepage Mobile-02` `5869:362` (400 wide). Archive: `5162:925`
+- Buttons board: `Butttons-02` `5869:709` (file spelling). Default Button L/M/S components stay as they are. Hover is extra components next to that board, not a change to the default lime buttons.
+
+Going forward: Lauren designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless she asks.
 
 Same token names can have different values on desktop vs mobile. Apply the value for the breakpoint you are implementing.
 
@@ -33,7 +36,7 @@ Hero top padding is not the Figma section token. The header overlays the hero, s
 
 If the user points at a mismatch, read that section’s node. Do not guess which section they mean.
 
-**Approved code exceptions** (do not revert to Figma without asking Lauren):
+**Approved code exceptions** (do not revert to Figma `-02` without asking Lauren):
 
-- Who We Serve card titles: desktop `header-s` (24px, line-height 1.25), not Figma desktop `header-m` (36px). Tablet 24px and mobile 18px stay as those frames.
 - Cropped photos fill their frames with `object-cover` (no stretching), even when Figma exported width/height percentages.
+- Header overlay behavior: clear over the hero on the homepage frames; solid (`ink` 80% + blur 50px + shadows) is a separate Figma state (`Header Desktop-02 — Solid (after Companies)`), not applied to the default overlay menu.
