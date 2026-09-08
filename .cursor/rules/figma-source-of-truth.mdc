@@ -13,9 +13,9 @@ Before changing layout, type, color, spacing, or images:
 
 File: [Affordable Bellbottom Pier Drilling](https://www.figma.com/design/rNBkruQcCGz3s7uz1xn0bR/Affordable-Bellbottom-Pier-Drilling)
 
-Known homepage frames (confirm in Figma if they move). **Use the `-02` frames** as the visual source for new code work. The un-suffixed frames on the same page are the previous archive — do not mix them.
+Known homepage frames (confirm in Figma if they move). **Use these as the visual source** for new code work. Do not mix archive frames.
 
-- Desktop: `Homepage Desktop-02` `5869:34` (1440 wide). Archive: `5162:587`
+- Desktop: `Homepage Desktop-03` `5916:490` (1440 wide) on the **About Page** canvas. Previous: `Homepage Desktop-02` `5869:34` on Ready Homepage and mobile; older archive `5162:587`
 - Tablet: `Homepage Tablet-02` `5869:721` (768 wide). Archive: `5435:27`
 - Mobile: `Homepage Mobile-02` `5869:362` (400 wide). Archive: `5162:925`
 - Buttons board: `Butttons-02` `5869:709` (file spelling). Default Button L/M/S components stay as they are. Hover is extra components next to that board, not a change to the default lime buttons.
@@ -36,7 +36,7 @@ Hero top padding is not the Figma section token. The header overlays the hero, s
 
 If the user points at a mismatch, read that section’s node. Do not guess which section they mean.
 
-**Approved code exceptions** (do not revert to Figma `-02` without asking Lauren):
+**Approved code exceptions** (do not revert to Figma Desktop-03 / Tablet-02 / Mobile-02 without asking Lauren):
 
 - Cropped photos fill their frames with `object-cover` (no stretching), even when Figma exported width/height percentages.
 - Header overlay behavior: clear over the hero on the homepage frames; solid (`ink` 80% + blur 50px + shadows) is a separate Figma state (`Header Desktop-02 — Solid (after Companies)`), not applied to the default overlay menu.
