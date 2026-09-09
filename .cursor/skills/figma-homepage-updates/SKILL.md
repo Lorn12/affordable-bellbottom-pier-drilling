@@ -11,9 +11,9 @@ description: Matches this site’s homepage to the Figma file (tokens, frames, a
 2. Load the Figma MCP skill `figma-design-to-code` before calling `get_design_context`.
 3. Call `get_variable_defs` on the frame you are implementing (`Homepage Desktop-03` `5916:490` on the About Page, `Homepage Tablet-02` `5869:721`, and/or `Homepage Mobile-02` `5869:362` unless the user gives a different node). Do not implement from Desktop-02 or unsuffixed archive frames.
 4. Call `get_design_context` on the **section** node, not only the full page, when the page is too large.
-5. Compare tokens to `src/style.css` and the markup. Change the site to match Figma Desktop-03 / Tablet-02 / Mobile-02, not the reverse, unless Lauren asks to update Figma **or** an approved exception below already applies.
-6. Change only the breakpoint Lauren asked for. Do not restyle tablet or mobile in the same pass.
-7. Keep frames editable: auto-layout, variables, and component instances. Do not flatten homepage frames to screenshots. Do not edit the shared default Button L/M/S appearance unless Lauren asks. Hover lives as separate components under `Butttons-02`.
+5. Compare tokens to `src/style.css` and the markup. Change the site to match Figma Desktop-03 / Tablet-02 / Mobile-02, not the reverse, unless asked to update Figma **or** an approved exception below already applies.
+6. Change only the breakpoint named in the request. Do not restyle tablet or mobile in the same pass.
+7. Keep frames editable: auto-layout, variables, and component instances. Do not flatten homepage frames to screenshots. Do not edit the shared default Button L/M/S appearance unless asked. Hover lives as separate components under `Butttons-02`.
 
 File: `https://www.figma.com/design/rNBkruQcCGz3s7uz1xn0bR/Affordable-Bellbottom-Pier-Drilling`
 
@@ -44,11 +44,14 @@ Implemented on `.hero-inner` in `src/style.css` (re-measure in Figma if those no
 
 Do not mix `md:pt-*` with `lg:py-*` on the same box; `padding-top` can lose to the `md` utility. Set hero top padding in CSS, and leave bottom padding as-is unless the user asks.
 
-## Approved exceptions (code wins until Lauren updates Figma)
+## Approved exceptions (code wins until Figma is updated)
 
 - **Photos** in overflow frames: keep Figma crop offsets if present, and always add `object-cover` so images do not stretch.
 - **Who We Serve cards:** keep equal height in each breakpoint’s `-02` grid (desktop cards `FILL` equal rows; tablet 398px; mobile 249px). On the site, desktop uses `lg:h-full` + `lg:auto-rows-fr` so all four stretch to the tallest.
 - **Header scroll:** the live site switches from a clear overlay to a blurred solid bar at Companies. In Figma that is two states, not one frame that tries to show both.
+- **Our Work hover:** Desktop-03 cards are a flat 20% black overlay only. The live site keeps that at rest and adds `.project-card-scrim` on hover/focus (bottom ink gradient). Do not clear the overlay on hover.
+- **Soil & Rock drill icon:** Noun Project (`noun-drilling-8343366`), not Streamline. Leave the Figma SVG stroke. Do not redraw it.
+- **Equipment vs How We Work spacing:** different on purpose in Desktop-03. Do not copy one section’s gutter onto the other unless asked.
 
 ## Assets
 

@@ -20,7 +20,7 @@ Known homepage frames (confirm in Figma if they move). **Use these as the visual
 - Mobile: `Homepage Mobile-02` `5869:362` (400 wide). Archive: `5162:925`
 - Buttons board: `Butttons-02` `5869:709` (file spelling). Default Button L/M/S components stay as they are. Hover is extra components next to that board, not a change to the default lime buttons.
 
-Going forward: Lauren designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless she asks.
+Going forward: the designer designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless they ask.
 
 Same token names can have different values on desktop vs mobile. Apply the value for the breakpoint you are implementing.
 
@@ -36,7 +36,10 @@ Hero top padding is not the Figma section token. The header overlays the hero, s
 
 If the user points at a mismatch, read that section’s node. Do not guess which section they mean.
 
-**Approved code exceptions** (do not revert to Figma Desktop-03 / Tablet-02 / Mobile-02 without asking Lauren):
+**Approved code exceptions** (do not revert to Figma Desktop-03 / Tablet-02 / Mobile-02 without asking):
 
 - Cropped photos fill their frames with `object-cover` (no stretching), even when Figma exported width/height percentages.
 - Header overlay behavior: clear over the hero on the homepage frames; solid (`ink` 80% + blur 50px + shadows) is a separate Figma state (`Header Desktop-02 — Solid (after Companies)`), not applied to the default overlay menu.
+- **Our Work cards:** keep the Figma rest overlay (`bg-black/20`). On hover and keyboard focus, fade in `.project-card-scrim` (bottom ink gradient). Do not remove the rest overlay on hover.
+- **Capabilities drill icon:** keep the Noun Project export (`icon-drilling.svg`) as-is. Do not thicken or redraw it to match the Streamline icons next to it unless a Streamline glyph is placed in Figma.
+- Do not equalize Equipment & Capabilities vs How We Work column gutters unless asked. Desktop-03 uses different left/right widths (Equipment left max 720 + 524px photos; How We Work two flex columns, list max 550).
