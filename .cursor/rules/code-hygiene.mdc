@@ -17,7 +17,7 @@ This is HTML + Tailwind (Vite), not React. Do not split the homepage into compon
 
 ## When inner pages are approved
 
-One HTML file per page at the repo root (`about.html`, `contact.html`, later `services.html` or `pier-drilling.html`). Reuse header/footer markup and `src/main.js` / `src/style.css`. Add `src/about.js` (and import it only from that page) only if that page needs unique behavior. Do not start a `pages/` or `components/` tree unless asked.
+One HTML file per page at the repo root (`about.html`, `contact.html`, later `services.html` or `pier-drilling.html`). Register that file in `vite.config.js` `build.rollupOptions.input` or the production/GitHub Pages build will omit it. Reuse header/footer markup and `src/main.js` / `src/style.css`. Add `src/about.js` (and import it only from that page) only if that page needs unique behavior. Do not start a `pages/` or `components/` tree unless asked.
 
 ## Always
 
