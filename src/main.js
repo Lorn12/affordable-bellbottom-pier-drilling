@@ -164,7 +164,7 @@ function trapMenuFocus(event) {
 menuButton?.addEventListener("click", () => {
   const expanded = menuButton.getAttribute("aria-expanded") === "true";
   if (expanded) closeMenu();
-  else openMenu(); 
+  else openMenu();
 });
 
 menuClose?.addEventListener("click", closeMenu);

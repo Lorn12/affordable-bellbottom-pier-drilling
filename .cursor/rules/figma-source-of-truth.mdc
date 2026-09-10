@@ -15,10 +15,11 @@ File: [Affordable Bellbottom Pier Drilling](https://www.figma.com/design/rNBkruQ
 
 Known homepage frames (confirm in Figma if they move). **Use these as the visual source** for new code work. Do not mix archive frames.
 
-- Desktop: `Homepage Desktop-03` `5916:490` (1440 wide) on the **About Page** canvas. Previous: `Homepage Desktop-02` `5869:34` on Ready Homepage and mobile; older archive `5162:587`
+- Desktop: `Homepage Desktop-03` `6040:137` (1440 wide) on the **About Page** canvas. Ready board copy: `Homepage Desktop-02` `5869:34`. Older archive `5162:587`. Do not implement from the archive.
 - Tablet: `Homepage Tablet-02` `5869:721` (768 wide). Archive: `5435:27`
 - Mobile: `Homepage Mobile-02` `5869:362` (400 wide). Archive: `5162:925`
 - Buttons board: `Butttons-02` `5869:709` (file spelling). Default Button L/M/S components stay as they are. Hover is extra components next to that board, not a change to the default lime buttons.
+- About desktop: `About Desktop` `5916:827` (1440 wide) on the **About Page** canvas. No About tablet or mobile frame yet — do not invent those layouts.
 
 Going forward: the designer designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless they ask.
 

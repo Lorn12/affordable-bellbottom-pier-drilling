@@ -1,5 +1,5 @@
 ---
-description: Homepage-only scope and HTML + Tailwind stack unless the user asks otherwise.
+description: Homepage-first HTML + Tailwind stack; Home and About are live.
 alwaysApply: true
 ---
 
@@ -7,17 +7,20 @@ alwaysApply: true
 
 This repo is HTML + Tailwind (Vite). Do not introduce WordPress, React, or another stack unless the user asks for it.
 
-**Live now:** Home only (`index.html`), plus same-page jumps and the phone number.
+**Live now:** Home (`index.html`) and About (`about.html`), plus same-page jumps and the phone number.
 
 **Stay “coming soon”** until the user says otherwise:
 
-- About
 - Services (dropdown and “explore” links)
 - Projects
 - Careers
 - Contact
 
-Keep those items visible in the menu. Do not build inner pages or invent their layouts.
+Keep those items visible in the menu. Do not build remaining inner pages or invent their layouts.
+
+When a page is approved, add it as its own HTML file and follow `.cursor/rules/code-hygiene.mdc`. Do not dump new pages into `index.html`.
+
+**About:** implement from Figma `About Desktop` `5916:827`. There is no About tablet or mobile frame yet — do not invent those layouts. Further About visual updates stay in Figma first.
 
 **Until the designer says otherwise:**
 

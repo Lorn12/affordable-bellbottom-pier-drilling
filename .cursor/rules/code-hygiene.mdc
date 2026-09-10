@@ -1,0 +1,27 @@
+---
+description: Keep HTML/CSS/JS clean; one HTML file per page; delete unused code.
+alwaysApply: true
+---
+
+# Code hygiene and file layout
+
+This is HTML + Tailwind (Vite), not React. Do not split the homepage into components “for cleanliness.”
+
+## Live pages
+
+- Home markup: `index.html`
+- About markup: `about.html`
+- Shared styles: `src/style.css` (tokens, header, hero overlay, marquee, utilities used in more than one section)
+- Shared behavior: `src/main.js` (menu, header solid state, marquee)
+- Assets: `public/assets/`
+
+## When inner pages are approved
+
+One HTML file per page at the repo root (`about.html`, `contact.html`, later `services.html` or `pier-drilling.html`). Reuse header/footer markup and `src/main.js` / `src/style.css`. Add `src/about.js` (and import it only from that page) only if that page needs unique behavior. Do not start a `pages/` or `components/` tree unless asked.
+
+## Always
+
+- Delete unused CSS, JS, classes, comments, and assets when a change replaces them. Do not leave the old path “just in case.”
+- Prefer editing the existing pattern over adding a second one. Two overlay systems (hero vs `.dark-pattern`) stay separate until the designer asks to unify them.
+- Hero padding/height stay in `.hero-inner` in CSS. Do not mix `md:pt-*` with `lg:py-*` on that box.
+- Update `.cursor/rules` and `figma-homepage-updates` when frame IDs, hero overlay, or page scope change.
