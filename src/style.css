@@ -146,10 +146,25 @@ h3 {
   cursor: pointer;
 }
 
+.service-card {
+  height: 572px;
+  border-radius: 12px;
+}
+
+.service-card-media {
+  height: 360px;
+}
+
 .service-card .service-card-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .service-card {
+    height: 588px;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -158,8 +173,8 @@ h3 {
   }
 
   .service-card {
-    min-height: 620px;
-    border-radius: 1rem;
+    height: 620px;
+    border-radius: 16px;
   }
 
   .service-card-media {
