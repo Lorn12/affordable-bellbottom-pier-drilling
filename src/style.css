@@ -147,11 +147,13 @@ h3 {
 }
 
 .service-card {
-  height: 572px;
+  min-height: 572px;
+  height: 100%;
   border-radius: 12px;
 }
 
 .service-card-media {
+  width: 100%;
   height: 360px;
 }
 
@@ -161,9 +163,20 @@ h3 {
   object-fit: cover;
 }
 
+.service-card-copy {
+  justify-content: flex-start;
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+
 @media (min-width: 768px) {
   .service-card {
-    height: 588px;
+    min-height: 588px;
+  }
+
+  .service-card-copy {
+    padding-top: 31px;
+    padding-bottom: 31px;
   }
 }
 
@@ -173,12 +186,19 @@ h3 {
   }
 
   .service-card {
-    height: 620px;
+    min-height: 620px;
     border-radius: 16px;
   }
 
   .service-card-media {
-    height: 400px;
+    aspect-ratio: 413 / 400;
+    height: auto;
+  }
+
+  .service-card-copy {
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .who-we-serve h3 {
@@ -259,27 +279,48 @@ h3 {
 .equipment-photos {
   position: relative;
   width: 100%;
-  height: 562px;
+  aspect-ratio: 360 / 562;
+  height: auto;
   flex-shrink: 0;
 }
 
 .equipment-photos-main,
 .equipment-photos-inset {
   position: absolute;
+  overflow: hidden;
+}
+
+.equipment-photos-main img,
+.equipment-photos-inset img {
+  position: absolute;
+  max-width: none;
+  height: auto;
+}
+
+.equipment-photos-main img {
+  top: -0.1%;
+  left: -2.08%;
+  width: 175.86%;
+}
+
+.equipment-photos-inset img {
+  top: -45.36%;
+  left: -127.86%;
+  width: 273.02%;
 }
 
 .equipment-photos-main {
   top: 0;
   left: 0;
   width: 100%;
-  height: 360px;
+  height: 64.06%;
 }
 
 .equipment-photos-inset {
-  top: 302px;
+  top: 53.74%;
   left: 27.78%;
   width: 72.14%;
-  height: 260px;
+  height: 46.26%;
 }
 
 @media (min-width: 768px) {
@@ -289,24 +330,21 @@ h3 {
   }
 
   .equipment-photos {
-    width: 100%;
     max-width: 688px;
-    height: 923px;
+    aspect-ratio: 688 / 923;
   }
 
   .equipment-photos-main {
-    width: 666px;
-    max-width: 100%;
-    height: 658px;
+    width: 96.8%;
+    height: 71.29%;
   }
 
   .equipment-photos-inset {
-    top: 534px;
+    top: 57.85%;
     left: auto;
     right: 0;
-    width: 443px;
-    max-width: 64.39%;
-    height: 389px;
+    width: 64.39%;
+    height: 42.15%;
   }
 }
 
@@ -326,22 +364,20 @@ h3 {
   .equipment-photos {
     width: 557px;
     max-width: none;
-    height: 780px;
+    aspect-ratio: 557 / 780;
   }
 
   .equipment-photos-main {
-    width: 536px;
-    max-width: none;
-    height: 529px;
+    width: 96.23%;
+    height: 67.82%;
   }
 
   .equipment-photos-inset {
-    top: 420px;
+    top: 53.85%;
     left: auto;
     right: 0;
-    width: 413px;
-    max-width: none;
-    height: 360px;
+    width: 74.15%;
+    height: 46.15%;
   }
 }
 
@@ -355,20 +391,19 @@ h3 {
   .equipment-photos {
     width: 520px;
     max-width: none;
-    height: 782px;
+    aspect-ratio: 520 / 782;
   }
 
   .equipment-photos-main {
-    width: 507px;
-    height: 501px;
+    width: 97.5%;
+    height: 64.07%;
   }
 
   .equipment-photos-inset {
-    top: 422px;
+    top: 53.96%;
     right: 0;
-    width: 413px;
-    max-width: none;
-    height: 360px;
+    width: 79.42%;
+    height: 46.04%;
   }
 }
 

@@ -292,8 +292,8 @@
               </a>
             </div>
           </div>
-          <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-x-5 md:gap-y-10 lg:grid-cols-3 lg:gap-5">
-            <a id="pier-drilling" class="coming-soon service-card relative flex w-full min-w-0 flex-col overflow-hidden bg-white" href="#" aria-disabled="true">
+          <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:auto-rows-fr md:gap-x-5 md:gap-y-10 lg:grid-cols-3 lg:gap-5">
+            <a id="pier-drilling" class="coming-soon service-card relative flex w-full min-w-0 flex-col bg-white" href="#" aria-disabled="true">
               <div class="service-card-media relative w-full shrink-0 overflow-hidden rounded-tl-[8px] rounded-tr-[8px] rounded-br-[42px] rounded-bl-[8px]">
                 <picture class="absolute inset-0 block size-full">
                   <source
@@ -307,14 +307,16 @@
                   <img class="absolute inset-[-15.38%_-20.51%_-25.64%_-20.51%] size-full max-w-none" src="/assets/service-arrow-up-right.svg" alt="" width="110" height="110" />
                 </span>
               </div>
-              <div class="flex flex-1 flex-col justify-center gap-6 px-4">
-                <h3 class="text-2xl font-bold leading-[1.25] text-ink">Pier Drilling</h3>
-                <p class="leading-[1.75] text-neutral-600">
-                  Straight-shaft pier drilling for residential and commercial foundation projects. Site access and ground conditions are reviewed before drilling.
-                </p>
+              <div class="service-card-copy flex flex-1 flex-col px-4">
+                <div class="flex flex-col gap-6">
+                  <h3 class="text-2xl font-bold leading-[1.25] text-ink">Pier Drilling</h3>
+                  <p class="leading-[1.75] text-neutral-600">
+                    Straight-shaft pier drilling for residential and commercial foundation projects. Site access and ground conditions are reviewed before drilling.
+                  </p>
+                </div>
               </div>
             </a>
-            <a id="belled-pier-drilling" class="coming-soon service-card relative flex w-full min-w-0 flex-col overflow-hidden bg-white" href="#" aria-disabled="true">
+            <a id="belled-pier-drilling" class="coming-soon service-card relative flex w-full min-w-0 flex-col bg-white" href="#" aria-disabled="true">
               <div class="service-card-media relative w-full shrink-0 overflow-hidden rounded-tl-[8px] rounded-tr-[8px] rounded-br-[42px] rounded-bl-[8px]">
                 <picture class="absolute inset-0 block size-full">
                   <source
@@ -328,14 +330,16 @@
                   <img class="absolute inset-[-15.38%_-20.51%_-25.64%_-20.51%] size-full max-w-none" src="/assets/service-arrow-up-right.svg" alt="" width="110" height="110" />
                 </span>
               </div>
-              <div class="flex flex-1 flex-col justify-center gap-6 px-4">
-                <h3 class="text-2xl font-bold leading-[1.25] text-ink">Belled Pier Drilling</h3>
-                <p class="leading-[1.75] text-neutral-600">
-                  Belled pier drilling for residential and commercial projects requiring a widened pier base. Site conditions are reviewed before drilling.
-                </p>
+              <div class="service-card-copy flex flex-1 flex-col px-4">
+                <div class="flex flex-col gap-6">
+                  <h3 class="text-2xl font-bold leading-[1.25] text-ink">Belled Pier Drilling</h3>
+                  <p class="leading-[1.75] text-neutral-600">
+                    Belled pier drilling for residential and commercial projects requiring a widened pier base. Site conditions are reviewed before drilling.
+                  </p>
+                </div>
               </div>
             </a>
-            <a id="concrete-pour-assistance" class="coming-soon service-card relative flex w-full min-w-0 flex-col overflow-hidden bg-white" href="#" aria-disabled="true">
+            <a id="concrete-pour-assistance" class="coming-soon service-card relative flex w-full min-w-0 flex-col bg-white" href="#" aria-disabled="true">
               <div class="service-card-media relative w-full shrink-0 overflow-hidden rounded-tl-[8px] rounded-tr-[8px] rounded-br-[42px] rounded-bl-[8px]">
                 <picture class="absolute inset-0 block size-full">
                   <source
@@ -349,11 +353,13 @@
                   <img class="absolute inset-[-15.38%_-20.51%_-25.64%_-20.51%] size-full max-w-none" src="/assets/service-arrow-up-right.svg" alt="" width="110" height="110" />
                 </span>
               </div>
-              <div class="flex flex-1 flex-col justify-center gap-6 px-4">
-                <h3 class="text-2xl font-bold leading-[1.25] text-ink">Concrete Pour Assistance</h3>
-                <p class="leading-[1.75] text-neutral-600">
-                  Concrete placement support for drilled piers. Permits, layout, rebar, spoil removal, and cleanup remain the client’s or general contractor’s responsibility.
-                </p>
+              <div class="service-card-copy flex flex-1 flex-col px-4">
+                <div class="flex flex-col gap-6">
+                  <h3 class="text-2xl font-bold leading-[1.25] text-ink">Concrete Pour Assistance</h3>
+                  <p class="leading-[1.75] text-neutral-600">
+                    Concrete placement support for drilled piers. Permits, layout, rebar, spoil removal, and cleanup remain the client’s or general contractor’s responsibility.
+                  </p>
+                </div>
               </div>
             </a>
           </div>
@@ -404,24 +410,24 @@
             <a class="inline-block self-start rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 hover:bg-white hover:text-ink" href="#quote">Discuss Your Project</a>
           </div>
           <div class="equipment-photos">
-            <div class="equipment-photos-main overflow-hidden rounded-2xl">
+            <div class="equipment-photos-main rounded-2xl">
               <picture class="contents">
                 <source
                   type="image/webp"
                   srcset="/assets/equipment-main-400.webp 400w, /assets/equipment-main-800.webp 800w, /assets/equipment-main-1280.webp 1280w"
                   sizes="(min-width: 1280px) 507px, (min-width: 1024px) 536px, (min-width: 768px) 666px, 100vw"
                 />
-                <img class="absolute left-[-2.08%] top-[-0.1%] h-[100.1%] w-[175.86%] max-w-none object-cover" src="/assets/equipment-main.png" alt="Skid steer with an auger on a jobsite" width="507" height="501" loading="lazy" decoding="async" />
+                <img src="/assets/equipment-main.png" alt="Skid steer with an auger on a jobsite" width="507" height="285" loading="lazy" decoding="async" />
               </picture>
             </div>
-            <div class="equipment-photos-inset overflow-hidden rounded-[20px] shadow-[2px_10px_40px_-4px_rgba(11,11,11,0.2)]">
+            <div class="equipment-photos-inset rounded-[20px] shadow-[2px_10px_40px_-4px_rgba(11,11,11,0.2)]">
               <picture class="contents">
                 <source
                   type="image/webp"
                   srcset="/assets/equipment-inset-400.webp 400w, /assets/equipment-inset-800.webp 800w, /assets/equipment-inset-1280.webp 1280w"
                   sizes="(min-width: 1024px) 413px, (min-width: 768px) 443px, 72vw"
                 />
-                <img class="absolute left-[-127.86%] top-[-45.36%] h-[165.41%] w-[273.02%] max-w-none object-cover" src="/assets/equipment-inset.png" alt="Workers pouring concrete into a drilled pier" width="413" height="360" loading="lazy" decoding="async" />
+                <img src="/assets/equipment-inset.png" alt="Workers pouring concrete into a drilled pier" width="413" height="232" loading="lazy" decoding="async" />
               </picture>
             </div>
           </div>
