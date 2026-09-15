@@ -42,5 +42,6 @@ If the user points at a mismatch, read that section’s node. Do not guess which
 - Cropped photos fill their frames with `object-cover` (no stretching), even when Figma exported width/height percentages.
 - Header overlay behavior: clear over the hero on the homepage frames; solid (`ink` 80% + blur 50px + shadows) is a separate Figma state (`Header Desktop-02 — Solid (after Companies)`), not applied to the default overlay menu.
 - **Our Work cards:** keep the Figma rest overlay (`bg-black/20`). On hover and keyboard focus, fade in `.project-card-scrim` (bottom ink gradient). Do not remove the rest overlay on hover.
+- **Who We Serve mobile:** Homepage Mobile-V1 stacks the bento full-width (same order as the site). Do not restore the 2-col / 3-col mobile grid.
 - **Capabilities drill icon:** keep the Noun Project export (`icon-drilling.svg`) as-is. Do not thicken or redraw it to match the Streamline icons next to it unless a Streamline glyph is placed in Figma.
 - Do not equalize Equipment & Capabilities vs How We Work column gutters unless asked. Desktop-V1 uses different left/right widths (Equipment left max 720 + 524px photos; How We Work two flex columns, list max 550).

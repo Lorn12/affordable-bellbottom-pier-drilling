@@ -169,6 +169,10 @@ h3 {
   padding-bottom: 23px;
 }
 
+.who-we-serve h3 {
+  line-height: 1.25;
+}
+
 @media (min-width: 768px) {
   .service-card {
     min-height: 588px;
@@ -180,18 +184,15 @@ h3 {
   }
 }
 
-@media (min-width: 1280px) {
-  .hero-inner {
-    min-height: 824px;
-  }
-
+/* Large Tablet-V1 services (1280 frame) once three cards fit; hamburger still below 1280 */
+@media (min-width: 1024px) {
   .service-card {
     min-height: 620px;
     border-radius: 16px;
   }
 
   .service-card-media {
-    aspect-ratio: 413 / 400;
+    aspect-ratio: 387 / 400;
     height: auto;
   }
 
@@ -200,9 +201,11 @@ h3 {
     padding-top: 0;
     padding-bottom: 0;
   }
+}
 
-  .who-we-serve h3 {
-    line-height: 1.25;
+@media (min-width: 1280px) {
+  .hero-inner {
+    min-height: 824px;
   }
 
   .how-we-work-steps h3 {
