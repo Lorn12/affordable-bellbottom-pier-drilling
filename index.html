@@ -361,57 +361,67 @@
       </section>
 
       <section class="dark-pattern relative text-white" aria-labelledby="equipment-heading">
-        <div class="relative mx-auto grid max-w-[1440px] items-center gap-[60px] px-5 py-[100px] md:px-10 md:py-[100px] md:max-lg:gap-[60px] lg:flex lg:gap-10 lg:px-20 lg:py-[100px]">
-          <div class="w-full md:max-lg:max-w-[720px] lg:min-w-0 lg:max-w-[720px] lg:flex-1">
-            <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Equipment &amp; Capabilities</p>
-            <h2 id="equipment-heading" class="mt-5 text-[32px] font-bold leading-[1.2] md:mt-6 md:max-lg:max-w-[630px] md:text-[42px]">
-              Compact Equipment for Tight-Access Pier Drilling
-            </h2>
-            <p class="mt-5 max-w-[658px] leading-[1.75] text-neutral-200 md:mt-6 md:max-lg:max-w-[550px]">
-              Affordable Bellbottom uses skid steers and a compact excavator for straight-shaft and belled pier drilling on residential and commercial jobsites. Equipment and drilling tools are selected based on site access, project requirements, pier dimensions, and ground conditions.
-            </p>
-            <ul class="mt-10 w-full space-y-5 md:max-lg:max-w-[550px] md:space-y-6 lg:max-w-[630px]">
-              <li>
-                <h3 class="flex items-start gap-2 font-body text-base font-medium">
-                  <img src="/assets/check.svg" alt="" width="24" height="24" class="mt-0.5 size-6" />
+        <div class="equipment-inner">
+          <div class="equipment-copy flex flex-col gap-10">
+            <div class="flex max-w-[720px] flex-col gap-5 md:gap-6">
+              <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Equipment &amp; Capabilities</p>
+              <h2 id="equipment-heading" class="text-[36px] font-bold leading-[1.2] md:max-w-[630px] md:text-[42px] min-[1024px]:max-w-none">
+                Compact Equipment for Tight-Access Pier Drilling
+              </h2>
+              <p class="leading-[1.75] text-neutral-200 lg:max-w-[658px]">
+                Affordable Bellbottom uses skid steers and a compact excavator for straight-shaft and belled pier drilling on residential and commercial jobsites. Equipment and drilling tools are selected based on site access, project requirements, pier dimensions, and ground conditions.
+              </p>
+            </div>
+            <ul class="flex w-full flex-col gap-5 md:gap-6 lg:max-w-[630px]">
+              <li class="flex flex-col gap-1">
+                <h3 class="flex items-start gap-2 font-body text-xl font-normal leading-[1.5] lg:text-base lg:font-medium">
+                  <img src="/assets/check.svg" alt="" width="24" height="24" class="size-6 shrink-0" />
                   Tight-Access Jobsites
                 </h3>
-                <p class="mt-1 leading-[1.75] text-neutral-400">
+                <p class="leading-[1.75] text-neutral-400">
                   Compact equipment can access gated yards and limited side-yard spaces, subject to the conditions of each jobsite.
                 </p>
               </li>
-              <li>
-                <h3 class="flex items-start gap-2 font-body text-base font-medium">
-                  <img src="/assets/check.svg" alt="" width="24" height="24" class="mt-0.5 size-6" />
+              <li class="flex flex-col gap-2">
+                <h3 class="flex items-start gap-2 font-body text-xl font-normal leading-[1.5] lg:text-base lg:font-medium">
+                  <img src="/assets/check.svg" alt="" width="24" height="24" class="size-6 shrink-0" />
                   Soil &amp; Rock Drilling
                 </h3>
-                <p class="mt-1 leading-[1.75] text-neutral-400">
+                <p class="leading-[1.75] text-neutral-400">
                   Equipment and drilling tools are selected based on the project requirements, location, and whether the site contains standard soil or rock.
                 </p>
               </li>
-              <li>
-                <h3 class="flex items-start gap-2 font-body text-base font-medium">
-                  <img src="/assets/check.svg" alt="" width="24" height="24" class="mt-0.5 size-6" />
+              <li class="flex flex-col gap-2">
+                <h3 class="flex items-start gap-2 font-body text-xl font-normal leading-[1.5] lg:text-base lg:font-medium">
+                  <img src="/assets/check.svg" alt="" width="24" height="24" class="size-6 shrink-0" />
                   Concrete Pour Support
                 </h3>
-                <p class="mt-1 leading-[1.75] text-neutral-400">
+                <p class="leading-[1.75] text-neutral-400">
                   A modified bucket can be used to assist the concrete contractor with pouring the drilled piers.
                 </p>
               </li>
             </ul>
-            <a class="mt-10 inline-block rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 hover:bg-white hover:text-ink" href="#quote">Discuss Your Project</a>
+            <a class="inline-block self-start rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 hover:bg-white hover:text-ink" href="#quote">Discuss Your Project</a>
           </div>
-          <div class="relative mx-auto h-[562px] w-full max-w-[524px] md:mx-0 md:h-[759px] md:max-w-[688px] lg:mx-auto lg:h-[760px] lg:max-w-[524px] lg:shrink-0">
-            <div class="relative h-[360px] w-full max-w-[464px] overflow-hidden rounded-2xl md:h-[525px] md:max-w-[531px] lg:h-[458px] lg:w-[464px] lg:max-w-[464px]">
+          <div class="equipment-photos">
+            <div class="equipment-photos-main overflow-hidden rounded-2xl">
               <picture class="contents">
-                <source type="image/webp" srcset="/assets/equipment-main-1280.webp" />
-                <img class="absolute left-[-2.08%] top-[-0.1%] h-[100.1%] w-[175.86%] max-w-none object-cover" src="/assets/equipment-main.png" alt="Compact excavator with an auger on a jobsite" width="464" height="458" loading="lazy" decoding="async" />
+                <source
+                  type="image/webp"
+                  srcset="/assets/equipment-main-400.webp 400w, /assets/equipment-main-800.webp 800w, /assets/equipment-main-1280.webp 1280w"
+                  sizes="(min-width: 1280px) 507px, (min-width: 1024px) 536px, (min-width: 768px) 666px, 100vw"
+                />
+                <img class="absolute left-[-2.08%] top-[-0.1%] h-[100.1%] w-[175.86%] max-w-none object-cover" src="/assets/equipment-main.png" alt="Skid steer with an auger on a jobsite" width="507" height="501" loading="lazy" decoding="async" />
               </picture>
             </div>
-            <div class="absolute top-[302px] right-0 h-[260px] w-[72.14%] overflow-hidden rounded-[20px] shadow-[2px_10px_40px_-4px_rgba(11,11,11,0.2)] md:top-[399px] md:left-[299px] md:right-auto md:h-[360px] md:w-[383px] lg:top-[400px] lg:left-[160px] lg:size-[360px]">
+            <div class="equipment-photos-inset overflow-hidden rounded-[20px] shadow-[2px_10px_40px_-4px_rgba(11,11,11,0.2)]">
               <picture class="contents">
-                <source type="image/webp" srcset="/assets/equipment-inset-1280.webp" />
-                <img class="absolute left-[-127.86%] top-[-45.36%] h-[165.41%] w-[273.02%] max-w-none object-cover" src="/assets/equipment-inset.png" alt="Workers pouring concrete into a drilled pier" width="360" height="360" loading="lazy" decoding="async" />
+                <source
+                  type="image/webp"
+                  srcset="/assets/equipment-inset-400.webp 400w, /assets/equipment-inset-800.webp 800w, /assets/equipment-inset-1280.webp 1280w"
+                  sizes="(min-width: 1024px) 413px, (min-width: 768px) 443px, 72vw"
+                />
+                <img class="absolute left-[-127.86%] top-[-45.36%] h-[165.41%] w-[273.02%] max-w-none object-cover" src="/assets/equipment-inset.png" alt="Workers pouring concrete into a drilled pier" width="413" height="360" loading="lazy" decoding="async" />
               </picture>
             </div>
           </div>
