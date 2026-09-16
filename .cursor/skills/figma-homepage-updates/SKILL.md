@@ -27,7 +27,7 @@ Extra state frames (not full homepage copies):
 
 - `Header Desktop-02 — Solid (after Companies)` — scrolled header
 - `Mobile menu open — Homepage Mobile-02` — hamburger overlay (also documents tablet open menu)
-- Button hover components beside `Butttons-02`
+- Button hover components beside `Butttons-02`, including `Icon Button Arrow` (`6413:240`) Default / Hover (Neutral-200), 52px
 
 Keep existing menu overlay behavior. Do not invent extra tablet section layouts beyond that frame.
 
@@ -37,7 +37,7 @@ The header sits on top of the hero (`-mt-[58px]` mobile, `-mt-[93px]` from table
 
 Content is **bottom-aligned** (`justify-end`). `.hero-inner` padding-top is only the overlay bar; the gap under the nav comes from min-height + `justify-end`. Implemented in `src/style.css` (re-measure if nodes move):
 
-- Mobile (below 768px): min-height `934px`, padding-top `58px`, padding-bottom `80px` (`Homepage Mobile-V1`)
+- Mobile (below 768px): min-height `944px`, padding-top `58px`, padding-bottom `80px` (`Homepage Mobile-V1`)
 - Tablet (768–1279): min-height interpolates Regular Tablet-V1 `924px` → Large Tablet-V1 `900px`; padding-top `93px`, padding-bottom `80px`
 - Desktop (1280px+): min-height `824px`, padding-top `93px`, padding-bottom `80px` (`Homepage Desktop-V1`)
 - Gap between hero blocks: `32px` (`gap-8`)
@@ -48,16 +48,16 @@ Do not mix `md:pt-*` with `lg:py-*` on `.hero-inner`. Do not copy this overlay o
 
 ## Approved exceptions (code wins until Figma is updated)
 
-- **Photos** in overflow frames: keep Figma crop offsets if present, and always add `object-cover` so images do not stretch.
-- **Who We Serve cards:** Desktop-V1 and Large Tablet-V1 are a 560px side-by-side bento (left photo 1fr, right stack 2fr; top row 1fr/2fr). Apply that from `min-[1024px]` (hamburger still below 1280). Regular Tablet-V1 stacks a 400px photo over two 272px rows (2-col then 3-col). Mobile-V1 stacks every tile full-width like the site (do not keep the cramped 2/3-column bento). Keep `bg-black/40` on the Concrete Contractors photo so the caption stays readable. The Discuss Your Project text link uses full `text-lime-dark` like View All Services (do not fade the CTA with the intro copy).
+- **Photos** in overflow frames: keep Figma crop offsets if present, and always add `object-cover` so images do not stretch. Do **not** add a second `overflow-hidden` + radius wrapper around a `<picture>` to place an overlay — that makes photos blurry on high-DPI screens. Round the `<img>`. Overlay controls are siblings. Keep `srcset`, `sizes`, `width`, `height`, and `alt`. Our Services: `.service-card-photo` uses 8px / 42px corners; the 52px arrow sits 6px from the right and 9px from the photo bottom on every breakpoint. Our Work uses the same 52px lime/Neutral-200 button, top-right.
+- **Who We Serve cards:** Copy is audience tiles: Concrete Contractors, Home Builders, Pool Companies, Direct Clients, plus Based in Hockley, Texas. Desktop-V1 and Large Tablet-V1 are a 560px side-by-side bento (left photo 1fr, right stack 2fr; top row 1fr/2fr). Apply that from `min-[1024px]` (hamburger still below 1280). Regular Tablet-V1 stacks a 400px photo over two 272px rows (2-col then 3-col). Mobile-V1 stacks every tile full-width like the site (do not keep the cramped 2/3-column bento). Keep `bg-black/40` on the Concrete Contractors photo so the caption stays readable. The Discuss Your Project text link uses full `text-lime-dark` like View All Services (do not fade the CTA with the intro copy).
 - **Header scroll:** the live site switches from a clear overlay to a blurred solid bar at Companies. In Figma that is two states, not one frame that tries to show both.
-- **Our Work hover:** Desktop-V1 cards are a flat 20% black overlay only. The live site keeps that at rest and adds `.project-card-scrim` on hover/focus (bottom ink gradient). Do not clear the overlay on hover.
+- **Our Work hover:** Desktop-V1 cards are a flat 20% black overlay only. The live site keeps that at rest and adds `.project-card-scrim` on hover/focus (bottom ink gradient). Do not clear the overlay on hover. Circular arrows use `.icon-arrow-btn` at 52px on Our Services and Our Work (all breakpoints); card hover/focus/active fills Neutral-200 (`#f1f1f1`). Figma hover is a variant next to `Butttons-02`, not a change to the default lime rest state.
 - **Soil & Rock drill icon:** Noun Project (`noun-drilling-8343366`), not Streamline. Leave the Figma SVG stroke. Do not redraw it.
-- **Equipment vs How We Work spacing:** different on purpose in Desktop-V1. Do not copy one section’s gutter onto the other unless asked.
+- **Equipment vs How We Work spacing:** different on purpose in Desktop-V1. Do not copy one section’s gutter onto the other unless asked. How We Work steps (Left Content Container) stay full column width with no `max-width` at tablet, mobile, or desktop.
 
 ## Assets
 
-Download Figma image/SVG URLs into `public/assets/`. Do not redraw icons. Do not swap photo and grid files without checking both.
+Download Figma image/SVG URLs into `public/assets/`. Do not redraw icons. Do not swap photo and grid files without checking both. `srcset` `w` descriptors must match the file’s real pixel width. After any photo markup change, confirm the image is sharp on desktop and mobile (not only that the layout matches).
 
 ## After edits
 
