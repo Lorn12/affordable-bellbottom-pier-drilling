@@ -9,7 +9,7 @@ description: Matches this site’s homepage to the Figma file (tokens, frames, a
 
 1. If the target section, breakpoint, or Figma node is unclear, **ask**. Do not assume.
 2. Load the Figma MCP skill `figma-design-to-code` before calling `get_design_context`.
-3. Call `get_variable_defs` on the frame you are implementing (`Homepage Desktop-V1` `6161:112` on Ready Homepage and mobile, `Homepage Large Tablet-V1` `6217:356` (1280), `Homepage Regular Tablet-V1` `5869:721` (768), and/or `Homepage Mobile-V1` `5869:362` unless the user gives a different node; About page desktop is `About Desktop` `5916:827`). Do not implement from unsuffixed archive frames.
+3. Call `get_variable_defs` on the frame you are implementing (`Homepage Desktop-V1` `6161:112` on Ready Homepage and mobile, `Homepage Large Tablet-V1` `6217:356` (1280), `Homepage Regular Tablet-V1` `5869:721` (768), and/or `Homepage Mobile-V1` `5869:362` unless the user gives a different node; About is `About Desktop-V1` `6546:410`, `About Large Tablet-V1` `6546:1573`, and `About Regular Tablet-V1` `6552:5848` on **About Page**). Do not implement from unsuffixed archive frames.
 4. Call `get_design_context` on the **section** node, not only the full page, when the page is too large.
 5. Compare tokens to `src/style.css` and the markup. Change the site to match Figma Desktop-V1 / Regular Tablet-V1 / Mobile-V1, not the reverse, unless asked to update Figma **or** an approved exception below already applies.
 6. Change only the breakpoint named in the request. Do not restyle tablet or mobile in the same pass.
@@ -65,7 +65,13 @@ Follow the project rule to verify in the browser (desktop and mobile). Do not de
 
 ## About page
 
-Visual source: `About Desktop` `5916:827` (1440). Hero is 800 tall (shorter than Home); use `.about-hero-inner`, not `.hero-inner`. Same overlay recipe as Home (photo 0.78, hex grid 0.12, ink gradient). No About tablet/mobile frames — do not invent them.
+Visual source on **About Page**:
+
+- Desktop: `About Desktop-V1` `6546:410` (1440). Full nav from 1280px (`lg`).
+- Large tablet: `About Large Tablet-V1` `6546:1573` (1280) — visual source from `min-[1024px]` through 1279 (hamburger still below 1280).
+- Regular tablet: `About Regular Tablet-V1` `6552:5848` (768) — visual source for 768–1023. There is no About mobile frame — do not invent that layout.
+
+Hero uses `.about-hero-inner`, not `.hero-inner`. Same overlay recipe as Home (photo 0.78, hex grid 0.12, ink gradient). Regular Tablet-V1 hero is 742 tall; Large Tablet-V1 / Desktop-V1 are 800. Interpolate 742→800 across 768–1279. Capabilities marquee after the hero matches the homepage strip. Who We Are photos are 400 tall: Regular Tablet-V1 is a 2-up + full-width third photo with stacked captions; 3-column photos and caption row from `min-[1024px]`. Fill with `object-cover` (do not use the Figma 156% crop offsets). Why Choose Us Regular Tablet-V1 matches the homepage regular-tablet bento (400px photo over 2-col then 3-col rows); side-by-side 560px bento from `min-[1024px]`. Keep `bg-black/40` on the Why Choose photo so captions stay readable. Equipment & Access and the quote CTA stack on Regular Tablet-V1 and go side-by-side from `min-[1024px]`.
 
 ## Out of scope unless the user asks
 

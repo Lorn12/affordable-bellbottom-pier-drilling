@@ -125,7 +125,15 @@ h3 {
 
 @media (min-width: 768px) {
   .about-hero-inner {
+    /* About Regular Tablet-V1 742 → Large Tablet-V1 800 across 768–1279 */
+    min-height: calc(742px + 58 * (100vw - 768px) / 512);
     padding-top: 93px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-hero-inner {
+    min-height: 800px;
   }
 }
 

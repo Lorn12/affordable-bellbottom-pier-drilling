@@ -20,7 +20,7 @@ Keep those items visible in the menu. Do not build remaining inner pages or inve
 
 When a page is approved, add it as its own HTML file and follow `.cursor/rules/code-hygiene.mdc`. Do not dump new pages into `index.html`.
 
-**About:** implement from Figma `About Desktop` `5916:827`. There is no About tablet or mobile frame yet — do not invent those layouts. Further About visual updates stay in Figma first.
+**About:** implement from Figma `About Desktop-V1` `6546:410`, `About Large Tablet-V1` `6546:1573`, and `About Regular Tablet-V1` `6552:5848` on the About Page canvas. There is no About mobile frame yet — do not invent that layout. Further About visual updates stay in Figma first.
 
 **Until the designer says otherwise:**
 

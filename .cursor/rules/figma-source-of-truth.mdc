@@ -19,7 +19,9 @@ Known homepage frames (confirm in Figma if they move). **Use these as the visual
 - Tablet: `Homepage Large Tablet-V1` `6217:356` (1280 wide) on **Ready Homepage and mobile** — visual source for 768–1279. Keep `Homepage Regular Tablet-V1` `5869:721` (768 wide) as the min-width tablet. Archive: `5435:27`
 - Mobile: `Homepage Mobile-V1` `5869:362` (400 wide). Archive: `5162:925`
 - Buttons board: `Butttons-02` `5869:709` (file spelling). Default Button L/M/S components stay as they are. Hover is extra components next to that board, not a change to the default lime buttons.
-- About desktop: `About Desktop` `5916:827` (1440 wide) on the **About Page** canvas. No About tablet or mobile frame yet — do not invent those layouts.
+- About desktop: `About Desktop-V1` `6546:410` (1440 wide) on the **About Page** canvas. Older unsuffixed `About Desktop` frames are not the visual source.
+- About large tablet: `About Large Tablet-V1` `6546:1573` (1280 wide) on **About Page** — visual source from `min-[1024px]` through 1279 (hamburger still below 1280).
+- About regular tablet: `About Regular Tablet-V1` `6552:5848` (768 wide) on **About Page** — visual source for 768–1023. No About mobile frame yet — do not invent that layout.
 
 Going forward: the designer designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless they ask.
 
@@ -44,5 +46,7 @@ If the user points at a mismatch, read that section’s node. Do not guess which
 - Header overlay behavior: clear over the hero on the homepage frames; solid (`ink` 80% + blur 50px + shadows) is a separate Figma state (`Header Desktop-02 — Solid (after Companies)`), not applied to the default overlay menu.
 - **Our Work cards:** keep the Figma rest overlay (`bg-black/20`). On hover and keyboard focus, fade in `.project-card-scrim` (bottom ink gradient). Do not remove the rest overlay on hover. Circular arrows are 52px (`.icon-arrow-btn`); card hover/focus/active fills Neutral-200.
 - **Who We Serve mobile:** Homepage Mobile-V1 stacks the bento full-width (same order as the site). Do not restore the 2-col / 3-col mobile grid.
+- **Who We Serve / About Why Choose photo overlay:** keep `bg-black/40` on the Concrete Contractors card and the About Why Choose Us left photo so captions stay readable.
+- **About Who We Are photos:** fill the 400px frames with `object-cover`. Do not restore Figma’s 156% crop offsets. Regular Tablet-V1 uses 2-up + full-width third from 768–1023; 3-column from `min-[1024px]`.
 - **Capabilities drill icon:** keep the Noun Project export (`icon-drilling.svg`) as-is. Do not thicken or redraw it to match the Streamline icons next to it unless a Streamline glyph is placed in Figma.
 - Do not equalize Equipment & Capabilities vs How We Work column gutters unless asked. Desktop-V1 uses different left/right widths (Equipment left max 720 + 524px photos; How We Work two flex columns). How We Work steps (Left Content Container) have no max-width at any breakpoint — they fill the column.
