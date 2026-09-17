@@ -42,7 +42,7 @@ Content is **bottom-aligned** (`justify-end`). `.hero-inner` padding-top is only
 - Desktop (1280px+): min-height `824px`, padding-top `93px`, padding-bottom `80px` (`Homepage Desktop-V1`)
 - Gap between hero blocks: `32px` (`gap-8`)
 - Photo `opacity-[0.78]`, hex grid `opacity-12`, gradient `from-[rgba(11,11,11,0.225)]` to `to-[rgba(11,11,11,0.846)]` (Option A ink wash: Figma gradient layer 0.9, stops 0.25→0.94)
-- Desktop review: `lg:bottom-20` (80px), `lg:right-20`
+- Review card (Desktop-V1, Large Tablet-V1, Regular Tablet-V1, Mobile-V1): fill `rgba(151,151,151,0.1)`, Glass background blur `4px`, no stroke. Desktop position `lg:bottom-20` (80px), `lg:right-20`
 
 Do not mix `md:pt-*` with `lg:py-*` on `.hero-inner`. Do not copy this overlay onto `.dark-pattern` unless asked.
 
