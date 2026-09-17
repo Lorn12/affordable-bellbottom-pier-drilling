@@ -41,7 +41,7 @@ Content is **bottom-aligned** (`justify-end`). `.hero-inner` padding-top is only
 - Tablet (768–1279): min-height interpolates Regular Tablet-V1 `924px` → Large Tablet-V1 `900px`; padding-top `93px`, padding-bottom `80px`
 - Desktop (1280px+): min-height `824px`, padding-top `93px`, padding-bottom `80px` (`Homepage Desktop-V1`)
 - Gap between hero blocks: `32px` (`gap-8`)
-- Photo `opacity-[0.78]`, hex grid `opacity-12`, gradient `from-[rgba(11,11,11,0.11)]` to `to-[rgba(11,11,11,0.63)]`
+- Photo `opacity-[0.78]`, hex grid `opacity-12`, gradient `from-[rgba(11,11,11,0.225)]` to `to-[rgba(11,11,11,0.846)]` (Option A ink wash: Figma gradient layer 0.9, stops 0.25→0.94)
 - Desktop review: `lg:bottom-20` (80px), `lg:right-20`
 
 Do not mix `md:pt-*` with `lg:py-*` on `.hero-inner`. Do not copy this overlay onto `.dark-pattern` unless asked.
@@ -69,9 +69,10 @@ Visual source on **About Page**:
 
 - Desktop: `About Desktop-V1` `6546:410` (1440). Full nav from 1280px (`lg`).
 - Large tablet: `About Large Tablet-V1` `6546:1573` (1280) — visual source from `min-[1024px]` through 1279 (hamburger still below 1280).
-- Regular tablet: `About Regular Tablet-V1` `6552:5848` (768) — visual source for 768–1023. There is no About mobile frame — do not invent that layout.
+- Regular tablet: `About Regular Tablet-V1` `6552:5848` (768) — visual source for 768–1023.
+- Mobile: `About Mobile-V1` `6595:1954` (400). Why Choose Us stacks the bento full-width like Homepage Mobile-V1 Who We Serve.
 
-Hero uses `.about-hero-inner`, not `.hero-inner`. Same overlay recipe as Home (photo 0.78, hex grid 0.12, ink gradient). Regular Tablet-V1 hero is 742 tall; Large Tablet-V1 / Desktop-V1 are 800. Interpolate 742→800 across 768–1279. Capabilities marquee after the hero matches the homepage strip. Who We Are photos are 400 tall: Regular Tablet-V1 is a 2-up + full-width third photo with stacked captions; 3-column photos and caption row from `min-[1024px]`. Fill with `object-cover` (do not use the Figma 156% crop offsets). Why Choose Us Regular Tablet-V1 matches the homepage regular-tablet bento (400px photo over 2-col then 3-col rows); side-by-side 560px bento from `min-[1024px]`. Keep `bg-black/40` on the Why Choose photo so captions stay readable. Equipment & Access and the quote CTA stack on Regular Tablet-V1 and go side-by-side from `min-[1024px]`.
+Hero uses `.about-hero-inner`, not `.hero-inner`. Same overlay recipe as Home (photo 0.78, hex grid 0.12, ink gradient). Regular Tablet-V1 hero is 742 tall; Large Tablet-V1 / Desktop-V1 are 800. Interpolate 742→800 across 768–1279. Capabilities marquee after the hero matches the homepage strip. Who We Are photos are 400 tall: Regular Tablet-V1 is a 2-up + full-width third photo with stacked captions; 3-column photos and caption row from `min-[1024px]`. Fill with `object-cover` (do not use the Figma 156% crop offsets). Why Choose Us Regular Tablet-V1 matches the homepage regular-tablet bento (400px photo over 2-col then 3-col rows); side-by-side 560px bento from `min-[1024px]`; About Mobile-V1 stacks every tile full-width. Keep `bg-black/40` on the Why Choose photo so captions stay readable. Equipment & Access and the quote CTA stack on Regular Tablet-V1 and go side-by-side from `min-[1024px]`.
 
 ## Out of scope unless the user asks
 
