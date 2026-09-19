@@ -229,7 +229,11 @@ document.querySelectorAll("[data-nav-dropdown]").forEach((root) => {
 
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    setOpen(!isOpen());
+    if (isOverlay) {
+      setOpen(!isOpen());
+      return;
+    }
+    setOpen(true);
   });
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && isOpen()) {

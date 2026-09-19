@@ -29,7 +29,7 @@ When a page is approved, add it as its own HTML file and follow `.cursor/rules/c
 **Until the designer says otherwise:**
 
 - Quote / “Request a Quote” on Home, About, and the Services hub stays phone (`tel:+12813523077`). The Straight-Shaft page has a quote form (fields only; submissions are not delivered until an email/form service is chosen). A Contact page comes later.
-- Desktop **Services** goes to `services.html`. The chevron opens a dropdown: All Services (hub), Straight-Shaft (live), remaining services coming soon.
+- Desktop and overlay **Services** is a dropdown trigger (hover or click), not a page link. All Services in the dropdown goes to `services.html`. Straight-Shaft is live; remaining services coming soon.
 - Only change the breakpoint or section the designer named (e.g. desktop-only). Do not restyle tablet or mobile “while you are there.”
 
 Do not change hosting or domain setup unless the user asks.

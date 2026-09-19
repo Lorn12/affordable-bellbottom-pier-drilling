@@ -28,7 +28,7 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 - Confirm canonical/OG/schema/robots/sitemap domain (`https://bellbottompierdrilling.com/` is assumed — verify)
 - Request a Quote CTA + accessible form (labels, `required`, errors not color-only, no confidential data in URLs, prevent double submit). Until then, quote buttons that call should not use an `aria-label` that hides the visible “Request a Quote” text
 - Keyboard-test desktop Services dropdown (`aria-expanded`, Escape) and mobile menu
-- Homepage a11y leftovers: coming-soon links still in tab order; Services chevron implies a menu it does not have yet
+- Homepage a11y leftovers: coming-soon links still in tab order
 
 **Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Do not rewrite the hub when adding remaining individual service pages. Straight-Shaft lives at `services/straight-shaft-pier-drilling.html`; the hub Explore for that service is live. Remaining hub Explore links stay coming soon. Desktop Services dropdown is live (`aria-expanded`, Escape); remaining dropdown items besides All Services and Straight-Shaft stay coming soon.
 
