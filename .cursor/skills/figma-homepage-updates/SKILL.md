@@ -95,7 +95,7 @@ Visual source on **Services Page**:
 - Desktop: `Services Desktop-V1` `6692:1699` (1440). Full nav from 1280px (`lg`).
 - Large tablet: `Services Large Tablet-V1` `6738:2969` (1280) — hamburger still below 1280. Hero 800, pad 40. Listing cards 2-up; fifth card half-width left-aligned.
 - Regular tablet: `Services Regular Tablet-V1` `6738:3177` (768) — hero 742, pad 40. Cards, prep, and CTA stack.
-- Mobile: `Services Mobile-V1` `6738:3371` (400) — hero 800, pad 20. Cards, prep, and CTA stack. Hero `header-xl` 48; section/CTA/footer `header-l` 36 (Typography Mobile mode).
+- Mobile: `Services Mobile-V1` `6738:3371` (400) — hero 742, pad 20. Cards, prep, and CTA stack. Hero `header-xl` 48; section/CTA/footer `header-l` 36 (Typography Mobile mode).
 
 Hero uses `.services-hero-inner` (800 desktop, same overlay recipe as About). Live hub still stacks below desktop until asked to match the new frames. Explore links on the hub stay coming soon until asked to wire them. Project Preparation accordion copy is the approved four-item list; Figma shows state 1 only.
 
