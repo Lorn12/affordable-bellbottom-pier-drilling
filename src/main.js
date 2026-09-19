@@ -186,6 +186,41 @@ menu?.querySelectorAll("a").forEach((link) => {
   });
 });
 
+document.querySelectorAll("[data-nav-dropdown]").forEach((root) => {
+  const button = root.querySelector("[data-nav-dropdown-button]");
+  const panel = root.querySelector("[data-nav-dropdown-panel]");
+  if (!button || !panel) return;
+
+  function setOpen(open) {
+    button.setAttribute("aria-expanded", open ? "true" : "false");
+    panel.hidden = !open;
+  }
+
+  function isOpen() {
+    return button.getAttribute("aria-expanded") === "true";
+  }
+
+  root.addEventListener("mouseenter", () => setOpen(true));
+  root.addEventListener("mouseleave", () => setOpen(false));
+  root.addEventListener("focusin", () => setOpen(true));
+  root.addEventListener("focusout", (event) => {
+    if (!root.contains(event.relatedTarget)) setOpen(false);
+  });
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    setOpen(!isOpen());
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && isOpen()) {
+      setOpen(false);
+      button.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!root.contains(event.target)) setOpen(false);
+  });
+});
+
 function announceComingSoon(event) {
   const link = event.currentTarget;
   if (link.getAttribute("aria-disabled") !== "true") return;

@@ -30,7 +30,7 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 - Keyboard-test desktop Services dropdown (`aria-expanded`, Escape) and mobile menu
 - Homepage a11y leftovers: coming-soon links still in tab order; Services chevron implies a menu it does not have yet
 
-**Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Nav/footer/home cards crawl to the hub (and hash IDs). Individual service pages and the Services dropdown are not built; Explore links on the hub stay coming soon.
+**Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Do not rewrite the hub when adding remaining individual service pages. Straight-Shaft lives at `services/straight-shaft-pier-drilling.html`; the hub Explore for that service is live. Remaining hub Explore links stay coming soon. Desktop Services dropdown is live (`aria-expanded`, Escape); remaining dropdown items besides All Services and Straight-Shaft stay coming soon.
 
 ## Still needs client confirmation (do not guess)
 

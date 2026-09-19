@@ -27,6 +27,10 @@ Known homepage frames (confirm in Figma if they move). **Use these as the visual
 - Services large tablet: `Services Large Tablet-V1` `6738:2969` (1280 wide) on **Services Page** — hamburger (full nav still from 1280). 2-up listing cards; fifth card half-width, left-aligned.
 - Services regular tablet: `Services Regular Tablet-V1` `6738:3177` (768 wide) on **Services Page** — stacked listing cards, stacked prep + CTA.
 - Services mobile: `Services Mobile-V1` `6738:3371` (400 wide) on **Services Page** — stacked listing cards, stacked prep + CTA.
+- Straight-Shaft desktop: `Straight-Shaft Pier Drilling Desktop-V1` `6748:4368` (1440 wide) on **Services Page**. Two-column overview (780 + 80 gap + 420). Hidden Related Services stay off the site.
+- Straight-Shaft large tablet: `Straight-Shaft Pier Drilling Large Tablet-V1` `6784:4838` (1280 wide) on **Services Page** — visual source from `min-[1024px]` through 1279 (hamburger still below 1280). Two-column overview (700 + 80 gap + 420), pad 40, hero 800.
+- Straight-Shaft regular tablet: `Straight-Shaft Pier Drilling Regular Tablet-V1` `6784:5233` (768 wide) — stacked overview then full-width quote form and All Services (688). Hero 742, pad 40, CTA stacked and centered.
+- Straight-Shaft mobile: `Services Mobile-V1` `6784:5629` (400 wide) on **Services Page** (Straight-Shaft detail, not the hub). Stacked overview, full-width quote + All Services, hero 742, pad 20, CTA stacked with stacked buttons. Hub mobile stays `Services Mobile-V1` `6738:3371`.
 
 Going forward: the designer designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless they ask.
 

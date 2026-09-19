@@ -12,13 +12,14 @@ This is HTML + Tailwind (Vite), not React. Do not split the homepage into compon
 - Home markup: `index.html`
 - About markup: `about.html`
 - Services markup: `services.html` (accordion in `src/services.js`)
+- Straight-Shaft service markup: `services/straight-shaft-pier-drilling.html` (quote form in `src/quote-form.js`)
 - Shared styles: `src/style.css` (tokens, header, hero overlay, marquee, utilities used in more than one section)
-- Shared behavior: `src/main.js` (menu, header solid state, marquee)
+- Shared behavior: `src/main.js` (menu, header solid state, marquee, Services dropdown)
 - Assets: `public/assets/`
 
 ## When inner pages are approved
 
-One HTML file per page at the repo root (`about.html`, `contact.html`, later `services.html` or `pier-drilling.html`). Register that file in `vite.config.js` `build.rollupOptions.input` or the production/GitHub Pages build will omit it. Reuse header/footer markup and `src/main.js` / `src/style.css`. Add `src/about.js` (and import it only from that page) only if that page needs unique behavior. Do not start a `pages/` or `components/` tree unless asked.
+One HTML file per page. Root files for Home, About, and the Services hub; individual services live under `services/` (`services/straight-shaft-pier-drilling.html`). Register each file in `vite.config.js` `build.rollupOptions.input` or the production/GitHub Pages build will omit it. Reuse header/footer markup and `src/main.js` / `src/style.css`. Add a page JS file (and import it only from that page) only if that page needs unique behavior. Do not start a `pages/` or `components/` tree unless asked.
 
 ## Always
 

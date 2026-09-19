@@ -1,5 +1,5 @@
 ---
-description: Homepage-first HTML + Tailwind stack; Home, About, and Services hub are live.
+description: Homepage-first HTML + Tailwind stack; Home, About, Services hub, and Straight-Shaft are live.
 alwaysApply: true
 ---
 
@@ -7,12 +7,11 @@ alwaysApply: true
 
 This repo is HTML + Tailwind (Vite). Do not introduce WordPress, React, or another stack unless the user asks for it.
 
-**Live now:** Home (`index.html`), About (`about.html`), and Services hub (`services.html`), plus same-page jumps and the phone number.
+**Live now:** Home (`index.html`), About (`about.html`), Services hub (`services.html`), and Straight-Shaft Pier Drilling (`services/straight-shaft-pier-drilling.html`), plus same-page jumps and the phone number.
 
 **Stay “coming soon”** until the user says otherwise:
 
-- Individual service pages (Explore links on the hub)
-- Services dropdown (nav Services goes to `services.html`; chevron stays visual only)
+- Remaining individual service pages (Belled, Pool, Home Foundation, Concrete Pour — Explore links stay coming soon)
 - Projects
 - Careers
 - Contact
@@ -25,10 +24,12 @@ When a page is approved, add it as its own HTML file and follow `.cursor/rules/c
 
 **Services:** implement from Figma `Services Desktop-V1` `6692:1699`, `Services Large Tablet-V1` `6738:2969`, `Services Regular Tablet-V1` `6738:3177`, and `Services Mobile-V1` `6738:3371` on the **Services Page** canvas. Do not restyle tablet/mobile layout on the live hub until asked to match those frames. Heading sizes on Home, About, and Services follow the Typography collection modes even when a frame is bound to the wrong style (see figma-source-of-truth). Further Services visual updates stay in Figma first.
 
+**Straight-Shaft service page:** live file `services/straight-shaft-pier-drilling.html` from Figma on **Services Page**: Desktop-V1 `6748:4368` (1440, two-column 780 + 420), Large Tablet-V1 `6784:4838` (1280, two-column 700 + 420 from `min-[1024px]` through 1279, hamburger still below 1280), Regular Tablet-V1 `6784:5233` (768, stacked overview then full-width quote + All Services), and mobile `Services Mobile-V1` `6784:5629` (400, stacked; this is the Straight-Shaft mobile frame, not the hub). Related listing cards stay hidden. Hub `Services Mobile-V1` remains `6738:3371`.
+
 **Until the designer says otherwise:**
 
-- Quote / “Request a Quote” stays phone (`tel:+12813523077`). No quote form. A Contact page (and any form) comes later.
-- Desktop **Services** goes to `services.html`. A dropdown with individual service pages comes later. Do not build that dropdown yet.
+- Quote / “Request a Quote” on Home, About, and the Services hub stays phone (`tel:+12813523077`). The Straight-Shaft page has a quote form (fields only; submissions are not delivered until an email/form service is chosen). A Contact page comes later.
+- Desktop **Services** goes to `services.html`. The chevron opens a dropdown: All Services (hub), Straight-Shaft (live), remaining services coming soon.
 - Only change the breakpoint or section the designer named (e.g. desktop-only). Do not restyle tablet or mobile “while you are there.”
 
 Do not change hosting or domain setup unless the user asks.

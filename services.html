@@ -84,7 +84,7 @@
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Straight-Shaft Pier Drilling",
-                "url": "https://bellbottompierdrilling.com/services.html#straight-shaft-pier-drilling"
+                "url": "https://bellbottompierdrilling.com/services/straight-shaft-pier-drilling.html"
               },
               {
                 "@type": "ListItem",
@@ -150,11 +150,28 @@
           <ul class="flex min-w-0 items-center gap-10 text-base font-medium text-neutral-200">
             <li><a class="hover:text-white" href="./">Home</a></li>
             <li><a class="hover:text-white" href="about.html">About</a></li>
-            <li>
-              <a class="inline-flex items-center gap-1 hover:text-white" href="services.html" aria-current="page">
-                Services
-                <img src="/assets/chevron-down.svg" alt="" width="10" height="6" />
-              </a>
+            <li class="nav-dropdown relative" data-nav-dropdown>
+              <div class="flex items-center gap-1">
+                <a class="hover:text-white" href="services.html" aria-current="page">Services</a>
+                <button
+                  class="inline-flex size-6 items-center justify-center hover:text-white"
+                  type="button"
+                  data-nav-dropdown-button
+                  aria-expanded="false"
+                  aria-controls="services-dropdown"
+                  aria-label="Services menu"
+                >
+                  <img src="/assets/chevron-down.svg" alt="" width="10" height="6" />
+                </button>
+              </div>
+              <ul id="services-dropdown" class="nav-dropdown-panel" hidden data-nav-dropdown-panel>
+                <li><a href="services.html" aria-current="page">All Services</a></li>
+                <li><a href="services/straight-shaft-pier-drilling.html">Straight-Shaft Pier Drilling</a></li>
+                <li><a class="coming-soon" href="#" aria-disabled="true">Belled Pier Drilling</a></li>
+                <li><a class="coming-soon" href="#" aria-disabled="true">Pool Pier Drilling</a></li>
+                <li><a class="coming-soon" href="#" aria-disabled="true">Home Foundation Pier Drilling</a></li>
+                <li><a class="coming-soon" href="#" aria-disabled="true">Concrete Pour Assistance</a></li>
+              </ul>
             </li>
             <li><a class="coming-soon hover:text-white" href="#" aria-disabled="true">Projects</a></li>
             <li><a class="coming-soon hover:text-white" href="#" aria-disabled="true">Careers</a></li>
@@ -197,7 +214,12 @@
         <ul class="space-y-4 text-xl font-medium">
           <li><a href="./">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="services.html" aria-current="page">Services</a></li>
+          <li>
+            <a href="services.html" aria-current="page">Services</a>
+            <ul class="mt-3 space-y-3 pl-4 text-lg font-medium text-neutral-200">
+              <li><a href="services/straight-shaft-pier-drilling.html">Straight-Shaft Pier Drilling</a></li>
+            </ul>
+          </li>
           <li><a class="coming-soon" href="#" aria-disabled="true">Projects</a></li>
           <li><a class="coming-soon" href="#" aria-disabled="true">Careers</a></li>
           <li><a class="coming-soon" href="#" aria-disabled="true">Contact</a></li>
@@ -309,7 +331,7 @@
 
           <div class="grid grid-cols-1 gap-10 min-[1024px]:grid-cols-2 min-[1024px]:gap-x-6 min-[1024px]:gap-y-10">
             <article id="straight-shaft-pier-drilling" class="listing-card relative flex w-full min-w-0 flex-col rounded-2xl bg-white">
-              <a class="coming-soon listing-card-photo relative block h-[400px] w-full shrink-0" href="#" aria-disabled="true" aria-label="Explore Straight-Shaft Pier Drilling">
+              <a class="listing-card-photo relative block h-[400px] w-full shrink-0" href="services/straight-shaft-pier-drilling.html" aria-label="Explore Straight-Shaft Pier Drilling">
                 <picture class="absolute inset-0 block size-full">
                   <source
                     type="image/webp"
@@ -328,7 +350,7 @@
                 <p class="leading-[1.75] text-neutral-600">
                   Straight-shaft pier holes drilled for residential and commercial foundation projects, based on project requirements and site conditions.
                 </p>
-                <a class="coming-soon link-cta inline-flex cursor-pointer items-center gap-2 font-medium leading-[1.5] text-lime-dark transition-colors hover:text-ink" href="#" aria-disabled="true">
+                <a class="link-cta inline-flex cursor-pointer items-center gap-2 font-medium leading-[1.5] text-lime-dark transition-colors hover:text-ink" href="services/straight-shaft-pier-drilling.html">
                   Explore Straight-Shaft Pier Drilling
                   <svg class="size-4 shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -626,7 +648,7 @@
             <div class="w-[180px] shrink-0 md:max-lg:w-auto md:max-lg:flex-1 lg:w-auto lg:max-w-[180px] lg:flex-1">
               <h2 class="text-xl font-medium">Services</h2>
               <ul class="mt-4 space-y-2 text-neutral-300">
-                <li><a class="py-1 hover:text-white" href="#straight-shaft-pier-drilling">Pier drilling</a></li>
+                <li><a class="py-1 hover:text-white" href="services/straight-shaft-pier-drilling.html">Pier drilling</a></li>
                 <li><a class="py-1 hover:text-white" href="#belled-pier-drilling">Belled drilling</a></li>
                 <li><a class="py-1 hover:text-white" href="#pool-pier-drilling">Pool work</a></li>
                 <li><a class="py-1 hover:text-white" href="#home-foundation-pier-drilling">Residential</a></li>

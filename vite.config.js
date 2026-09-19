@@ -14,6 +14,7 @@ export default defineConfig({
         main: resolve(root, "index.html"),
         about: resolve(root, "about.html"),
         services: resolve(root, "services.html"),
+        straightShaft: resolve(root, "services/straight-shaft-pier-drilling.html"),
       },
     },
   },

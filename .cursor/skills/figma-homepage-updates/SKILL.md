@@ -97,8 +97,10 @@ Visual source on **Services Page**:
 - Regular tablet: `Services Regular Tablet-V1` `6738:3177` (768) — hero 742, pad 40. Cards, prep, and CTA stack.
 - Mobile: `Services Mobile-V1` `6738:3371` (400) — hero 800, pad 20. Cards, prep, and CTA stack. Hero `header-xl` 48; section/CTA/footer `header-l` 36 (Typography Mobile mode).
 
-Hero uses `.services-hero-inner` (800 desktop, same overlay recipe as About). Live hub still stacks below desktop until asked to match the new frames. Explore links stay coming soon until individual service pages exist. Project Preparation accordion copy is the approved four-item list; Figma shows state 1 only.
+Hero uses `.services-hero-inner` (800 desktop, same overlay recipe as About). Live hub still stacks below desktop until asked to match the new frames. Explore links on the hub stay coming soon until asked to wire them. Project Preparation accordion copy is the approved four-item list; Figma shows state 1 only.
+
+Straight-Shaft live file `services/straight-shaft-pier-drilling.html` from **Services Page**: Desktop-V1 `6748:4368` (two-column from `lg`), Large Tablet-V1 `6784:4838` (two-column from `min-[1024px]`), Regular Tablet-V1 `6784:5233` (stacked 768–1023), mobile `Services Mobile-V1` `6784:5629` (stacked below 768; not the hub). Hero uses `.straight-shaft-hero-inner` (742 mobile/regular tablet, interpolates to 800 by 1280). Hidden Related Services stay off the site. Hub Explore for Straight-Shaft is live; remaining hub Explore links stay coming soon. Desktop Services nav still goes to `services.html`; the chevron opens a dropdown that includes Straight-Shaft. Hub `Services Mobile-V1` is `6738:3371`.
 
 ## Out of scope unless the user asks
 
-WordPress/React, hosting, inventing copy that is not in Figma, remaining inner pages (individual service pages, Projects, Careers, Contact).
+WordPress/React, hosting, inventing copy that is not in Figma, remaining inner pages (other individual service pages, Projects, Careers, Contact).
