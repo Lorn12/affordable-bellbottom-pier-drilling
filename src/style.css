@@ -357,13 +357,23 @@ h3 {
 .nav-dropdown-panel a {
   display: block;
   padding: 10px 16px;
-  color: var(--color-neutral-200);
   white-space: nowrap;
 }
 
+.nav-dropdown-panel a,
+[data-mobile-menu] [data-nav-dropdown-panel] a {
+  color: var(--color-neutral-200);
+}
+
 .nav-dropdown-panel a:hover,
-.nav-dropdown-panel a:focus-visible {
-  color: #fff;
+.nav-dropdown-panel a:focus-visible,
+.nav-dropdown-panel a:active,
+.nav-dropdown-panel a[aria-current="page"],
+[data-mobile-menu] [data-nav-dropdown-panel] a:hover,
+[data-mobile-menu] [data-nav-dropdown-panel] a:focus-visible,
+[data-mobile-menu] [data-nav-dropdown-panel] a:active,
+[data-mobile-menu] [data-nav-dropdown-panel] a[aria-current="page"] {
+  color: var(--color-lime);
 }
 
 [data-mobile-menu] [data-nav-dropdown-button][aria-expanded="true"] img {
