@@ -214,10 +214,32 @@
         <ul class="space-y-4 text-xl font-medium">
           <li><a href="./">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li>
-            <a href="services.html" aria-current="page">Services</a>
-            <ul class="mt-3 space-y-3 pl-4 text-lg font-medium text-neutral-200">
+          <li data-nav-dropdown>
+            <div class="flex items-center gap-1">
+              <a href="services.html" aria-current="page">Services</a>
+              <button
+                class="inline-flex size-6 items-center justify-center"
+                type="button"
+                data-nav-dropdown-button
+                aria-expanded="false"
+                aria-controls="services-mobile-dropdown"
+                aria-label="Services menu"
+              >
+                <img src="/assets/chevron-down.svg" alt="" width="10" height="6" />
+              </button>
+            </div>
+            <ul
+              id="services-mobile-dropdown"
+              class="mt-3 space-y-3 pl-4 text-lg font-medium text-neutral-200"
+              hidden
+              data-nav-dropdown-panel
+            >
+              <li><a href="services.html" aria-current="page">All Services</a></li>
               <li><a href="services/straight-shaft-pier-drilling.html">Straight-Shaft Pier Drilling</a></li>
+              <li><a class="coming-soon" href="#" aria-disabled="true">Belled Pier Drilling</a></li>
+              <li><a class="coming-soon" href="#" aria-disabled="true">Pool Pier Drilling</a></li>
+              <li><a class="coming-soon" href="#" aria-disabled="true">Home Foundation Pier Drilling</a></li>
+              <li><a class="coming-soon" href="#" aria-disabled="true">Concrete Pour Assistance</a></li>
             </ul>
           </li>
           <li><a class="coming-soon" href="#" aria-disabled="true">Projects</a></li>

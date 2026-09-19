@@ -124,11 +124,23 @@ document.fonts?.ready.then(updateLogoMarquee);
 
 function getMenuFocusable() {
   if (!menu) return [];
-  return [...menu.querySelectorAll("a[href], button:not([disabled])")];
+  return [...menu.querySelectorAll("a[href], button:not([disabled])")].filter(
+    (el) => !el.closest("[hidden]"),
+  );
+}
+
+function closeOverlayDropdowns() {
+  menu?.querySelectorAll("[data-nav-dropdown]").forEach((root) => {
+    const button = root.querySelector("[data-nav-dropdown-button]");
+    const panel = root.querySelector("[data-nav-dropdown-panel]");
+    button?.setAttribute("aria-expanded", "false");
+    if (panel) panel.hidden = true;
+  });
 }
 
 function openMenu() {
   if (!menu || !menuButton) return;
+  closeOverlayDropdowns();
   menu.hidden = false;
   menu.setAttribute("aria-hidden", "false");
   menuButton.setAttribute("aria-expanded", "true");
@@ -139,6 +151,7 @@ function openMenu() {
 
 function closeMenu() {
   if (!menu || !menuButton) return;
+  closeOverlayDropdowns();
   menu.hidden = true;
   menu.setAttribute("aria-hidden", "true");
   menuButton.setAttribute("aria-expanded", "false");
@@ -182,7 +195,11 @@ menu?.addEventListener("click", (event) => {
 
 menu?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    if (!link.classList.contains("coming-soon")) closeMenu();
+    if (link.classList.contains("coming-soon")) return;
+    const next = new URL(link.href, window.location.href);
+    const samePage =
+      next.pathname === window.location.pathname && next.search === window.location.search;
+    if (samePage) closeMenu();
   });
 });
 
@@ -190,6 +207,7 @@ document.querySelectorAll("[data-nav-dropdown]").forEach((root) => {
   const button = root.querySelector("[data-nav-dropdown-button]");
   const panel = root.querySelector("[data-nav-dropdown-panel]");
   if (!button || !panel) return;
+  const isOverlay = Boolean(root.closest("[data-mobile-menu]"));
 
   function setOpen(open) {
     button.setAttribute("aria-expanded", open ? "true" : "false");
@@ -200,12 +218,15 @@ document.querySelectorAll("[data-nav-dropdown]").forEach((root) => {
     return button.getAttribute("aria-expanded") === "true";
   }
 
-  root.addEventListener("mouseenter", () => setOpen(true));
-  root.addEventListener("mouseleave", () => setOpen(false));
-  root.addEventListener("focusin", () => setOpen(true));
-  root.addEventListener("focusout", (event) => {
-    if (!root.contains(event.relatedTarget)) setOpen(false);
-  });
+  if (!isOverlay) {
+    root.addEventListener("mouseenter", () => setOpen(true));
+    root.addEventListener("mouseleave", () => setOpen(false));
+    root.addEventListener("focusin", () => setOpen(true));
+    root.addEventListener("focusout", (event) => {
+      if (!root.contains(event.relatedTarget)) setOpen(false);
+    });
+  }
+
   button.addEventListener("click", (event) => {
     event.preventDefault();
     setOpen(!isOpen());
@@ -213,7 +234,7 @@ document.querySelectorAll("[data-nav-dropdown]").forEach((root) => {
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && isOpen()) {
       setOpen(false);
-      button.focus();
+      if (!isOverlay) button.focus();
     }
   });
   document.addEventListener("click", (event) => {
