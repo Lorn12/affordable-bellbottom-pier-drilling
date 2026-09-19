@@ -1,5 +1,5 @@
 ---
-description: Homepage-first HTML + Tailwind stack; Home and About are live.
+description: Homepage-first HTML + Tailwind stack; Home, About, and Services hub are live.
 alwaysApply: true
 ---
 
@@ -7,11 +7,12 @@ alwaysApply: true
 
 This repo is HTML + Tailwind (Vite). Do not introduce WordPress, React, or another stack unless the user asks for it.
 
-**Live now:** Home (`index.html`) and About (`about.html`), plus same-page jumps and the phone number.
+**Live now:** Home (`index.html`), About (`about.html`), and Services hub (`services.html`), plus same-page jumps and the phone number.
 
 **Stay “coming soon”** until the user says otherwise:
 
-- Services (dropdown and “explore” links)
+- Individual service pages (Explore links on the hub)
+- Services dropdown (nav Services goes to `services.html`; chevron stays visual only)
 - Projects
 - Careers
 - Contact
@@ -22,10 +23,12 @@ When a page is approved, add it as its own HTML file and follow `.cursor/rules/c
 
 **About:** implement from Figma `About Desktop-V1` `6546:410`, `About Large Tablet-V1` `6546:1573`, `About Regular Tablet-V1` `6552:5848`, and `About Mobile-V1` `6595:1954` on the About Page canvas. Further About visual updates stay in Figma first.
 
+**Services:** implement from Figma `Services Desktop-V1` `6692:1699` on the **Services Page** canvas. No Services tablet/mobile frames yet — do not invent them; stack below desktop using existing site chrome. Further Services visual updates stay in Figma first.
+
 **Until the designer says otherwise:**
 
-- Quote / “Request a Quote” stays phone (`tel:+12813523077`). No quote form on Home. A Contact page (and any form) comes later.
-- Desktop **Services** is a jump to `#services`. A dropdown with a Services hub plus individual service pages comes later. Do not build that dropdown yet.
+- Quote / “Request a Quote” stays phone (`tel:+12813523077`). No quote form. A Contact page (and any form) comes later.
+- Desktop **Services** goes to `services.html`. A dropdown with individual service pages comes later. Do not build that dropdown yet.
 - Only change the breakpoint or section the designer named (e.g. desktop-only). Do not restyle tablet or mobile “while you are there.”
 
 Do not change hosting or domain setup unless the user asks.

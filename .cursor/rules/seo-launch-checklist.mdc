@@ -14,9 +14,9 @@ Do **not** start this work during routine homepage visual edits.
 - A form, quote flow, or careers application is added
 - Domain, hosting, or indexing is being set up
 
-Until the rest of the site is ready: keep unfinished menu items as coming soon; do not invent layouts or business facts. Home and About are live; do not run a full SEO/GEO pass unless asked.
+Until the rest of the site is ready: keep unfinished menu items as coming soon; do not invent layouts or business facts. Home, About, and the Services hub are live; do not run a full SEO/GEO pass unless asked.
 
-**Homepage visual matching is complete** (as of 2026-09-15). Bring SEO/launch up next when any of these happen: remaining inner pages (Services hub + service pages, Projects, Careers, Contact), a quote form, domain/hosting/indexing, or they say they are launching. Do not wait for more homepage visual tweaks.
+**Homepage visual matching is complete** (as of 2026-09-15). **Services hub is live** (as of 2026-09-18) from `Services Desktop-V1` `6692:1699`. Bring SEO/launch up next when any of these happen: remaining inner pages (individual service pages, Projects, Careers, Contact), a quote form, domain/hosting/indexing, or they say they are launching.
 
 ## Do when pages exist
 
@@ -29,6 +29,8 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 - Request a Quote CTA + accessible form (labels, `required`, errors not color-only, no confidential data in URLs, prevent double submit). Until then, quote buttons that call should not use an `aria-label` that hides the visible “Request a Quote” text
 - Keyboard-test desktop Services dropdown (`aria-expanded`, Escape) and mobile menu
 - Homepage a11y leftovers: coming-soon links still in tab order; Services chevron implies a menu it does not have yet
+
+**Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Nav/footer/home cards crawl to the hub (and hash IDs). Individual service pages and the Services dropdown are not built; Explore links on the hub stay coming soon.
 
 ## Still needs client confirmation (do not guess)
 

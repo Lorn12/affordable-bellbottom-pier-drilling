@@ -11,6 +11,7 @@ This is HTML + Tailwind (Vite), not React. Do not split the homepage into compon
 
 - Home markup: `index.html`
 - About markup: `about.html`
+- Services markup: `services.html` (accordion in `src/services.js`)
 - Shared styles: `src/style.css` (tokens, header, hero overlay, marquee, utilities used in more than one section)
 - Shared behavior: `src/main.js` (menu, header solid state, marquee)
 - Assets: `public/assets/`

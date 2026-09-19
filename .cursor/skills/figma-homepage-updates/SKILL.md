@@ -74,6 +74,10 @@ Visual source on **About Page**:
 
 Hero uses `.about-hero-inner`, not `.hero-inner`. Same overlay recipe as Home (photo 0.78, hex grid 0.12, ink gradient). Regular Tablet-V1 hero is 742 tall; Large Tablet-V1 / Desktop-V1 are 800. Interpolate 742→800 across 768–1279. Capabilities marquee after the hero matches the homepage strip. Who We Are photos are 400 tall: Regular Tablet-V1 is a 2-up + full-width third photo with stacked captions; 3-column photos and caption row from `min-[1024px]`. Fill with `object-cover` (do not use the Figma 156% crop offsets). Why Choose Us Regular Tablet-V1 matches the homepage regular-tablet bento (400px photo over 2-col then 3-col rows); side-by-side 560px bento from `min-[1024px]`; About Mobile-V1 stacks every tile full-width. Keep `bg-black/40` on the Why Choose photo so captions stay readable. Equipment & Access and the quote CTA stack on Regular Tablet-V1 and go side-by-side from `min-[1024px]`.
 
+## Services page
+
+Visual source on **Services Page**: `Services Desktop-V1` `6692:1699` (1440). Full nav from 1280px (`lg`). No tablet or mobile Services frames yet — do not invent them. Hero uses `.services-hero-inner` (800 desktop, same overlay recipe as About). Listing cards are 2-up at `min-[1024px]` (fifth card left-aligned). Explore links stay coming soon until individual service pages exist. Project Preparation accordion copy is the approved four-item list; Figma shows state 1 only.
+
 ## Out of scope unless the user asks
 
-WordPress/React, hosting, inventing copy that is not in Figma, remaining inner pages (Services, Projects, Careers, Contact).
+WordPress/React, hosting, inventing copy that is not in Figma, remaining inner pages (individual service pages, Projects, Careers, Contact).

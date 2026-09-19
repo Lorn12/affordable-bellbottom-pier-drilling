@@ -191,8 +191,9 @@ function announceComingSoon(event) {
   if (link.getAttribute("aria-disabled") !== "true") return;
   event.preventDefault();
   if (status) {
+    const name = (link.getAttribute("aria-label") || link.textContent).trim();
     status.textContent = "";
-    status.textContent = `${link.textContent.trim()} is coming soon.`;
+    status.textContent = `${name} is coming soon.`;
   }
 }
 

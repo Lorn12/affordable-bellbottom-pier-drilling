@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         main: resolve(root, "index.html"),
         about: resolve(root, "about.html"),
+        services: resolve(root, "services.html"),
       },
     },
   },

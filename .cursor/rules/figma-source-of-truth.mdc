@@ -23,6 +23,7 @@ Known homepage frames (confirm in Figma if they move). **Use these as the visual
 - About large tablet: `About Large Tablet-V1` `6546:1573` (1280 wide) on **About Page** — visual source from `min-[1024px]` through 1279 (hamburger still below 1280).
 - About regular tablet: `About Regular Tablet-V1` `6552:5848` (768 wide) on **About Page** — visual source for 768–1023.
 - About mobile: `About Mobile-V1` `6595:1954` (400 wide) on **About Page**. Why Choose Us stacks the bento full-width like Homepage Mobile-V1 Who We Serve (do not restore the 2-col / 3-col mobile grid).
+- Services desktop: `Services Desktop-V1` `6692:1699` (1440 wide) on the **Services Page** canvas. No Services tablet/mobile frames yet.
 
 Going forward: the designer designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless they ask.
 
