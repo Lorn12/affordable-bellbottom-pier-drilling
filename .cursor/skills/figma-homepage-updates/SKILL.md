@@ -11,7 +11,7 @@ description: Matches this site’s homepage to the Figma file (tokens, frames, a
 2. Load the Figma MCP skill `figma-design-to-code` before calling `get_design_context`.
 3. Call `get_variable_defs` on the frame you are implementing (`Homepage Desktop-V1` `6161:112` on Ready Homepage and mobile, `Homepage Large Tablet-V1` `6217:356` (1280), `Homepage Regular Tablet-V1` `5869:721` (768), and/or `Homepage Mobile-V1` `5869:362` unless the user gives a different node; About is `About Desktop-V1` `6546:410`, `About Large Tablet-V1` `6546:1573`, and `About Regular Tablet-V1` `6552:5848` on **About Page**). Do not implement from unsuffixed archive frames.
 4. Call `get_design_context` on the **section** node, not only the full page, when the page is too large.
-5. Compare tokens to `src/style.css` and the markup. Change the site to match Figma Desktop-V1 / Regular Tablet-V1 / Mobile-V1, not the reverse, unless asked to update Figma **or** an approved exception below already applies.
+5. Compare tokens to `src/style.css` and the markup. Change the site to match Figma Desktop-V1 / Regular Tablet-V1 / Mobile-V1, not the reverse, unless asked to update Figma **or** an approved exception below already applies. **Exception for type:** use the Typography collection mode values even when a frame’s text style is bound wrong.
 6. Change only the breakpoint named in the request. Do not restyle tablet or mobile in the same pass.
 7. Keep frames editable: auto-layout, variables, and component instances. Do not flatten homepage frames to screenshots. Do not edit the shared default Button L/M/S appearance unless asked. Hover lives as separate components under `Butttons-02`.
 
@@ -46,12 +46,26 @@ Content is **bottom-aligned** (`justify-end`). `.hero-inner` padding-top is only
 
 Do not mix `md:pt-*` with `lg:py-*` on `.hero-inner`. Do not copy this overlay onto `.dark-pattern` unless asked.
 
+## Typography (variable modes, not baked frame sizes)
+
+The **Typography** collection has Desktop, Tablet, and Mobile modes. Tablet header sizes match Desktop. Mobile is the step-down. Always call `get_variable_defs` and use those mode values for heading CSS (`md` = 768+ tablet/desktop type; below 768 = mobile type).
+
+If a Figma text layer is on the wrong style, **do not copy that size onto the site**. Implement the token the heading is supposed to use:
+
+- **Home H1 only:** `header-xxl` — 72 from `md`, **52** on mobile. This is the only extra-large header. Do not switch it to `header-xl` 48 even if Homepage Mobile-V1 is bound that way.
+- **About and Services H1:** `header-xl` — 52 from `md`, 48 on mobile.
+- **Section / CTA / footer headings** (Home, About, Services): `header-l` — 42 from `md`, 36 on mobile. Do not use 32 (`header-m`) for these.
+- Card titles: `header-s` 24 at every breakpoint. Eyebrows: `header-xs` 20. Body: `text-m` 16.
+
+Do not push these corrections back into Figma unless asked.
+
 ## Approved exceptions (code wins until Figma is updated)
 
 - **Photos** in overflow frames: keep Figma crop offsets if present, and always add `object-cover` so images do not stretch. Do **not** add a second `overflow-hidden` + radius wrapper around a `<picture>` to place an overlay — that makes photos blurry on high-DPI screens. Round the `<img>`. Overlay controls are siblings. Keep `srcset`, `sizes`, `width`, `height`, and `alt`. Our Services: `.service-card-photo` uses 8px / 42px corners; the 52px arrow sits 6px from the right and 9px from the photo bottom on every breakpoint. Our Work uses the same 52px lime/Neutral-200 button, top-right.
 - **Who We Serve cards:** Copy is audience tiles: Concrete Contractors, Home Builders, Pool Companies, Direct Clients, plus Based in Hockley, Texas. Desktop-V1 and Large Tablet-V1 are a 560px side-by-side bento (left photo 1fr, right stack 2fr; top row 1fr/2fr). Apply that from `min-[1024px]` (hamburger still below 1280). Regular Tablet-V1 stacks a 400px photo over two 272px rows (2-col then 3-col). Mobile-V1 stacks every tile full-width like the site (do not keep the cramped 2/3-column bento). Keep `bg-black/40` on the Concrete Contractors photo so the caption stays readable. The Discuss Your Project text link uses full `text-lime-dark` like View All Services (do not fade the CTA with the intro copy).
 - **Header scroll:** the live site switches from a clear overlay to a blurred solid bar at Companies. In Figma that is two states, not one frame that tries to show both.
 - **Our Work hover:** Desktop-V1 cards are a flat 20% black overlay only. The live site keeps that at rest and adds `.project-card-scrim` on hover/focus (bottom ink gradient). Do not clear the overlay on hover. Circular arrows use `.icon-arrow-btn` at 52px on Our Services and Our Work (all breakpoints); card hover/focus/active fills Neutral-200 (`#f1f1f1`). Figma hover is a variant next to `Butttons-02`, not a change to the default lime rest state.
+- **Typography modes over baked type:** heading sizes follow the Typography collection, not a mis-bound text style. Home H1 is `header-xxl` (72 / 52). About and Services H1 are `header-xl` (52 / 48). Section/CTA/footer headings are `header-l` (42 / 36). Do not revert Home mobile hero to 48 if Homepage Mobile-V1 still uses `header-xl`.
 - **Soil & Rock drill icon:** Noun Project (`noun-drilling-8343366`), not Streamline. Leave the Figma SVG stroke. Do not redraw it.
 - **Equipment vs How We Work spacing:** different on purpose in Desktop-V1. Do not copy one section’s gutter onto the other unless asked. How We Work steps (Left Content Container) stay full column width with no `max-width` at tablet, mobile, or desktop.
 
@@ -81,7 +95,7 @@ Visual source on **Services Page**:
 - Desktop: `Services Desktop-V1` `6692:1699` (1440). Full nav from 1280px (`lg`).
 - Large tablet: `Services Large Tablet-V1` `6738:2969` (1280) — hamburger still below 1280. Hero 800, pad 40. Listing cards 2-up; fifth card half-width left-aligned.
 - Regular tablet: `Services Regular Tablet-V1` `6738:3177` (768) — hero 742, pad 40. Cards, prep, and CTA stack.
-- Mobile: `Services Mobile-V1` `6738:3371` (400) — hero 800, pad 20. Cards, prep, and CTA stack. Hero `header-xl` 48; section/CTA/footer `header-l` 36.
+- Mobile: `Services Mobile-V1` `6738:3371` (400) — hero 800, pad 20. Cards, prep, and CTA stack. Hero `header-xl` 48; section/CTA/footer `header-l` 36 (Typography Mobile mode).
 
 Hero uses `.services-hero-inner` (800 desktop, same overlay recipe as About). Live hub still stacks below desktop until asked to match the new frames. Explore links stay coming soon until individual service pages exist. Project Preparation accordion copy is the approved four-item list; Figma shows state 1 only.
 

@@ -23,7 +23,7 @@ When a page is approved, add it as its own HTML file and follow `.cursor/rules/c
 
 **About:** implement from Figma `About Desktop-V1` `6546:410`, `About Large Tablet-V1` `6546:1573`, `About Regular Tablet-V1` `6552:5848`, and `About Mobile-V1` `6595:1954` on the About Page canvas. Further About visual updates stay in Figma first.
 
-**Services:** implement from Figma `Services Desktop-V1` `6692:1699`, `Services Large Tablet-V1` `6738:2969`, `Services Regular Tablet-V1` `6738:3177`, and `Services Mobile-V1` `6738:3371` on the **Services Page** canvas. Do not restyle tablet/mobile layout on the live hub until asked to match those frames. Typography follows the Typography collection modes (Desktop/Tablet vs Mobile). Further Services visual updates stay in Figma first.
+**Services:** implement from Figma `Services Desktop-V1` `6692:1699`, `Services Large Tablet-V1` `6738:2969`, `Services Regular Tablet-V1` `6738:3177`, and `Services Mobile-V1` `6738:3371` on the **Services Page** canvas. Do not restyle tablet/mobile layout on the live hub until asked to match those frames. Heading sizes on Home, About, and Services follow the Typography collection modes even when a frame is bound to the wrong style (see figma-source-of-truth). Further Services visual updates stay in Figma first.
 
 **Until the designer says otherwise:**
 
