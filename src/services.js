@@ -7,7 +7,9 @@ const closedButtonClass = "flex w-full items-center gap-4 px-6 py-5 text-left";
 const openPanelClass = "rounded-b-xl bg-neutral-800 px-6 pb-6";
 const closedPanelClass = "px-6 pb-6";
 let autoTimer = 0;
+let rafId = 0;
 let autoIndex = 0;
+let lastBeat = 0;
 
 function updateTimeline(index) {
   if (!timeline || !steps[index]) return;
@@ -43,7 +45,10 @@ function setOpen(index) {
     }
   });
   autoIndex = index;
-  requestAnimationFrame(() => updateTimeline(index));
+  lastBeat = performance.now();
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => updateTimeline(index));
+  });
 }
 
 function nextStep() {
@@ -53,16 +58,39 @@ function nextStep() {
 
 function stopAuto() {
   if (autoTimer) {
-    window.clearInterval(autoTimer);
+    window.clearTimeout(autoTimer);
     autoTimer = 0;
+  }
+  if (rafId) {
+    window.cancelAnimationFrame(rafId);
+    rafId = 0;
   }
 }
 
+function queueTimeout() {
+  if (autoTimer) window.clearTimeout(autoTimer);
+  autoTimer = window.setTimeout(() => {
+    if (performance.now() - lastBeat < AUTO_MS - 30) {
+      queueTimeout();
+      return;
+    }
+    nextStep();
+    queueTimeout();
+  }, AUTO_MS);
+}
+
+function watchFrame(now) {
+  rafId = window.requestAnimationFrame(watchFrame);
+  if (now - lastBeat < AUTO_MS) return;
+  nextStep();
+  queueTimeout();
+}
+
 function startAuto() {
-  stopAuto();
   if (!steps.length) return;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  autoTimer = window.setInterval(nextStep, AUTO_MS);
+  lastBeat = performance.now();
+  queueTimeout();
+  if (!rafId) rafId = window.requestAnimationFrame(watchFrame);
 }
 
 steps.forEach((step, index) => {
@@ -73,12 +101,24 @@ steps.forEach((step, index) => {
   });
 });
 
-accordion?.addEventListener("focusin", stopAuto);
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Tab") return;
+  if (accordion?.contains(event.target) || accordion?.contains(document.activeElement)) {
+    stopAuto();
+  }
+});
 accordion?.addEventListener("focusout", (event) => {
-  if (!accordion.contains(event.relatedTarget)) startAuto();
+  const next = event.relatedTarget;
+  if (next && accordion.contains(next)) return;
+  window.setTimeout(() => {
+    if (accordion.contains(document.activeElement)) return;
+    startAuto();
+  }, 0);
 });
 
+window.addEventListener("pageshow", () => startAuto());
 window.addEventListener("resize", () => updateTimeline(autoIndex));
+window.addEventListener("orientationchange", () => updateTimeline(autoIndex));
 if (accordion && typeof ResizeObserver !== "undefined") {
   new ResizeObserver(() => updateTimeline(autoIndex)).observe(accordion);
 }
