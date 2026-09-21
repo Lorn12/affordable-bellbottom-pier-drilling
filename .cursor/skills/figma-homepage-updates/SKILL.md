@@ -53,7 +53,7 @@ The **Typography** collection has Desktop, Tablet, and Mobile modes. Tablet head
 If a Figma text layer is on the wrong style, **do not copy that size onto the site**. Implement the token the heading is supposed to use:
 
 - **Home H1 only:** `header-xxl` — 72 from `md`, **52** on mobile. This is the only extra-large header. Do not switch it to `header-xl` 48 even if Homepage Mobile-V1 is bound that way.
-- **About and Services H1:** `header-xl` — 52 from `md`, 48 on mobile.
+- **About, Services, and Contact H1:** `header-xl` — 52 from `md`, 48 on mobile.
 - **Section / CTA / footer headings** (Home, About, Services): `header-l` — 42 from `md`, 36 on mobile. Do not use 32 (`header-m`) for these.
 - Card titles: `header-s` 24 at every breakpoint. Eyebrows: `header-xs` 20. Body: `text-m` 16.
 
@@ -65,7 +65,7 @@ Do not push these corrections back into Figma unless asked.
 - **Who We Serve cards:** Copy is audience tiles: Concrete Contractors, Home Builders, Pool Companies, Direct Clients, plus Based in Hockley, Texas. Desktop-V1 and Large Tablet-V1 are a 560px side-by-side bento (left photo 1fr, right stack 2fr; top row 1fr/2fr). Apply that from `min-[1024px]` (hamburger still below 1280). Regular Tablet-V1 stacks a 400px photo over two 272px rows (2-col then 3-col). Mobile-V1 stacks every tile full-width like the site (do not keep the cramped 2/3-column bento). Keep `bg-black/40` on the Concrete Contractors photo so the caption stays readable. The Discuss Your Project text link uses full `text-lime-dark` like View All Services (do not fade the CTA with the intro copy).
 - **Header scroll:** the live site switches from a clear overlay to a blurred solid bar at Companies. In Figma that is two states, not one frame that tries to show both.
 - **Our Work hover:** Desktop-V1 cards are a flat 20% black overlay only. The live site keeps that at rest and adds `.project-card-scrim` on hover/focus (bottom ink gradient). Do not clear the overlay on hover. Circular arrows use `.icon-arrow-btn` at 52px on Our Services and Our Work (all breakpoints); card hover/focus/active fills Neutral-200 (`#f1f1f1`). Figma hover is a variant next to `Butttons-02`, not a change to the default lime rest state.
-- **Typography modes over baked type:** heading sizes follow the Typography collection, not a mis-bound text style. Home H1 is `header-xxl` (72 / 52). About and Services H1 are `header-xl` (52 / 48). Section/CTA/footer headings are `header-l` (42 / 36). Do not revert Home mobile hero to 48 if Homepage Mobile-V1 still uses `header-xl`.
+- **Typography modes over baked type:** heading sizes follow the Typography collection, not a mis-bound text style. Home H1 is `header-xxl` (72 / 52). About, Services, and Contact H1 are `header-xl` (52 / 48). Section/CTA/footer headings are `header-l` (42 / 36). Do not revert Home mobile hero to 48 if Homepage Mobile-V1 still uses `header-xl`.
 - **Soil & Rock drill icon:** Noun Project (`noun-drilling-8343366`), not Streamline. Leave the Figma SVG stroke. Do not redraw it.
 - **Equipment vs How We Work spacing:** different on purpose in Desktop-V1. Do not copy one section’s gutter onto the other unless asked. How We Work steps (Left Content Container) stay full column width with no `max-width` at tablet, mobile, or desktop.
 
@@ -101,6 +101,17 @@ Hero uses `.services-hero-inner` (800 desktop, same overlay recipe as About). Li
 
 Straight-Shaft live file `services/straight-shaft-pier-drilling.html` from **Services Page**: Desktop-V1 `6748:4368` (two-column from `lg`), Large Tablet-V1 `6784:4838` (two-column from `min-[1024px]`), Regular Tablet-V1 `6784:5233` (stacked 768–1023), mobile `Services Mobile-V1` `6784:5629` (stacked below 768; not the hub). Hero uses `.straight-shaft-hero-inner` (742 mobile/regular tablet, interpolates to 800 by 1280). Hidden Related Services stay off the site. Hub Explore for Straight-Shaft is live; remaining hub Explore links stay coming soon. Desktop and overlay Services is a dropdown trigger (not a page link); All Services in the dropdown goes to `services.html`. The dropdown includes Straight-Shaft. Hub `Services Mobile-V1` is `6738:3371`.
 
+## Contact page
+
+Visual source on **Contact Page**:
+
+- Desktop: `Contact Desktop-V1` `6838:434` (1440). Full nav from 1280px (`lg`). Hero 800. Quote two-column (588 + 40 + 652), pad 80.
+- Large tablet: `Contact Large Tablet-V1` `6838:653` (1280) — visual source from `min-[1024px]` through 1279 (hamburger still below 1280). Hero 800, pad 40. Quote two-column (548 + 40 + 612).
+- Regular tablet: `Contact Regular Tablet-V1` `6838:863` (768) — hero 742, pad 40. Quote stacks: 400 photo then form. Email/phone stay 2-up.
+- Mobile: `Contact Mobile-V1` `6838:1059` (400) — hero 800, pad 20. Quote stacks; email/phone stack. Hero `header-xl` 48; section headings `header-l` 36.
+
+Hero uses `.contact-hero-inner` (same overlay recipe as About/Services). Interpolate 742→800 across 768–1279; mobile stays 800. Hero CTA is Call only. Capabilities marquee after the hero matches About. Quote and service-area sections are white; FAQ uses `.dark-pattern`. First FAQ item is open (lime −). Do not invent email, street address, hours, or a national map.
+
 ## Out of scope unless the user asks
 
-WordPress/React, hosting, inventing copy that is not in Figma, remaining inner pages (other individual service pages, Projects, Careers, Contact).
+WordPress/React, hosting, inventing copy that is not in Figma, remaining inner pages (other individual service pages, Projects, Careers).

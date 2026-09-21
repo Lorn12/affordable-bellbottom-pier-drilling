@@ -13,6 +13,7 @@ This is HTML + Tailwind (Vite), not React. Do not split the homepage into compon
 - About markup: `about.html`
 - Services markup: `services.html` (accordion in `src/services.js`)
 - Straight-Shaft service markup: `services/straight-shaft-pier-drilling.html` (quote form in `src/quote-form.js`)
+- Contact markup: `contact.html` (quote form in `src/quote-form.js`, FAQ in `src/contact.js`)
 - Shared styles: `src/style.css` (tokens, header, hero overlay, marquee, utilities used in more than one section)
 - Shared behavior: `src/main.js` (menu, header solid state, marquee, Services dropdown)
 - Assets: `public/assets/`

@@ -117,14 +117,16 @@ h3 {
   }
 }
 
-.about-hero-inner {
+.about-hero-inner,
+.contact-hero-inner {
   min-height: 800px;
   padding-top: 58px;
   padding-bottom: 80px;
 }
 
 @media (min-width: 768px) {
-  .about-hero-inner {
+  .about-hero-inner,
+  .contact-hero-inner {
     /* About Regular Tablet-V1 742 → Large Tablet-V1 800 across 768–1279 */
     min-height: calc(742px + 58 * (100vw - 768px) / 512);
     padding-top: 93px;
@@ -132,7 +134,8 @@ h3 {
 }
 
 @media (min-width: 1280px) {
-  .about-hero-inner {
+  .about-hero-inner,
+  .contact-hero-inner {
     min-height: 800px;
   }
 }
@@ -409,7 +412,8 @@ h3 {
 }
 
 .quote-field input,
-.quote-field select {
+.quote-field select,
+.quote-field textarea {
   width: 100%;
   border: 1px solid var(--color-neutral-300);
   border-radius: 4px;
@@ -421,6 +425,21 @@ h3 {
   line-height: 1.5;
 }
 
+.quote-field input,
+.quote-field select {
+  height: 50px;
+}
+
+.quote-field input::placeholder,
+.quote-field textarea::placeholder {
+  color: rgb(26 26 26 / 0.5);
+}
+
+.quote-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
 .quote-field select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5 11 1.5' stroke='%231a1a1a' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
@@ -430,7 +449,8 @@ h3 {
 }
 
 .quote-field input[aria-invalid="true"],
-.quote-field select[aria-invalid="true"] {
+.quote-field select[aria-invalid="true"],
+.quote-field textarea[aria-invalid="true"] {
   border-color: #b42318;
   outline: 1px solid #b42318;
 }
