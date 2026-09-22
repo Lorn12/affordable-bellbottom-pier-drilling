@@ -719,8 +719,10 @@ h3 {
 }
 
 .footer-contact {
+  display: flex;
   width: 100%;
   min-width: 0;
+  flex-direction: column;
 }
 
 .footer-contact-list {
