@@ -33,11 +33,11 @@ Keep existing menu overlay behavior. Do not invent extra tablet section layouts 
 
 ## Hero (nav overlay + photo overlay)
 
-The header sits on top of the hero (`-mt-[58px]` mobile, `-mt-[93px]` from tablet up). Figma `section-xxl` top padding includes the area behind the menu. Do not paste that token as extra space under the nav.
+The header sits on top of the hero (`-mt-[68px]` mobile, `-mt-[93px]` from tablet up). Figma `section-xxl` top padding includes the area behind the menu. Do not paste that token as extra space under the nav.
 
 Content is **bottom-aligned** (`justify-end`). `.hero-inner` padding-top is only the overlay bar; the gap under the nav comes from min-height + `justify-end`. Implemented in `src/style.css` (re-measure if nodes move):
 
-- Mobile (below 768px): min-height `944px`, padding-top `58px`, padding-bottom `80px` (`Homepage Mobile-V1`)
+- Mobile (below 768px): min-height `944px`, padding-top `68px` (44px logo + 12px padding), padding-bottom `80px` (`Homepage Mobile-V1`)
 - Tablet (768–1279): min-height interpolates Regular Tablet-V1 `924px` → Large Tablet-V1 `900px`; padding-top `93px`, padding-bottom `80px`
 - Desktop (1280px+): min-height `824px`, padding-top `93px`, padding-bottom `80px` (`Homepage Desktop-V1`)
 - Gap between hero blocks: `32px` (`gap-8`)
