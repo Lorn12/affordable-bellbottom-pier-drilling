@@ -148,6 +148,15 @@ h3 {
     0 40px 80px rgba(0, 0, 0, 0.3);
 }
 
+[data-menu-button],
+[data-menu-close] {
+  cursor: pointer;
+}
+
+[data-menu-button] img {
+  pointer-events: none;
+}
+
 .hero-review {
   background-color: rgb(151 151 151 / 0.1);
   backdrop-filter: blur(4px);
