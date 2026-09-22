@@ -32,12 +32,12 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 
 **Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Do not rewrite the hub when adding remaining individual service pages. Straight-Shaft lives at `services/straight-shaft-pier-drilling.html`; the hub Explore for that service is live. Remaining hub Explore links stay coming soon. Desktop Services dropdown is live (`aria-expanded`, Escape); remaining dropdown items besides All Services and Straight-Shaft stay coming soon.
 
-**Contact live:** `contact.html` has unique title, description, canonical, OG, ContactPage + BreadcrumbList schema, and is in `sitemap.xml`. Nav Contact is live. Email, hours, and directions stay coming soon. Do not add `LocalBusiness` street address until confirmed.
+**Contact live:** `contact.html` has unique title, description, canonical, OG, ContactPage + BreadcrumbList schema, and is in `sitemap.xml`. Nav Contact is live. Footer Contact shows phone, Greater Houston, and hours. Do not add `LocalBusiness` street address until confirmed.
 
 ## Still needs client confirmation (do not guess)
 
 - Street address (required before `LocalBusiness` schema; no fake address)
-- Email, hours, directions, social URLs
+- Street address, email, hours for schema, directions URL, social URLs (hours are in the footer; still confirm before schema)
 - Whether “General Liability Insured” and the Gladiators Construction quote/stars are approved to keep and/or mark up (do not add review schema unless confirmed)
 - Whether Our Work photos are real jobs
 - OG image 1200×630 if they want a dedicated social crop

@@ -34,7 +34,7 @@ Known homepage frames (confirm in Figma if they move). **Use these as the visual
 - Contact desktop: `Contact Desktop-V1` `6838:434` (1440 wide) on **Contact Page**.
 - Contact large tablet: `Contact Large Tablet-V1` `6838:653` (1280 wide) on **Contact Page** — visual source from `min-[1024px]` through 1279 (hamburger still below 1280). Quote row two-column (548 + 40 + 612).
 - Contact regular tablet: `Contact Regular Tablet-V1` `6838:863` (768 wide) — stacked quote photo (400) then form, hero 742, pad 40.
-- Contact mobile: `Contact Mobile-V1` `6838:1059` (400 wide) — stacked quote, email/phone stacked, hero 800, pad 20. No street address, email, hours, or US-wide map until confirmed.
+- Contact mobile: `Contact Mobile-V1` `6838:1059` (400 wide) — stacked quote, email/phone stacked, hero 800, pad 20. Footer Contact on the site lists phone, Greater Houston, and hours. No street address, email, directions link, or US-wide map until confirmed. Figma footer columns may still show the old text-only links.
 
 Going forward: the designer designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless they ask.
 

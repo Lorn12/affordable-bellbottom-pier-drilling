@@ -718,6 +718,78 @@ h3 {
   opacity: 1;
 }
 
+.footer-contact {
+  width: 100%;
+  min-width: 0;
+}
+
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact-icon {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  border: 1px solid rgb(200 200 200 / 0.4);
+  border-radius: 8px;
+}
+
+.footer-contact-copy {
+  min-width: 0;
+  line-height: 1.4;
+}
+
+.footer-contact-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-neutral-400);
+}
+
+.footer-contact-value {
+  display: block;
+  color: var(--color-neutral-100);
+  overflow-wrap: anywhere;
+  cursor: default;
+}
+
+a.footer-contact-value {
+  cursor: pointer;
+}
+
+a.footer-contact-value:hover,
+a.footer-contact-value:focus-visible {
+  color: var(--color-lime);
+}
+
+@media (min-width: 768px) {
+  .footer-contact {
+    flex: 1.35 1 0%;
+    width: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-contact {
+    max-width: 300px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -110,7 +110,7 @@ Visual source on **Contact Page**:
 - Regular tablet: `Contact Regular Tablet-V1` `6838:863` (768) — hero 742, pad 40. Quote stacks: 400 photo then form. Email/phone stay 2-up.
 - Mobile: `Contact Mobile-V1` `6838:1059` (400) — hero 800, pad 20. Quote stacks; email/phone stack. Hero `header-xl` 48; section headings `header-l` 36.
 
-Hero uses `.contact-hero-inner` (same overlay recipe as About/Services). Interpolate 742→800 across 768–1279; mobile stays 800. Hero CTA is Call only. Capabilities marquee after the hero matches About. Quote and service-area sections are white; FAQ uses `.dark-pattern`. First FAQ item is open (lime −). Do not invent email, street address, hours, or a national map.
+Hero uses `.contact-hero-inner` (same overlay recipe as About/Services). Interpolate 742→800 across 768–1279; mobile stays 800. Hero CTA is Call only. Capabilities marquee after the hero matches About. Quote and service-area sections are white; FAQ uses `.dark-pattern`. First FAQ item is open (lime −). Footer Contact on the site lists phone, Greater Houston, and hours. Do not invent a street address, email, directions link, or national map.
 
 ## Out of scope unless the user asks
 
