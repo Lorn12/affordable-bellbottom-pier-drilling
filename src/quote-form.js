@@ -1,6 +1,6 @@
 const form = document.querySelector("[data-quote-form]");
 if (form) {
-  const status = form.querySelector("[data-quote-status]");
+  const status = document.querySelector("[data-quote-status]");
   const submit = form.querySelector("[data-quote-submit]");
   const success = document.querySelector("[data-quote-success]");
   const fields = {
@@ -85,7 +85,7 @@ if (form) {
     form.dataset.busy = "true";
     submit.disabled = true;
     submit.setAttribute("aria-busy", "true");
-    if (status) status.textContent = "Sending your request…";
+    if (status) status.textContent = "";
 
     window.setTimeout(() => {
       form.hidden = true;
@@ -93,7 +93,9 @@ if (form) {
         success.hidden = false;
         success.focus();
       }
-      if (status) status.textContent = "";
+      const nextStep = success?.querySelector("p, h2, h3");
+      if (status && nextStep) status.textContent = nextStep.textContent.trim();
+      else if (status) status.textContent = "";
     }, 400);
   });
 }
