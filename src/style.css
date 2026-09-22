@@ -89,6 +89,24 @@ h3 {
   opacity: 0.16;
 }
 
+/* FAQ height changes when a question opens. A fixed image height keeps the
+   hex grid from scaling with that section. */
+.faq-pattern::before {
+  background-size: auto 1400px;
+}
+
+@media (min-width: 768px) {
+  .faq-pattern::before {
+    background-size: auto 1080px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .faq-pattern::before {
+    background-size: auto 1040px;
+  }
+}
+
 .dark-pattern::after {
   content: "";
   position: absolute;
@@ -331,6 +349,20 @@ h3 {
   box-shadow:
     0 4px 12px -4px rgb(11 11 11 / 0.16),
     0 8px 24px rgb(11 11 11 / 0.1);
+}
+
+[data-faq-item] {
+  border: 1px solid rgb(241 241 241 / 0.32);
+  transition: border-color 200ms ease;
+}
+
+[data-faq-item]:hover,
+[data-faq-item]:focus-within {
+  border-color: rgb(241 241 241 / 0.58);
+}
+
+[data-faq-trigger] {
+  cursor: pointer;
 }
 
 [data-nav-dropdown-button] {

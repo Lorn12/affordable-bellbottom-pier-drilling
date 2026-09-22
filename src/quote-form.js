@@ -1,14 +1,10 @@
+const MAIL_TO = "bids@affordablebellbottomdrill.com";
+
 const form = document.querySelector("[data-quote-form]");
 if (form) {
   const status = document.querySelector("[data-quote-status]");
   const submit = form.querySelector("[data-quote-submit]");
   const success = document.querySelector("[data-quote-success]");
-  const fields = {
-    name: form.querySelector("#quote-name"),
-    email: form.querySelector("#quote-email"),
-    phone: form.querySelector("#quote-phone"),
-    service: form.querySelector("#quote-service"),
-  };
 
   function errorEl(input) {
     return form.querySelector(`[data-quote-error="${input.id}"]`);
@@ -24,44 +20,57 @@ if (form) {
     }
   }
 
+  function labelText(input) {
+    const label = form.querySelector(`label[for="${input.id}"]`);
+    return label ? label.textContent.trim() : "this field";
+  }
+
+  function emptyMessage(input) {
+    const label = labelText(input).toLowerCase();
+    if (input.tagName === "SELECT") {
+      if (label === "service needed") return "Select the service you need.";
+      return `Select ${label}.`;
+    }
+    if (label === "full name") return "Enter your full name.";
+    if (label === "email address") return "Enter your email address.";
+    if (label === "kind of work") return "Tell us what you do.";
+    return `Enter your ${label}.`;
+  }
+
   function validate() {
     let firstInvalid = null;
+    const fields = [...form.querySelectorAll("input, select, textarea")].filter(
+      (input) => !input.matches("[data-quote-hp]"),
+    );
 
-    const name = fields.name.value.trim();
-    if (!name) {
-      setError(fields.name, "Enter your full name.");
-      firstInvalid ??= fields.name;
-    } else {
-      setError(fields.name, "");
-    }
-
-    const email = fields.email.value.trim();
-    if (!email) {
-      setError(fields.email, "Enter your email address.");
-      firstInvalid ??= fields.email;
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setError(fields.email, "Enter a valid email address.");
-      firstInvalid ??= fields.email;
-    } else {
-      setError(fields.email, "");
-    }
-
-    const phone = fields.phone.value.trim();
-    if (phone && !/^[0-9+().\s-]{7,}$/.test(phone)) {
-      setError(fields.phone, "Enter a valid phone number, or leave this blank.");
-      firstInvalid ??= fields.phone;
-    } else {
-      setError(fields.phone, "");
-    }
-
-    if (!fields.service.value) {
-      setError(fields.service, "Select the service you need.");
-      firstInvalid ??= fields.service;
-    } else {
-      setError(fields.service, "");
+    for (const input of fields) {
+      const value = input.value.trim();
+      if (input.required && !value) {
+        setError(input, emptyMessage(input));
+        firstInvalid ??= input;
+        continue;
+      }
+      if (input.type === "email" && value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        setError(input, "Enter a valid email address.");
+        firstInvalid ??= input;
+        continue;
+      }
+      if (input.type === "tel" && value && !/^[0-9+().\s-]{7,}$/.test(value)) {
+        setError(input, "Enter a valid phone number, or leave this blank.");
+        firstInvalid ??= input;
+        continue;
+      }
+      setError(input, "");
     }
 
     return firstInvalid;
+  }
+
+  function mailBody() {
+    return [...form.querySelectorAll("input, select, textarea")]
+      .filter((input) => !input.matches("[data-quote-hp]") && input.name && input.value.trim())
+      .map((input) => `${labelText(input)}: ${input.value.trim()}`)
+      .join("\n");
   }
 
   form.addEventListener("submit", (event) => {
@@ -86,6 +95,15 @@ if (form) {
     submit.disabled = true;
     submit.setAttribute("aria-busy", "true");
     if (status) status.textContent = "";
+
+    const subject = form.dataset.mailSubject || "Website form";
+    const href = `mailto:${MAIL_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(mailBody())}`;
+    const mail = document.createElement("a");
+    mail.href = href;
+    mail.hidden = true;
+    document.body.append(mail);
+    mail.click();
+    mail.remove();
 
     window.setTimeout(() => {
       form.hidden = true;

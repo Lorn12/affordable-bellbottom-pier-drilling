@@ -1,5 +1,5 @@
 ---
-description: Homepage-first HTML + Tailwind stack; Home, About, Services hub, Straight-Shaft, and Contact are live.
+description: Homepage-first HTML + Tailwind stack; Home, About, Services hub, Straight-Shaft, Contact, and Careers are live.
 alwaysApply: true
 ---
 
@@ -7,13 +7,12 @@ alwaysApply: true
 
 This repo is HTML + Tailwind (Vite). Do not introduce WordPress, React, or another stack unless the user asks for it.
 
-**Live now:** Home (`index.html`), About (`about.html`), Services hub (`services.html`), Straight-Shaft Pier Drilling (`services/straight-shaft-pier-drilling.html`), and Contact (`contact.html`), plus same-page jumps and the phone number.
+**Live now:** Home (`index.html`), About (`about.html`), Services hub (`services.html`), Straight-Shaft Pier Drilling (`services/straight-shaft-pier-drilling.html`), Contact (`contact.html`), and Careers (`careers.html`), plus same-page jumps and the phone number.
 
 **Stay “coming soon”** until the user says otherwise:
 
 - Remaining individual service pages (Belled, Pool, Home Foundation, Concrete Pour — Explore links stay coming soon)
 - Projects
-- Careers
 
 Keep those items visible in the menu. Do not build remaining inner pages or invent their layouts.
 
@@ -27,9 +26,11 @@ When a page is approved, add it as its own HTML file and follow `.cursor/rules/c
 
 **Contact:** live file `contact.html` from Figma on **Contact Page**: Desktop-V1 `6838:434` (1440), Large Tablet-V1 `6838:653` (1280, two-column quote from `min-[1024px]`, hamburger still below 1280), Regular Tablet-V1 `6838:863` (768, stacked), and Mobile-V1 `6838:1059` (400). Hero uses `.contact-hero-inner` (`header-xl`; 800 mobile, interpolates 742→800 from 768–1279, 800 desktop). Call-only hero CTA. Capabilities marquee after the hero. Quote section is white with photo overlay card + form; FAQ is dark-pattern; service area is white. Footer Contact lists phone, Greater Houston, and hours (Mon–Fri 7AM–6PM, Sat–Sun 9AM–6PM). No street address, email, directions link, or US-wide map until confirmed. Further Contact visual updates stay in Figma first.
 
+**Careers:** live file `careers.html` from Figma on **Careers Page**: Desktop-V1 `6994:276` (1440), Large Tablet-V1 `6994:508` (1280, two-column apply from `min-[1024px]`, hamburger still below 1280), Regular Tablet-V1 `6994:731` (768, stacked), and Mobile-V1 `6994:940` (400). Same layout and hero heights as Contact (`.contact-hero-inner`). Hero CTA is Apply Now (`#apply`). Apply form fields: full name, email, phone, kind of work, experience. FAQ is dark-pattern. Service area copy is the crew in Hockley. Submitted state is `6994:1193`. Further Careers visual updates stay in Figma first.
+
 **Until the designer says otherwise:**
 
-- Quote / “Request a Quote” on Home, About, and the Services hub stays phone (`tel:+12813523077`). The Straight-Shaft page and Contact page have a quote form (fields only; submissions are not delivered until an email/form service is chosen).
+- Quote / “Request a Quote” on Home, About, and the Services hub stays phone (`tel:+12813523077`). The Straight-Shaft page and Contact page quote forms, and the Careers apply form, open a mailto draft to `bids@affordablebellbottomdrill.com`.
 - Desktop and overlay **Services** is a dropdown trigger (hover or click), not a page link. All Services in the dropdown goes to `services.html`. Straight-Shaft is live; remaining services coming soon.
 - Only change the breakpoint or section the designer named (e.g. desktop-only). Do not restyle tablet or mobile “while you are there.”
 

@@ -14,9 +14,9 @@ Do **not** start this work during routine homepage visual edits.
 - A form, quote flow, or careers application is added
 - Domain, hosting, or indexing is being set up
 
-Until the rest of the site is ready: keep unfinished menu items as coming soon; do not invent layouts or business facts. Home, About, Services hub, Straight-Shaft, and Contact are live; do not run a full SEO/GEO pass unless asked.
+Until the rest of the site is ready: keep unfinished menu items as coming soon; do not invent layouts or business facts. Home, About, Services hub, Straight-Shaft, Contact, and Careers are live; do not run a full SEO/GEO pass unless asked.
 
-**Homepage visual matching is complete** (as of 2026-09-15). **Services hub is live** (as of 2026-09-18) from `Services Desktop-V1` `6692:1699`. **Contact is live** (as of 2026-09-21) at `contact.html` from `Contact Desktop-V1` `6838:434`. Bring SEO/launch up next when any of these happen: remaining inner pages (individual service pages, Projects, Careers), domain/hosting/indexing, or they say they are launching.
+**Homepage visual matching is complete** (as of 2026-09-15). **Services hub is live** (as of 2026-09-18) from `Services Desktop-V1` `6692:1699`. **Contact is live** (as of 2026-09-21) at `contact.html` from `Contact Desktop-V1` `6838:434`. **Careers is live** (as of 2026-09-22) at `careers.html` from `Careers Desktop-V1` `6994:276`. Quote and apply forms open a mailto draft to `bids@affordablebellbottomdrill.com`. Bring SEO/launch up next when any of these happen: remaining inner pages (individual service pages, Projects), domain/hosting/indexing, or they say they are launching.
 
 ## Do when pages exist
 
@@ -33,6 +33,8 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 **Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Do not rewrite the hub when adding remaining individual service pages. Straight-Shaft lives at `services/straight-shaft-pier-drilling.html`; the hub Explore for that service is live. Remaining hub Explore links stay coming soon. Desktop Services dropdown is live (`aria-expanded`, Escape); remaining dropdown items besides All Services and Straight-Shaft stay coming soon.
 
 **Contact live:** `contact.html` has unique title, description, canonical, OG, ContactPage + BreadcrumbList schema, and is in `sitemap.xml`. Nav Contact is live. Footer Contact shows phone, Greater Houston, and hours. Do not add `LocalBusiness` street address until confirmed.
+
+**Careers live:** `careers.html` has unique title, description, canonical, OG, WebPage + BreadcrumbList schema, and is in `sitemap.xml`. Nav Careers is live. No job listings, pay, or benefits until confirmed. Do not add `JobPosting` schema until a specific opening is confirmed.
 
 ## Still needs client confirmation (do not guess)
 

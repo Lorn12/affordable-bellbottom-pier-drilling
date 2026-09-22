@@ -53,7 +53,7 @@ The **Typography** collection has Desktop, Tablet, and Mobile modes. Tablet head
 If a Figma text layer is on the wrong style, **do not copy that size onto the site**. Implement the token the heading is supposed to use:
 
 - **Home H1 only:** `header-xxl` — 72 from `md`, **52** on mobile. This is the only extra-large header. Do not switch it to `header-xl` 48 even if Homepage Mobile-V1 is bound that way.
-- **About, Services, and Contact H1:** `header-xl` — 52 from `md`, 48 on mobile.
+- **About, Services, Contact, and Careers H1:** `header-xl` — 52 from `md`, 48 on mobile.
 - **Section / CTA / footer headings** (Home, About, Services): `header-l` — 42 from `md`, 36 on mobile. Do not use 32 (`header-m`) for these.
 - Card titles: `header-s` 24 at every breakpoint. Eyebrows: `header-xs` 20. Body: `text-m` 16.
 
@@ -65,7 +65,7 @@ Do not push these corrections back into Figma unless asked.
 - **Who We Serve cards:** Copy is audience tiles: Concrete Contractors, Home Builders, Pool Companies, Direct Clients, plus Based in Hockley, Texas. Desktop-V1 and Large Tablet-V1 are a 560px side-by-side bento (left photo 1fr, right stack 2fr; top row 1fr/2fr). Apply that from `min-[1024px]` (hamburger still below 1280). Regular Tablet-V1 stacks a 400px photo over two 272px rows (2-col then 3-col). Mobile-V1 stacks every tile full-width like the site (do not keep the cramped 2/3-column bento). Keep `bg-black/40` on the Concrete Contractors photo so the caption stays readable. The Discuss Your Project text link uses full `text-lime-dark` like View All Services (do not fade the CTA with the intro copy).
 - **Header scroll:** the live site switches from a clear overlay to a blurred solid bar at Companies. In Figma that is two states, not one frame that tries to show both.
 - **Our Work hover:** Desktop-V1 cards are a flat 20% black overlay only. The live site keeps that at rest and adds `.project-card-scrim` on hover/focus (bottom ink gradient). Do not clear the overlay on hover. Circular arrows use `.icon-arrow-btn` at 52px on Our Services and Our Work (all breakpoints); card hover/focus/active fills Neutral-200 (`#f1f1f1`). Figma hover is a variant next to `Butttons-02`, not a change to the default lime rest state.
-- **Typography modes over baked type:** heading sizes follow the Typography collection, not a mis-bound text style. Home H1 is `header-xxl` (72 / 52). About, Services, and Contact H1 are `header-xl` (52 / 48). Section/CTA/footer headings are `header-l` (42 / 36). Do not revert Home mobile hero to 48 if Homepage Mobile-V1 still uses `header-xl`.
+- **Typography modes over baked type:** heading sizes follow the Typography collection, not a mis-bound text style. Home H1 is `header-xxl` (72 / 52). About, Services, Contact, and Careers H1 are `header-xl` (52 / 48). Section/CTA/footer headings are `header-l` (42 / 36). Do not revert Home mobile hero to 48 if Homepage Mobile-V1 still uses `header-xl`.
 - **Soil & Rock drill icon:** Noun Project (`noun-drilling-8343366`), not Streamline. Leave the Figma SVG stroke. Do not redraw it.
 - **Equipment vs How We Work spacing:** different on purpose in Desktop-V1. Do not copy one section’s gutter onto the other unless asked. How We Work steps (Left Content Container) stay full column width with no `max-width` at tablet, mobile, or desktop.
 
@@ -112,6 +112,17 @@ Visual source on **Contact Page**:
 
 Hero uses `.contact-hero-inner` (same overlay recipe as About/Services). Interpolate 742→800 across 768–1279; mobile stays 800. Hero CTA is Call only. Capabilities marquee after the hero matches About. Quote and service-area sections are white; FAQ uses `.dark-pattern`. First FAQ item is open (lime −). Footer Contact on the site lists phone, Greater Houston, and hours. Do not invent a street address, email, directions link, or national map.
 
+## Careers page
+
+Visual source on **Careers Page**:
+
+- Desktop: `Careers Desktop-V1` `6994:276` (1440). Full nav from 1280px (`lg`). Hero 800. Apply two-column, pad 80.
+- Large tablet: `Careers Large Tablet-V1` `6994:508` (1280) — visual source from `min-[1024px]` through 1279 (hamburger still below 1280). Hero 800, pad 40. Apply two-column.
+- Regular tablet: `Careers Regular Tablet-V1` `6994:731` (768) — hero 742, pad 40. Apply stacks: photo then form. Email/phone stay 2-up.
+- Mobile: `Careers Mobile-V1` `6994:940` (400) — hero 800, pad 20. Apply stacks; email/phone stack. Hero `header-xl` 48; section headings `header-l` 36.
+
+Same structure and hero class as Contact (`.contact-hero-inner`). Hero CTA is Apply Now to `#apply`. Kind of work is a text field (“Tell us what you do”); Figma shows dropdown chrome with no option list. FAQ uses `.dark-pattern`. Question containers use a soft Neutral-200 border (`rgb(241 241 241 / 0.32)`, stronger on hover and focus). Service-area intro is the crew based in Hockley. Submitted state frame: `6994:1193`. Quote and apply forms mailto `bids@affordablebellbottomdrill.com`.
+
 ## Out of scope unless the user asks
 
-WordPress/React, hosting, inventing copy that is not in Figma, remaining inner pages (other individual service pages, Projects, Careers).
+WordPress/React, hosting, inventing copy that is not in Figma, remaining inner pages (other individual service pages, Projects).

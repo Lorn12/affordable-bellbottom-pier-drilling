@@ -35,12 +35,16 @@ Known homepage frames (confirm in Figma if they move). **Use these as the visual
 - Contact large tablet: `Contact Large Tablet-V1` `6838:653` (1280 wide) on **Contact Page** — visual source from `min-[1024px]` through 1279 (hamburger still below 1280). Quote row two-column (548 + 40 + 612).
 - Contact regular tablet: `Contact Regular Tablet-V1` `6838:863` (768 wide) — stacked quote photo (400) then form, hero 742, pad 40.
 - Contact mobile: `Contact Mobile-V1` `6838:1059` (400 wide) — stacked quote, email/phone stacked, hero 800, pad 20. Footer Contact on the site lists phone, Greater Houston, and hours. No street address, email, directions link, or US-wide map until confirmed. Figma footer columns may still show the old text-only links.
+- Careers desktop: `Careers Desktop-V1` `6994:276` (1440 wide) on **Careers Page**.
+- Careers large tablet: `Careers Large Tablet-V1` `6994:508` (1280 wide) on **Careers Page** — visual source from `min-[1024px]` through 1279 (hamburger still below 1280). Apply row two-column.
+- Careers regular tablet: `Careers Regular Tablet-V1` `6994:731` (768 wide) — stacked apply photo then form, hero 742, pad 40.
+- Careers mobile: `Careers Mobile-V1` `6994:940` (400 wide) — stacked apply, email/phone stacked, hero 800, pad 20.
 
 Going forward: the designer designs in Figma first, then we match the site to Figma. Do not silently push site-only tweaks back into Figma unless they ask.
 
 Same token names can have different values on desktop vs mobile. Apply the value for the breakpoint you are implementing.
 
-**Typography collection modes win over a mis-bound frame.** Read `Typography` Desktop / Tablet / Mobile variable values (`header-xxl`, `header-xl`, `header-l`, etc.). If a text layer is on the wrong style (for example Homepage Mobile-V1 hero on `header-xl` 48 instead of `header-xxl` 52), implement the **variable** for that token and breakpoint. Do not copy the baked Figma size. Desktop and Tablet header sizes match; Mobile is the step-down. Home hero is the only `header-xxl` (72 from `md`, 52 below 768). About, Services, and Contact heroes are `header-xl` (52 from `md`, 48 below 768). Section, CTA, and footer headings are `header-l` (42 from `md`, 36 below 768). Do not silently rebind Figma unless asked.
+**Typography collection modes win over a mis-bound frame.** Read `Typography` Desktop / Tablet / Mobile variable values (`header-xxl`, `header-xl`, `header-l`, etc.). If a text layer is on the wrong style (for example Homepage Mobile-V1 hero on `header-xl` 48 instead of `header-xxl` 52), implement the **variable** for that token and breakpoint. Do not copy the baked Figma size. Desktop and Tablet header sizes match; Mobile is the step-down. Home hero is the only `header-xxl` (72 from `md`, 52 below 768). About, Services, Contact, and Careers heroes are `header-xl` (52 from `md`, 48 below 768). Section, CTA, and footer headings are `header-l` (42 from `md`, 36 below 768). Do not silently rebind Figma unless asked.
 
 Code breakpoints for this site:
 
@@ -64,5 +68,5 @@ If the user points at a mismatch, read that section’s node. Do not guess which
 - **Who We Serve / About Why Choose photo overlay:** keep `bg-black/40` on the Concrete Contractors card and the About Why Choose Us left photo so captions stay readable.
 - **About Who We Are photos:** fill the 400px frames with `object-cover`. Do not restore Figma’s 156% crop offsets. Regular Tablet-V1 uses 2-up + full-width third from 768–1023; 3-column from `min-[1024px]`.
 - **Capabilities drill icon:** keep the Noun Project export (`icon-drilling.svg`) as-is. Do not thicken or redraw it to match the Streamline icons next to it unless a Streamline glyph is placed in Figma.
-- **Typography modes over baked type:** heading sizes follow the Typography collection (Desktop/Tablet vs Mobile), not a mis-bound text style. Home H1 is `header-xxl` (72 / 52). About, Services, and Contact H1 are `header-xl` (52 / 48). Section/CTA/footer headings are `header-l` (42 / 36). Do not revert Home mobile hero to 48 if Homepage Mobile-V1 still uses `header-xl`.
+- **Typography modes over baked type:** heading sizes follow the Typography collection (Desktop/Tablet vs Mobile), not a mis-bound text style. Home H1 is `header-xxl` (72 / 52). About, Services, Contact, and Careers H1 are `header-xl` (52 / 48). Section/CTA/footer headings are `header-l` (42 / 36). Do not revert Home mobile hero to 48 if Homepage Mobile-V1 still uses `header-xl`.
 - Do not equalize Equipment & Capabilities vs How We Work column gutters unless asked. Desktop-V1 uses different left/right widths (Equipment left max 720 + 524px photos; How We Work two flex columns). How We Work steps (Left Content Container) have no max-width at any breakpoint — they fill the column.
