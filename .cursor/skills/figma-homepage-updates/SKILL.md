@@ -38,7 +38,7 @@ The header sits on top of the hero (`-mt-[68px]` mobile, `-mt-[93px]` from table
 Content is **bottom-aligned** (`justify-end`). `.hero-inner` padding-top is only the overlay bar; the gap under the nav comes from min-height + `justify-end`. Implemented in `src/style.css` (re-measure if nodes move):
 
 - Mobile (below 768px): min-height `944px`, padding-top `68px` (44px logo + 12px padding), padding-bottom `80px` (`Homepage Mobile-V1`)
-- Tablet (768–1279): min-height interpolates Regular Tablet-V1 `924px` → Large Tablet-V1 `900px`; padding-top `93px`, padding-bottom `80px`
+- Tablet (768–1279): min-height interpolates Regular Tablet-V1 `924px` → Large Tablet-V1 `932px`; padding-top `93px`, padding-bottom `80px`
 - Desktop (1280px+): min-height `824px`, padding-top `93px`, padding-bottom `80px` (`Homepage Desktop-V1`)
 - Gap between hero blocks: `32px` (`gap-8`)
 - Photo `opacity-[0.78]`, hex grid `opacity-12`, gradient `from-[rgba(11,11,11,0.225)]` to `to-[rgba(11,11,11,0.846)]` (Option A ink wash: Figma gradient layer 0.9, stops 0.25→0.94)

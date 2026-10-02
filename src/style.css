@@ -129,8 +129,8 @@ h3 {
 
 @media (min-width: 768px) {
   .hero-inner {
-    /* Regular Tablet-V1 924 → Large Tablet-V1 900 across 768–1279 */
-    min-height: calc(924px - 24 * (100vw - 768px) / 512);
+    /* Regular Tablet-V1 924 → Large Tablet-V1 932 across 768–1279 */
+    min-height: calc(924px + 8 * (100vw - 768px) / 512);
     padding-top: 93px;
   }
 }
