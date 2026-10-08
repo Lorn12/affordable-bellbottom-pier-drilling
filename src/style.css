@@ -233,6 +233,11 @@ h3 {
   border-radius: 8px 8px 42px 8px;
 }
 
+/* Desktop-V1 crop: image is 137.78% tall, top -33.61%, so the loader sits in the frame. */
+.service-card .service-card-photo-belled {
+  object-position: center 89%;
+}
+
 .service-card-copy {
   justify-content: flex-start;
   padding-top: 23px;
@@ -270,6 +275,13 @@ h3 {
     justify-content: center;
     padding-top: 0;
     padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .service-card-media {
+    height: 400px;
+    aspect-ratio: auto;
   }
 }
 
@@ -598,7 +610,15 @@ h3 {
   gap: 60px;
   max-width: 1440px;
   margin-inline: auto;
-  padding: 100px 20px;
+  padding: 80px 20px;
+}
+
+.equipment-lede {
+  max-width: 620px;
+}
+
+.equipment-lede-wide {
+  display: none;
 }
 
 .equipment-copy {
@@ -628,15 +648,16 @@ h3 {
 }
 
 .equipment-photos-main img {
-  top: -0.1%;
-  left: -2.08%;
-  width: 175.86%;
+  top: 0.03%;
+  left: -2.26%;
+  width: 133.33%;
 }
 
 .equipment-photos-inset img {
-  top: -45.36%;
-  left: -127.86%;
-  width: 273.02%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -678,13 +699,31 @@ h3 {
     width: 64.39%;
     height: 42.15%;
   }
+
+  .equipment-photos-main img {
+    top: 0.03%;
+    left: -2.71%;
+    width: 131.73%;
+  }
+
 }
 
-/* Large Tablet-V1 row (1280 frame) once two columns fit; hamburger still below 1280 */
+/* Large Tablet-V1 row (1280 frame) once two columns fit; hamburger still below 1280.
+   Intro copy on that frame names the compact excavator. Desktop-V1 and the stacked frames do not. */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .equipment-lede-compact {
+    display: none;
+  }
+
+  .equipment-lede-wide {
+    display: block;
+  }
+}
+
 @media (min-width: 1024px) {
   .equipment-inner {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
   }
 
@@ -694,36 +733,44 @@ h3 {
   }
 
   .equipment-photos {
-    width: 557px;
+    width: 520px;
+    height: 780px;
     max-width: none;
-    aspect-ratio: 557 / 780;
+    aspect-ratio: auto;
+    flex-shrink: 0;
   }
 
   .equipment-photos-main {
-    width: 96.23%;
-    height: 67.82%;
+    width: 99.594%;
+    height: 65.529%;
   }
 
   .equipment-photos-inset {
-    top: 53.85%;
-    left: auto;
-    right: 0;
-    width: 74.15%;
-    height: 46.15%;
+    top: 55.405%;
+    left: 23.26%;
+    right: auto;
+    width: 76.74%;
+    height: 44.595%;
+  }
+
+  .equipment-photos-main img {
+    top: 0.17%;
+    left: -4.78%;
+    width: 131.59%;
+    height: auto;
+    object-fit: unset;
   }
 }
 
 @media (min-width: 1280px) {
   .equipment-inner {
-    align-items: center;
     padding-left: 80px;
     padding-right: 80px;
   }
 
   .equipment-photos {
     width: 520px;
-    max-width: none;
-    aspect-ratio: 520 / 782;
+    height: 782px;
   }
 
   .equipment-photos-main {
@@ -733,9 +780,19 @@ h3 {
 
   .equipment-photos-inset {
     top: 53.96%;
+    left: auto;
     right: 0;
     width: 79.42%;
     height: 46.04%;
+  }
+
+  .equipment-photos-main img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 
