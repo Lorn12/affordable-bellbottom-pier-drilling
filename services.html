@@ -264,22 +264,7 @@
               decoding="async"
             />
           </picture>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="/assets/hero-grid-400.webp 400w, /assets/hero-grid-800.webp 800w, /assets/hero-grid-1280.webp 1280w, /assets/hero-grid-1920.webp 1920w"
-              sizes="100vw"
-            />
-            <img
-              class="absolute inset-0 h-full w-full object-cover opacity-12"
-              src="/assets/hero-grid.png"
-              alt=""
-              width="4096"
-              height="1707"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <div class="hero-grid"></div>
           <div class="absolute inset-0 bg-gradient-to-b from-[rgba(11,11,11,0.225)] to-[rgba(11,11,11,0.846)]"></div>
         </div>
         <div class="services-hero-inner relative mx-auto flex max-w-[1440px] flex-col justify-end gap-8 px-5 md:px-10 lg:px-20">
@@ -647,56 +632,55 @@
     <footer class="dark-pattern text-white">
       <div class="mx-auto max-w-[1440px] px-5 py-[100px] md:px-10 md:py-[100px] lg:px-20 lg:py-[100px]">
         <div class="flex flex-col gap-20 md:max-lg:gap-10 lg:flex-row lg:items-start lg:gap-20">
-          <div class="max-w-[500px] lg:flex-1">
+          <div class="max-w-[500px] lg:min-w-0 lg:flex-1">
             <a class="inline-block w-fit" href="./" aria-label="Affordable Bellbottom Pier Drilling">
               <img src="/assets/logo.svg" alt="Affordable Bellbottom Pier Drilling" width="204" height="59" class="h-[77px] w-auto max-w-full" />
             </a>
-            <p class="mt-10 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px]">
+            <p class="font-header mt-10 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px]">
               Pier Drilling &amp;<br />Belled Pier Drilling
             </p>
-            <a class="mt-6 inline-block rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 hover:bg-white hover:text-ink" href="#quote">Get a Quote Today</a>
           </div>
-          <div class="flex w-full min-w-0 flex-wrap items-stretch gap-x-4 gap-y-5 md:max-lg:flex-nowrap md:max-lg:gap-4 lg:flex-1 lg:flex-nowrap lg:justify-end">
-            <div class="flex w-[180px] shrink-0 flex-col md:max-lg:w-auto md:max-lg:flex-1 lg:w-auto lg:max-w-[180px] lg:flex-1">
-              <h2 class="text-xl font-medium">Services</h2>
-              <ul class="mt-4 space-y-2 text-neutral-300">
-                <li><a class="py-1 hover:text-white" href="services/straight-shaft-pier-drilling.html">Pier drilling</a></li>
-                <li><a class="py-1 hover:text-white" href="#belled-pier-drilling">Belled drilling</a></li>
-                <li><a class="py-1 hover:text-white" href="#pool-pier-drilling">Pool work</a></li>
-                <li><a class="py-1 hover:text-white" href="#home-foundation-pier-drilling">Residential</a></li>
-                <li><a class="py-1 hover:text-white" href="#concrete-pour-assistance">Concrete assist</a></li>
+          <div class="grid w-full min-w-0 grid-cols-2 items-start gap-x-4 gap-y-5 md:flex md:flex-nowrap md:justify-end md:gap-4 lg:flex-1">
+            <div class="flex min-w-0 flex-col gap-4 md:flex-1 lg:w-[180px] lg:flex-none">
+              <h2 class="footer-col-title text-xl">Services</h2>
+              <ul class="text-neutral-300">
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="services/straight-shaft-pier-drilling.html">Pier drilling</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="#belled-pier-drilling">Belled drilling</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="#pool-pier-drilling">Pool work</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="#home-foundation-pier-drilling">Residential</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="#concrete-pour-assistance">Concrete assist</a></li>
               </ul>
             </div>
-            <div class="flex w-[180px] shrink-0 flex-col md:max-lg:w-auto md:max-lg:flex-1 lg:w-auto lg:max-w-[180px] lg:flex-1">
-              <h2 class="text-xl font-medium">Company</h2>
-              <ul class="mt-4 space-y-2 text-neutral-300">
-                <li><a class="py-1 hover:text-white" href="about.html">About us</a></li>
-                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Projects</a></li>
-                <li><a class="py-1 hover:text-white" href="careers.html">Careers</a></li>
-                <li><a class="py-1 hover:text-white" href="contact.html">Contact</a></li>
-                <li><a class="py-1 hover:text-white" href="#quote">Request quote</a></li>
+            <div class="flex min-w-0 flex-col gap-4 md:flex-1 lg:w-[180px] lg:flex-none">
+              <h2 class="footer-col-title text-xl">Company</h2>
+              <ul class="text-neutral-300">
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="about.html">About us</a></li>
+                <li><a class="coming-soon block py-2 leading-[1.75]" href="#" aria-disabled="true">Projects</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="careers.html">Careers</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="contact.html">Contact</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="#quote">Request quote</a></li>
               </ul>
             </div>
-            <div class="footer-contact">
-              <h2 class="text-xl font-medium">Contact</h2>
-              <address class="mt-4 not-italic">
+            <div class="footer-contact col-span-2 md:col-auto">
+              <h2 class="footer-col-title text-xl">Contact</h2>
+              <address class="not-italic">
                 <ul class="footer-contact-list">
                   <li class="footer-contact-row">
-                    <span class="footer-contact-icon"><img src="/assets/phone.svg" alt="" width="16" height="16" /></span>
+                    <span class="footer-contact-icon"><img src="/assets/footer-phone.svg" alt="" width="16" height="16" /></span>
                     <span class="footer-contact-copy">
                       <span class="footer-contact-label">Call us</span>
                       <a class="footer-contact-value touch-manipulation" href="tel:+12813523077">(281) 352-3077</a>
                     </span>
                   </li>
                   <li class="footer-contact-row">
-                    <span class="footer-contact-icon"><img src="/assets/icon-pin.svg" alt="" width="16" height="16" class="size-4" /></span>
+                    <span class="footer-contact-icon"><img src="/assets/footer-pin.svg" alt="" width="16" height="16" /></span>
                     <span class="footer-contact-copy">
                       <span class="footer-contact-label">Service area</span>
                       <span class="footer-contact-value">Greater Houston</span>
                     </span>
                   </li>
                   <li class="footer-contact-row">
-                    <span class="footer-contact-icon"><img src="/assets/icon-clock.svg" alt="" width="16" height="16" /></span>
+                    <span class="footer-contact-icon"><img src="/assets/footer-clock.svg" alt="" width="16" height="16" /></span>
                     <span class="footer-contact-copy">
                       <span class="footer-contact-label">Business hours</span>
                       <span class="footer-contact-value">Mon–Fri 7AM–6PM</span>
@@ -709,7 +693,7 @@
           </div>
         </div>
       </div>
-      <div class="border-t border-neutral-300/40 px-5 py-5 md:px-10 lg:px-20 lg:py-5">
+      <div class="border-t border-neutral-300/[0.42] px-5 py-5 md:px-10 lg:px-20 lg:py-5">
         <div class="mx-auto flex max-w-[1440px] flex-col gap-5 text-sm leading-[1.75] text-neutral-300 md:flex-row md:items-center md:justify-between md:gap-4">
           <p>Copyright @ 2026 Affordable Bellbottom Pier Drilling, All rights reserved.</p>
           <p class="flex gap-[50px]">

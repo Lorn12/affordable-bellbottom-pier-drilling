@@ -208,22 +208,7 @@
               decoding="async"
             />
           </picture>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="/assets/hero-grid-400.webp 400w, /assets/hero-grid-800.webp 800w, /assets/hero-grid-1280.webp 1280w, /assets/hero-grid-1920.webp 1920w"
-              sizes="100vw"
-            />
-            <img
-              class="absolute inset-0 h-full w-full object-cover opacity-12"
-              src="/assets/hero-grid.png"
-              alt=""
-              width="4096"
-              height="1707"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <div class="hero-grid"></div>
           <div class="absolute inset-0 bg-gradient-to-b from-[rgba(11,11,11,0.225)] to-[rgba(11,11,11,0.846)]"></div>
         </div>
         <div class="hero-inner relative mx-auto flex max-w-[1440px] flex-col justify-end gap-8 px-5 md:px-10 lg:px-20">
@@ -541,182 +526,125 @@
       </section>
 
       <section class="dark-pattern text-white lg:px-20" aria-labelledby="process-heading">
-        <div class="mx-auto max-w-[1440px] px-5 py-20 md:px-10 md:py-20 lg:max-w-[1280px] lg:px-0 lg:py-20">
-          <div class="mb-10 grid w-full gap-5 md:gap-6 min-[1024px]:mb-20 min-[1024px]:flex min-[1024px]:items-end min-[1024px]:gap-6 lg:gap-10">
-            <div class="min-[1024px]:min-w-0 min-[1024px]:flex-1">
+        <div class="mx-auto flex max-w-[1440px] flex-col gap-10 px-5 py-20 md:px-10 lg:max-w-[1280px] lg:px-0 min-[1024px]:flex-row min-[1024px]:items-start">
+          <div class="flex min-w-0 flex-1 flex-col gap-5 md:gap-10">
+            <div class="flex flex-col gap-5 md:gap-6">
               <p class="font-header text-xl font-medium"><span class="text-lime">●</span> How We Work</p>
-              <h2 id="process-heading" class="mt-3.5 text-[36px] font-bold leading-[1.2] md:max-lg:mt-4 md:max-lg:max-w-[630px] md:text-[42px]">
-                Clear Coordination From Project Review Through Drilling
+              <h2 id="process-heading" class="max-w-[630px] text-[36px] font-bold leading-[1.2] md:text-[42px]">
+                Planning Your Pier Drilling Project
               </h2>
-            </div>
-            <div class="min-[1024px]:flex min-[1024px]:min-w-0 min-[1024px]:flex-1 min-[1024px]:justify-end">
-              <p class="max-w-[522px] leading-[1.75] text-neutral-200 md:max-lg:max-w-[550px] lg:max-w-[620px]">
-                We review the available project information, confirm site and access requirements, and coordinate the drilling scope with the customer, contractor, or project team before work begins.
+              <p class="max-w-[550px] leading-[1.75] text-neutral-200">
+                Every drilling project is different. Sharing accurate site information, plans, access conditions, and pier requirements helps us review the scope before scheduling and mobilization.
               </p>
             </div>
+            <a class="inline-block self-start rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 hover:bg-white hover:text-ink" href="contact.html">Discuss Your Project</a>
           </div>
-          <div class="grid items-start gap-[60px] min-[1024px]:grid-cols-2 min-[1024px]:items-stretch min-[1024px]:gap-10">
-            <ol class="how-we-work-steps w-full space-y-5 md:space-y-6">
-              <li>
-                <h3 class="font-body text-xl font-normal leading-[1.5]">01 — Review the Project</h3>
-                <p class="mt-1 leading-[1.75] text-neutral-400">
-                  We review plans, pier requirements, project location, access conditions, and known soil or rock conditions to understand the drilling scope.
-                </p>
-              </li>
-              <li>
-                <h3 class="font-body text-xl font-normal leading-[1.5]">02 — Confirm Responsibilities</h3>
-                <p class="mt-1 leading-[1.75] text-neutral-400">
-                  We clarify what Affordable Bellbottom will handle and what remains with the client or general contractor, including permits, layout, rebar cages, spoil removal, and cleanup.
-                </p>
-              </li>
-              <li>
-                <h3 class="font-body text-xl font-normal leading-[1.5]">03 — Coordinate the Work</h3>
-                <p class="mt-1 leading-[1.75] text-neutral-400">
-                  We coordinate drilling needs, site access, and project timing with the customer or contractor so everyone understands the next steps before mobilization.
-                </p>
-              </li>
-              <li>
-                <h3 class="font-body text-xl font-normal leading-[1.5]">04 — Support the Next Phase</h3>
-                <p class="mt-1 leading-[1.75] text-neutral-400">
-                  After drilling is complete, we can assist the concrete contractor with pouring the piers using a modified bucket when that support is part of the project scope.
-                </p>
-              </li>
-            </ol>
-            <div class="relative min-w-0 w-full min-[1024px]:h-[472px] lg:h-full">
-              <div class="relative h-[360px] rounded-[20px] shadow-[2px_10px_40px_-4px_rgba(11,11,11,0.2)] md:h-[480px] min-[1024px]:h-[472px] min-[1024px]:max-w-[620px] min-[1024px]:ml-auto lg:h-full lg:max-w-none">
-                <picture class="contents">
-                  <source
-                    type="image/webp"
-                    srcset="/assets/how-we-work-400.webp 400w, /assets/how-we-work-800.webp 800w, /assets/how-we-work-1280.webp 1280w"
-                    sizes="(min-width: 1280px) calc((min(1280px, 100vw) - 200px) / 2), (min-width: 1024px) min(620px, calc((100vw - 120px) / 2)), (min-width: 768px) calc(100vw - 80px), calc(100vw - 40px)"
-                  />
-                  <img class="h-full w-full rounded-[20px] object-cover object-[center_72%] min-[1024px]:max-lg:object-[41%_50%] min-[1024px]:absolute min-[1024px]:inset-0" src="/assets/how-we-work.png" alt="Bellbottom drilling bucket over a pier hole" width="620" height="472" loading="lazy" decoding="async" />
-                </picture>
-                <a class="absolute bottom-4 left-2.5 rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 hover:bg-white hover:text-ink md:right-4 md:left-auto" href="#quote">Request Your Quote</a>
-              </div>
-            </div>
-          </div>
+          <ol class="flex min-w-0 flex-1 flex-col gap-6">
+            <li>
+              <h3 class="font-body text-xl font-normal leading-[1.5]">01 — Share Your Project</h3>
+              <p class="mt-1 leading-[1.75] text-neutral-400">
+                Tell us your project location, drilling needs, and site-access details.
+              </p>
+            </li>
+            <li>
+              <h3 class="font-body text-xl font-normal leading-[1.5]">02 — Confirm the Scope</h3>
+              <p class="mt-2 leading-[1.75] text-neutral-400">
+                Discuss the drilling work and the client’s or contractor’s responsibilities.
+              </p>
+            </li>
+            <li>
+              <h3 class="font-body text-xl font-normal leading-[1.5]">03 — Coordinate the Work</h3>
+              <p class="mt-2 leading-[1.75] text-neutral-400">
+                Confirm site access and project timing before work begins.
+              </p>
+            </li>
+            <li>
+              <h3 class="font-body text-xl font-normal leading-[1.5]">04 — Concrete Pour Assistance</h3>
+              <p class="mt-2 leading-[1.75] text-neutral-400">
+                We can assist the concrete contractor with pouring the drilled piers when included in the scope.
+              </p>
+            </li>
+          </ol>
         </div>
       </section>
 
-      <section class="bg-white px-5 py-20 md:px-10 md:py-20 lg:px-20 lg:py-20" aria-labelledby="planning-heading">
-        <div class="mx-auto grid max-w-[1280px] gap-10 min-[1024px]:grid-cols-2 min-[1024px]:gap-10">
-          <div>
-            <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Project Planning</p>
-            <h2 id="planning-heading" class="mt-5 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px] min-[1024px]:max-lg:max-w-[630px]">
-              The Right Details Help Us Prepare for the Work
-            </h2>
-            <p class="mt-5 leading-[1.75] text-neutral-600 md:mt-6 md:max-w-[638px] min-[1024px]:max-w-[550px] lg:max-w-[517px]">
-              Every drilling project is different. Sharing accurate site information, plans, access conditions, and pier requirements helps us review the scope before scheduling and mobilization.
-            </p>
-            <a class="mt-5 inline-block rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 hover:bg-ink hover:text-white md:mt-10 lg:mt-[60px]" href="contact.html">Discuss Your Project</a>
-          </div>
-          <dl class="w-full space-y-5 md:space-y-6">
-            <div>
-              <dt class="font-body text-xl font-normal leading-[1.5]">Project Location</dt>
-              <dd class="mt-1 leading-[1.75] text-neutral-600">
-                Provide the jobsite address so we can review service-area availability, access conditions, and mobilization requirements.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-body text-xl font-normal leading-[1.5]">Plans &amp; Pier Requirements</dt>
-              <dd class="mt-2 leading-[1.75] text-neutral-600">
-                Share available plans, pier count, diameter, depth, bell dimensions, and any engineering requirements you have.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-body text-xl font-normal leading-[1.5]">Site Access &amp; Ground Conditions</dt>
-              <dd class="mt-2 leading-[1.75] text-neutral-600">
-                Let us know about gates, side-yard access, limited work areas, or known soil and rock conditions that may affect equipment setup or drilling.
-              </dd>
-            </div>
-            <div>
-              <dt class="font-body text-xl font-normal leading-[1.5]">Project Responsibilities</dt>
-              <dd class="mt-2 leading-[1.75] text-neutral-600">
-                Permits, layout, rebar cages, spoil removal, and cleanup are handled by the client or general contractor unless otherwise confirmed before the project.
-              </dd>
-            </div>
-          </dl>
-        </div>
-      </section>
-
-      <section class="dark-pattern text-white lg:px-20" aria-labelledby="work-heading">
+      <section class="bg-white text-ink lg:px-20" aria-labelledby="work-heading">
         <div class="mx-auto max-w-[1440px] px-5 py-20 md:px-10 md:py-20 lg:max-w-[1280px] lg:px-0 lg:py-20">
-          <div class="mb-10 grid w-full gap-5 md:gap-6 md:max-lg:mb-[60px] lg:mb-20 lg:flex lg:items-end lg:gap-20">
-            <div class="lg:min-w-0 lg:flex-1">
+          <div class="mb-10 flex w-full flex-col gap-5 md:mb-[60px] md:max-[1023px]:gap-6 lg:mb-20 min-[1024px]:flex-row min-[1024px]:items-end min-[1024px]:gap-20">
+            <div class="min-[1024px]:min-w-0 min-[1024px]:flex-1">
               <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Our Work</p>
               <h2 id="work-heading" class="mt-5 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px]">Pier Drilling Projects</h2>
             </div>
-            <div class="lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
-              <p class="max-w-[517px] leading-[1.75] text-neutral-200 md:max-lg:max-w-[550px] lg:max-w-[600px]">
-                See examples of straight-shaft and belled pier drilling for residential, commercial, builder, contractor, and pool-related projects throughout Greater Houston.
+            <div class="min-[1024px]:flex min-[1024px]:min-w-0 min-[1024px]:flex-1 min-[1024px]:items-end min-[1024px]:justify-end">
+              <p class="max-w-[550px] leading-[1.75] text-neutral-600 min-[1024px]:max-w-[600px]">
+                Pier drilling, belled pier drilling, and concrete pour assistance throughout Houston and Greater Houston.
               </p>
             </div>
           </div>
-          <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-10">
-            <a class="group relative block h-[450px] cursor-pointer rounded-lg md:max-lg:h-[400px]" href="#" data-project-card>
+          <div class="grid gap-5 md:grid-cols-2 md:max-[1023px]:gap-10 min-[1024px]:grid-cols-3 min-[1024px]:gap-5 lg:gap-10">
+            <a class="group relative block h-[450px] cursor-pointer rounded-lg md:max-[1023px]:h-[400px]" href="#" data-project-card>
               <picture class="block size-full">
-                <source type="image/webp" srcset="/assets/work-pool-400.webp 400w, /assets/work-pool-800.webp 800w, /assets/work-pool-1280.webp 1280w" sizes="(min-width: 1280px) 33vw, (min-width: 768px) calc((100vw - 120px) / 2), calc(100vw - 40px)" />
-                <img class="h-full w-full rounded-lg object-cover" src="/assets/work-pool.png" alt="Representative photo of compact drilling equipment on a jobsite" width="1672" height="941" loading="lazy" decoding="async" />
+                <source type="image/webp" srcset="/assets/work-pool-400.webp 400w, /assets/work-pool-800.webp 800w, /assets/work-pool-1280.webp 1280w" sizes="(min-width: 1280px) 400px, (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 120px) / 2), calc(100vw - 40px)" />
+                <img class="h-full w-full rounded-lg object-cover object-[86%_center]" src="/assets/work-pool.png" alt="Representative photo of a track skid steer with an auger in front of a house" width="1672" height="941" loading="lazy" decoding="async" />
               </picture>
               <div class="absolute inset-0 rounded-lg bg-black/20"></div>
               <div class="project-card-scrim"></div>
               <span class="icon-arrow-btn pointer-events-none absolute top-3 right-3 z-10" aria-hidden="true">
                 <img src="/assets/icon-arrow-up-right.svg" alt="" width="52" height="52" />
               </span>
-              <span class="absolute bottom-6 left-4 z-10">
-                <span class="block text-xl font-medium">Pool Company</span>
-                <span class="block text-neutral-200">Greater Houston, TX</span>
+              <span class="absolute bottom-4 left-4 z-10 flex flex-col gap-1 min-[1024px]:bottom-6 min-[1024px]:left-6">
+                <span class="text-xl font-medium leading-[1.5] text-white">Pool Company</span>
+                <span class="leading-[1.75] text-neutral-200">Greater Houston, TX</span>
               </span>
             </a>
-            <a class="group relative block h-[450px] cursor-pointer rounded-lg md:max-lg:h-[400px]" href="#" data-project-card>
+            <a class="group relative block h-[450px] cursor-pointer rounded-lg md:max-[1023px]:h-[400px]" href="#" data-project-card>
               <picture class="block size-full">
-                <source type="image/webp" srcset="/assets/work-belled-400.webp 400w, /assets/work-belled-800.webp 800w, /assets/work-belled-1280.webp 1280w" sizes="(min-width: 1280px) 33vw, (min-width: 768px) calc((100vw - 120px) / 2), calc(100vw - 40px)" />
-                <img class="h-full w-full rounded-lg object-cover" src="/assets/work-belled.png" alt="Representative photo of an auger used for belled pier drilling" width="1672" height="941" loading="lazy" decoding="async" />
+                <source type="image/webp" srcset="/assets/work-belled-400.webp 400w, /assets/work-belled-800.webp 800w, /assets/work-belled-1280.webp 1280w" sizes="(min-width: 1280px) 400px, (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 120px) / 2), calc(100vw - 40px)" />
+                <img class="h-full w-full rounded-lg object-cover" src="/assets/work-belled.png" alt="Representative photo of an auger drilling a hole beside a compact track loader" width="1536" height="1024" loading="lazy" decoding="async" />
               </picture>
               <div class="absolute inset-0 rounded-lg bg-black/20"></div>
               <div class="project-card-scrim"></div>
               <span class="icon-arrow-btn pointer-events-none absolute top-3 right-3 z-10" aria-hidden="true">
                 <img src="/assets/icon-arrow-up-right.svg" alt="" width="52" height="52" />
               </span>
-              <span class="absolute bottom-6 left-6 z-10">
-                <span class="block text-xl font-medium">Belled Pier Drilling</span>
-                <span class="block text-neutral-200">Greater Houston, TX</span>
+              <span class="absolute bottom-4 left-4 z-10 flex flex-col gap-1 min-[1024px]:bottom-6 min-[1024px]:left-6">
+                <span class="text-xl font-medium leading-[1.5] text-white">Belled Pier Drilling</span>
+                <span class="leading-[1.75] text-neutral-200">Greater Houston, TX</span>
               </span>
             </a>
-            <a class="group relative block h-[450px] cursor-pointer rounded-lg md:max-lg:h-[400px]" href="#" data-project-card>
+            <a class="group relative block h-[450px] cursor-pointer rounded-lg md:max-[1023px]:h-[400px]" href="#" data-project-card>
               <picture class="block size-full">
-                <source type="image/webp" srcset="/assets/work-pour-400.webp 400w, /assets/work-pour-800.webp 800w, /assets/work-pour-1280.webp 1280w" sizes="(min-width: 1280px) 33vw, (min-width: 768px) calc((100vw - 120px) / 2), calc(100vw - 40px)" />
-                <img class="h-full w-full rounded-lg object-cover" src="/assets/work-pour.png" alt="Representative photo of concrete being placed into a drilled pier" width="1672" height="941" loading="lazy" decoding="async" />
+                <source type="image/webp" srcset="/assets/work-pour-400.webp 400w, /assets/work-pour-800.webp 800w, /assets/work-pour-1280.webp 1280w" sizes="(min-width: 1280px) 400px, (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 120px) / 2), calc(100vw - 40px)" />
+                <img class="h-full w-full rounded-lg object-cover object-[21%_center]" src="/assets/work-pour.png" alt="Representative photo of concrete being placed into a drilled pier" width="1672" height="941" loading="lazy" decoding="async" />
               </picture>
               <div class="absolute inset-0 rounded-lg bg-black/20"></div>
               <div class="project-card-scrim"></div>
               <span class="icon-arrow-btn pointer-events-none absolute top-3 right-3 z-10" aria-hidden="true">
                 <img src="/assets/icon-arrow-up-right.svg" alt="" width="52" height="52" />
               </span>
-              <span class="absolute bottom-6 left-6 z-10">
-                <span class="block text-xl font-medium">Concrete Pour Assistance</span>
-                <span class="block text-[#fcfcfc]">Greater Houston, TX</span>
+              <span class="absolute bottom-4 left-4 z-10 flex flex-col gap-1 min-[1024px]:bottom-6 min-[1024px]:left-6">
+                <span class="text-xl font-medium leading-[1.5] text-white">Concrete Pour Assistance</span>
+                <span class="leading-[1.75] text-[#fcfcfc]">Greater Houston, TX</span>
               </span>
             </a>
           </div>
         </div>
       </section>
 
-      <section id="quote" class="bg-white px-5 py-20 md:px-10 md:py-20 lg:px-20 lg:py-20" aria-labelledby="quote-heading">
-        <div class="dark-pattern mx-auto max-w-[1280px] rounded-[20px] p-[60px] text-white">
-          <div class="grid w-full items-center justify-items-center gap-5 text-center md:max-lg:justify-items-center md:max-lg:text-center lg:flex lg:items-center lg:gap-20 lg:text-left">
-            <div class="lg:min-w-0 lg:flex-1">
-              <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Project Planning</p>
-              <h2 id="quote-heading" class="mt-5 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px] lg:max-w-[620px]">
+      <section id="quote" class="bg-white px-5 pb-20 md:px-10 lg:px-20" aria-labelledby="quote-heading">
+        <div class="dark-pattern mx-auto flex w-full max-w-[1280px] flex-col justify-center rounded-[20px] p-[60px] text-white min-[1024px]:min-h-[368px]">
+          <div class="grid w-full items-center justify-items-center gap-5 text-center md:gap-10 min-[1024px]:flex min-[1024px]:items-end min-[1024px]:gap-20 min-[1024px]:text-left">
+            <div class="min-[1024px]:min-w-0 min-[1024px]:flex-1">
+              <p class="font-header text-xl font-medium"><span class="text-lime">●</span> Request a Quote</p>
+              <h2 id="quote-heading" class="mt-5 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px] min-[1024px]:max-w-[620px]">
                 Ready to Discuss Your Pier Drilling Needs?
               </h2>
             </div>
-            <div class="flex flex-col items-center md:max-lg:flex md:max-lg:flex-col md:max-lg:items-center lg:w-[457px] lg:shrink-0 lg:items-start">
+            <div class="flex flex-col items-center min-[1024px]:w-[457px] min-[1024px]:shrink-0 min-[1024px]:items-start">
               <p class="max-w-[457px] leading-[1.75] text-neutral-200">
-                Tell us where the project is located, what service you need, and any pier specifications or plans you already have. We’ll review the information and follow up if additional details are needed.
+                Contact us for pier drilling, belled pier drilling, or concrete pour assistance in Houston and Greater Houston.
               </p>
-              <div class="mt-6 flex flex-col flex-wrap items-center gap-5 md:flex-row md:gap-6 md:max-lg:justify-center">
+              <div class="mt-6 flex flex-col flex-wrap items-center gap-5 md:flex-row md:justify-center md:gap-6 min-[1024px]:justify-start">
                 <a class="rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 touch-manipulation hover:bg-white hover:text-ink" href="contact.html">Request a Quote</a>
                 <a class="rounded border border-white px-8 py-2.5 font-medium text-white touch-manipulation hover:bg-white hover:text-ink" href="tel:+12813523077">
                   Call 281-352-3077
@@ -731,56 +659,55 @@
     <footer class="dark-pattern text-white">
       <div class="mx-auto max-w-[1440px] px-5 py-[100px] md:px-10 md:py-[100px] lg:px-20 lg:py-[100px]">
         <div class="flex flex-col gap-20 md:max-lg:gap-10 lg:flex-row lg:items-start lg:gap-20">
-          <div class="max-w-[500px] lg:flex-1">
+          <div class="max-w-[500px] lg:min-w-0 lg:flex-1">
             <a class="inline-block w-fit" href="/" aria-label="Affordable Bellbottom Pier Drilling">
               <img src="/assets/logo.svg" alt="Affordable Bellbottom Pier Drilling" width="204" height="59" class="h-[77px] w-auto max-w-full" />
             </a>
-            <p class="mt-10 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px]">
+            <p class="font-header mt-10 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px]">
               Pier Drilling &amp;<br />Belled Pier Drilling
             </p>
-            <a class="mt-6 inline-block rounded bg-lime px-8 py-2.5 font-medium text-neutral-800 hover:bg-white hover:text-ink" href="#quote">Get a Quote Today</a>
           </div>
-          <div class="flex w-full min-w-0 flex-wrap items-stretch gap-x-4 gap-y-5 md:max-lg:flex-nowrap md:max-lg:gap-4 lg:flex-1 lg:flex-nowrap lg:justify-end">
-            <div class="flex w-[180px] shrink-0 flex-col md:max-lg:w-auto md:max-lg:flex-1 lg:w-auto lg:max-w-[180px] lg:flex-1">
-              <h2 class="text-xl font-medium">Services</h2>
-              <ul class="mt-4 space-y-2 text-neutral-300">
-                <li><a class="py-1 hover:text-white" href="services/straight-shaft-pier-drilling.html">Pier drilling</a></li>
-                <li><a class="py-1 hover:text-white" href="services.html#belled-pier-drilling">Belled drilling</a></li>
-                <li><a class="py-1 hover:text-white" href="services.html#pool-pier-drilling">Pool work</a></li>
-                <li><a class="py-1 hover:text-white" href="services.html#home-foundation-pier-drilling">Residential</a></li>
-                <li><a class="py-1 hover:text-white" href="services.html#concrete-pour-assistance">Concrete assist</a></li>
+          <div class="grid w-full min-w-0 grid-cols-2 items-start gap-x-4 gap-y-5 md:flex md:flex-nowrap md:justify-end md:gap-4 lg:flex-1">
+            <div class="flex min-w-0 flex-col gap-4 md:flex-1 lg:w-[180px] lg:flex-none">
+              <h2 class="footer-col-title text-xl">Services</h2>
+              <ul class="text-neutral-300">
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="services/straight-shaft-pier-drilling.html">Pier drilling</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="services.html#belled-pier-drilling">Belled drilling</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="services.html#pool-pier-drilling">Pool work</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="services.html#home-foundation-pier-drilling">Residential</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="services.html#concrete-pour-assistance">Concrete assist</a></li>
               </ul>
             </div>
-            <div class="flex w-[180px] shrink-0 flex-col md:max-lg:w-auto md:max-lg:flex-1 lg:w-auto lg:max-w-[180px] lg:flex-1">
-              <h2 class="text-xl font-medium">Company</h2>
-              <ul class="mt-4 space-y-2 text-neutral-300">
-                <li><a class="py-1 hover:text-white" href="about.html">About us</a></li>
-                <li><a class="coming-soon py-1" href="#" aria-disabled="true">Projects</a></li>
-                <li><a class="py-1 hover:text-white" href="careers.html">Careers</a></li>
-                <li><a class="py-1 hover:text-white" href="contact.html">Contact</a></li>
-                <li><a class="py-1 hover:text-white" href="contact.html">Request quote</a></li>
+            <div class="flex min-w-0 flex-col gap-4 md:flex-1 lg:w-[180px] lg:flex-none">
+              <h2 class="footer-col-title text-xl">Company</h2>
+              <ul class="text-neutral-300">
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="about.html">About us</a></li>
+                <li><a class="coming-soon block py-2 leading-[1.75]" href="#" aria-disabled="true">Projects</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="careers.html">Careers</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="contact.html">Contact</a></li>
+                <li><a class="block py-2 leading-[1.75] hover:text-white" href="contact.html">Request quote</a></li>
               </ul>
             </div>
-            <div class="footer-contact">
-              <h2 class="text-xl font-medium">Contact</h2>
-              <address class="mt-4 not-italic">
+            <div class="footer-contact col-span-2 md:col-auto">
+              <h2 class="footer-col-title text-xl">Contact</h2>
+              <address class="not-italic">
                 <ul class="footer-contact-list">
                   <li class="footer-contact-row">
-                    <span class="footer-contact-icon"><img src="/assets/phone.svg" alt="" width="16" height="16" /></span>
+                    <span class="footer-contact-icon"><img src="/assets/footer-phone.svg" alt="" width="16" height="16" /></span>
                     <span class="footer-contact-copy">
                       <span class="footer-contact-label">Call us</span>
                       <a class="footer-contact-value touch-manipulation" href="tel:+12813523077">(281) 352-3077</a>
                     </span>
                   </li>
                   <li class="footer-contact-row">
-                    <span class="footer-contact-icon"><img src="/assets/icon-pin.svg" alt="" width="16" height="16" class="size-4" /></span>
+                    <span class="footer-contact-icon"><img src="/assets/footer-pin.svg" alt="" width="16" height="16" /></span>
                     <span class="footer-contact-copy">
                       <span class="footer-contact-label">Service area</span>
                       <span class="footer-contact-value">Greater Houston</span>
                     </span>
                   </li>
                   <li class="footer-contact-row">
-                    <span class="footer-contact-icon"><img src="/assets/icon-clock.svg" alt="" width="16" height="16" /></span>
+                    <span class="footer-contact-icon"><img src="/assets/footer-clock.svg" alt="" width="16" height="16" /></span>
                     <span class="footer-contact-copy">
                       <span class="footer-contact-label">Business hours</span>
                       <span class="footer-contact-value">Mon–Fri 7AM–6PM</span>
@@ -793,7 +720,7 @@
           </div>
         </div>
       </div>
-      <div class="border-t border-neutral-300/40 px-5 py-5 md:px-10 lg:px-20 lg:py-5">
+      <div class="border-t border-neutral-300/[0.42] px-5 py-5 md:px-10 lg:px-20 lg:py-5">
         <div class="mx-auto flex max-w-[1440px] flex-col gap-5 text-sm leading-[1.75] text-neutral-300 md:flex-row md:items-center md:justify-between md:gap-4">
           <p>Copyright @ 2026 Affordable Bellbottom Pier Drilling, All rights reserved.</p>
           <p class="flex gap-[50px]">
