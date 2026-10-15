@@ -210,7 +210,8 @@ h3 {
 }
 
 .service-card {
-  height: auto;
+  min-height: 572px;
+  height: 100%;
   border-radius: 12px;
 }
 
@@ -232,10 +233,9 @@ h3 {
 }
 
 .service-card-copy {
-  flex: none;
   justify-content: flex-start;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
 .who-we-serve h3 {
@@ -243,9 +243,13 @@ h3 {
 }
 
 @media (min-width: 768px) {
+  .service-card {
+    min-height: 588px;
+  }
+
   .service-card-copy {
     padding-top: 31px;
-    padding-bottom: 0;
+    padding-bottom: 31px;
   }
 }
 
@@ -253,7 +257,6 @@ h3 {
 @media (min-width: 1024px) {
   .service-card {
     min-height: 620px;
-    height: 100%;
     border-radius: 16px;
   }
 
@@ -263,7 +266,6 @@ h3 {
   }
 
   .service-card-copy {
-    flex: 1 1 0%;
     justify-content: center;
     padding-top: 0;
     padding-bottom: 0;
