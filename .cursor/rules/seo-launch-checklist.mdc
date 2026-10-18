@@ -14,7 +14,7 @@ Do **not** start this work during routine homepage visual edits.
 - A form, quote flow, or careers application is added
 - Domain, hosting, or indexing is being set up
 
-Until the rest of the site is ready: keep unfinished menu items as coming soon; do not invent layouts or business facts. Home, About, Services hub, Straight-Shaft, Contact, and Careers are live; do not run a full SEO/GEO pass unless asked.
+Until the rest of the site is ready: keep unfinished menu items as coming soon; do not invent layouts or business facts. Home, About, Services hub, Pier Drilling, Contact, and Careers are live; do not run a full SEO/GEO pass unless asked.
 
 **Homepage visual matching is complete** (as of 2026-09-15). **Services hub is live** (as of 2026-09-18) from `Services Desktop-V1` `6692:1699`. **Contact is live** (as of 2026-09-21) at `contact.html` from `Contact Desktop-V1` `6838:434`. **Careers is live** (as of 2026-09-22) at `careers.html` from `Careers Desktop-V1` `6994:276`. Quote and apply forms open a mailto draft to `bids@affordablebellbottomdrill.com`. Bring SEO/launch up next when any of these happen: remaining inner pages (individual service pages, Projects), domain/hosting/indexing, or they say they are launching.
 
@@ -30,7 +30,7 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 - Keyboard-test desktop Services dropdown (`aria-expanded`, Escape) and mobile menu
 - Homepage a11y leftovers: coming-soon links still in tab order
 
-**Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Do not rewrite the hub when adding remaining individual service pages. Straight-Shaft lives at `services/straight-shaft-pier-drilling.html`; the hub card is titled Pier Drilling and its Explore link is live. Remaining hub Explore links stay coming soon. Desktop Services dropdown is live (`aria-expanded`, Escape); remaining dropdown items besides All Services and Straight-Shaft stay coming soon.
+**Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Do not rewrite the hub when adding remaining individual service pages. Pier Drilling lives at `services/pier-drilling.html`; the hub card and Services dropdown item use that name, and the Explore link is live. The previous address stays out of the sitemap. GitHub Pages builds serve a meta-refresh HTML file there. This repo has no production server config, so a 301 is not set. Remaining hub Explore links stay coming soon. Desktop Services dropdown is live (`aria-expanded`, Escape); remaining dropdown items besides All Services and Pier Drilling stay coming soon.
 
 **Contact live:** `contact.html` has unique title, description, canonical, OG, ContactPage + BreadcrumbList schema, and is in `sitemap.xml`. Nav Contact is live. Footer Contact shows phone, Greater Houston, and hours. Do not add `LocalBusiness` street address until confirmed.
 
