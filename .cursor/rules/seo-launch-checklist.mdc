@@ -25,7 +25,7 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 - Indexable pages for: Pier Drilling, Belled Pier Drilling, Pool Pier Drilling, Home Foundation Pier Drilling, Concrete Pouring Assistance — plus a Services hub if that is the IA
 - Put those URLs in `public/sitemap.xml`; keep confirmation pages and placeholder Projects on `noindex`
 - Hosting must serve `public/404.html` with a real HTTP 404
-- Confirm canonical/OG/schema/robots/sitemap domain (`https://bellbottompierdrilling.com/` is assumed — verify)
+- Production canonical, Open Graph, schema, robots, and sitemap use `https://bellbottompierdrilling.com` (still confirm this domain before launch). GitHub Pages preview builds (`GITHUB_PAGES=true`) use `https://<owner>.github.io/affordable-bellbottom-pier-drilling`, `noindex, nofollow`, and a robots file with `Allow: /` and no sitemap. Page HTML uses `%VITE_SITE_URL%` and `%VITE_ROBOTS%`. Home and logo links use `%BASE_URL%`. Do not hardcode the production origin back into HTML.
 - Request a Quote CTA + accessible form (labels, `required`, errors not color-only, no confidential data in URLs, prevent double submit). Until then, quote buttons that call should not use an `aria-label` that hides the visible “Request a Quote” text
 - Keyboard-test desktop Services dropdown (`aria-expanded`, Escape) and mobile menu
 - Homepage a11y leftovers: coming-soon links still in tab order

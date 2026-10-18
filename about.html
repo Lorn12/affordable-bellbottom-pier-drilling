@@ -8,8 +8,8 @@
       name="description"
       content="Based in Hockley, Texas, we provide pier drilling, belled pier drilling, and concrete pour assistance for residential and commercial projects across Greater Houston."
     />
-    <link rel="canonical" href="https://bellbottompierdrilling.com/about.html" />
-    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="%VITE_SITE_URL%/about.html" />
+    <meta name="robots" content="%VITE_ROBOTS%" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Affordable Bellbottom Pier Drilling" />
     <meta property="og:title" content="About Us | Affordable Bellbottom Pier Drilling" />
@@ -17,9 +17,9 @@
       property="og:description"
       content="Based in Hockley, Texas, we provide pier drilling, belled pier drilling, and concrete pour assistance for residential and commercial projects across Greater Houston."
     />
-    <meta property="og:url" content="https://bellbottompierdrilling.com/about.html" />
-    <meta property="og:image" content="https://bellbottompierdrilling.com/assets/about-hero-1280.webp" />
-    <meta property="og:image:alt" content="Skid steer drilling a pier on a Greater Houston jobsite" />
+    <meta property="og:url" content="%VITE_SITE_URL%/about.html" />
+    <meta property="og:image" content="%VITE_SITE_URL%/assets/about-hero-1280.webp" />
+    <meta property="og:image:alt" content="Bobcat T770 and three crew members beside a drilled pier on a wooded lot" />
     <meta property="og:locale" content="en_US" />
     <meta name="theme-color" content="#0b0b0b" />
     <meta name="format-detection" content="telephone=no" />
@@ -33,11 +33,11 @@
         "@graph": [
           {
             "@type": "Organization",
-            "@id": "https://bellbottompierdrilling.com/#organization",
+            "@id": "%VITE_SITE_URL%/#organization",
             "name": "Affordable Bellbottom Pier Drilling",
-            "url": "https://bellbottompierdrilling.com/",
+            "url": "%VITE_SITE_URL%/",
             "telephone": "+12813523077",
-            "logo": "https://bellbottompierdrilling.com/assets/logo-drill.svg",
+            "logo": "%VITE_SITE_URL%/assets/logo-drill.svg",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Hockley",
@@ -51,10 +51,10 @@
           },
           {
             "@type": "WebPage",
-            "@id": "https://bellbottompierdrilling.com/about.html#webpage",
-            "url": "https://bellbottompierdrilling.com/about.html",
+            "@id": "%VITE_SITE_URL%/about.html#webpage",
+            "url": "%VITE_SITE_URL%/about.html",
             "name": "About Us | Affordable Bellbottom Pier Drilling",
-            "isPartOf": { "@id": "https://bellbottompierdrilling.com/#website" }
+            "isPartOf": { "@id": "%VITE_SITE_URL%/#website" }
           }
         ]
       }
@@ -82,13 +82,13 @@
       </div>
       <div class="flex items-center py-3 md:max-lg:h-[93px] md:max-lg:py-0">
       <div class="mx-auto flex h-[44px] w-full max-w-[1440px] items-center justify-between px-5 md:h-[55px] md:px-10 lg:h-[69px] lg:px-20">
-        <a class="flex h-[44px] shrink-0 items-center md:h-[55px]" href="./" aria-label="Affordable Bellbottom Pier Drilling">
+        <a class="flex h-[44px] shrink-0 items-center md:h-[55px]" href="%BASE_URL%" aria-label="Affordable Bellbottom Pier Drilling">
           <img src="/assets/logo.svg" alt="Affordable Bellbottom Pier Drilling" width="204" height="59" class="h-[44px] w-auto md:h-[55px]" />
         </a>
 
         <nav class="hidden min-w-0 items-center gap-[60px] lg:flex" aria-label="Primary">
           <ul class="flex min-w-0 items-center gap-10 text-base font-medium text-neutral-200">
-            <li><a class="hover:text-white" href="./">Home</a></li>
+            <li><a class="hover:text-white" href="%BASE_URL%">Home</a></li>
             <li><a class="hover:text-white" href="about.html" aria-current="page">About</a></li>
             <li class="nav-dropdown relative" data-nav-dropdown>
               <button
@@ -145,14 +145,14 @@
       aria-label="Site menu"
     >
       <div class="mb-8 flex items-center justify-between">
-        <a class="flex h-[44px] shrink-0 items-center md:h-[55px]" href="./" aria-label="Affordable Bellbottom Pier Drilling">
+        <a class="flex h-[44px] shrink-0 items-center md:h-[55px]" href="%BASE_URL%" aria-label="Affordable Bellbottom Pier Drilling">
           <img src="/assets/logo.svg" alt="Affordable Bellbottom Pier Drilling" width="204" height="59" class="h-[44px] w-auto md:h-[55px]" />
         </a>
         <button class="rounded border border-white px-3 py-1 text-sm hover:bg-white hover:text-ink" type="button" data-menu-close>Close</button>
       </div>
       <nav aria-label="Mobile">
         <ul class="space-y-4 text-xl font-medium">
-          <li><a href="./">Home</a></li>
+          <li><a href="%BASE_URL%">Home</a></li>
           <li><a href="about.html" aria-current="page">About</a></li>
           <li data-nav-dropdown>
             <button
@@ -194,15 +194,15 @@
           <picture>
             <source
               type="image/webp"
-              srcset="/assets/about-hero-400.webp 400w, /assets/about-hero-800.webp 800w, /assets/about-hero-1280.webp 1280w"
-              sizes="100vw"
+              srcset="/assets/about-hero-400.webp 400w, /assets/about-hero-800.webp 800w, /assets/about-hero-1280.webp 1280w, /assets/about-hero-1681.webp 1681w"
+              sizes="1440px"
             />
             <img
-              class="h-full w-full object-cover opacity-[0.78]"
+              class="h-full w-full object-cover object-[62%_center] opacity-[0.78] md:object-center"
               src="/assets/about-hero.png"
               alt=""
-              width="1440"
-              height="800"
+              width="1681"
+              height="936"
               loading="eager"
               fetchpriority="high"
               decoding="async"
@@ -293,26 +293,26 @@
           <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 min-[1024px]:grid-cols-3">
             <div class="h-[360px] min-w-0 md:h-[400px]">
               <picture class="block size-full">
-                <source type="image/webp" srcset="/assets/about-who-shaft-400.webp 400w, /assets/about-who-shaft-800.webp 800w, /assets/about-who-shaft-1448.webp 1448w" sizes="(min-width: 1024px) 411px, (min-width: 768px) calc((100vw - 104px) / 2), calc(100vw - 40px)" />
-                <img class="size-full rounded-lg object-cover" src="/assets/about-who-shaft.png" alt="Compact track loader drilling a pier in a residential lot, with a worker in a high-visibility shirt standing nearby" width="1448" height="1086" loading="lazy" decoding="async" />
+                <source type="image/webp" srcset="/assets/about-who-shaft-400.webp 400w, /assets/about-who-shaft-800.webp 800w, /assets/about-who-shaft-1086.webp 1086w" sizes="(min-width: 1024px) 411px, (min-width: 768px) calc((100vw - 104px) / 2), calc(100vw - 40px)" />
+                <img class="size-full rounded-lg object-cover" src="/assets/about-who-shaft.png" alt="Compact track loader with an auger beside industrial silos, while a worker shovels spoil next to railroad tracks" width="1086" height="1448" loading="lazy" decoding="async" />
               </picture>
             </div>
             <div class="h-[360px] min-w-0 md:h-[400px]">
               <picture class="block size-full">
-                <source type="image/webp" srcset="/assets/about-who-belled-400.webp 400w, /assets/about-who-belled-800.webp 800w, /assets/about-who-belled-1448.webp 1448w" sizes="(min-width: 1024px) 411px, (min-width: 768px) calc((100vw - 104px) / 2), calc(100vw - 40px)" />
-                <img class="size-full rounded-lg object-cover" src="/assets/about-who-belled.png" alt="Rebar cage set in a belled concrete pier, with a compact track loader and auger behind it" width="1448" height="1086" loading="lazy" decoding="async" />
+                <source type="image/webp" srcset="/assets/about-who-belled-400.webp 400w, /assets/about-who-belled-800.webp 800w, /assets/about-who-belled-1280.webp 1280w, /assets/about-who-belled-1536.webp 1536w" sizes="600px" />
+                <img class="size-full rounded-lg object-cover" src="/assets/about-who-belled.png" alt="Bobcat T770 drilling a pier beside a commercial building, with workers in high-visibility shirts nearby" width="1536" height="1024" loading="lazy" decoding="async" />
               </picture>
             </div>
             <div class="h-[360px] min-w-0 md:col-span-2 md:h-[400px] min-[1024px]:col-span-1">
               <picture class="block size-full">
-                <source type="image/webp" srcset="/assets/about-who-pour-400.webp 400w, /assets/about-who-pour-800.webp 800w, /assets/about-who-pour-1448.webp 1448w" sizes="(min-width: 1024px) 411px, (min-width: 768px) calc(100vw - 80px), calc(100vw - 40px)" />
-                <img class="size-full rounded-lg object-cover" src="/assets/about-who-pour.png" alt="Compact track loader pouring concrete into a rebar cage while workers in high-visibility shirts guide the pour" width="1448" height="1086" loading="lazy" decoding="async" />
+                <source type="image/webp" srcset="/assets/about-who-pour-400.webp 400w, /assets/about-who-pour-800.webp 800w, /assets/about-who-pour-1280.webp 1280w, /assets/about-who-pour-1536.webp 1536w" sizes="(min-width: 1024px) 600px, (min-width: 768px) calc(100vw - 80px), 540px" />
+                <img class="size-full rounded-lg object-cover" src="/assets/about-who-pour.png" alt="Compact track loader pouring concrete from its bucket into a rebar cage on a commercial jobsite" width="1536" height="1024" loading="lazy" decoding="async" />
               </picture>
             </div>
           </div>
           <div class="flex flex-col min-[1024px]:flex-row min-[1024px]:items-stretch">
             <div class="flex flex-1 flex-col gap-2 py-6 text-center min-[1024px]:py-0 min-[1024px]:pr-8">
-              <h3 class="text-2xl font-bold leading-[1.25]">Straight-Shaft Pier Drilling</h3>
+              <h3 class="text-2xl font-bold leading-[1.25]">Pier Drilling</h3>
               <p class="leading-[1.75]">Residential and commercial drilling support.</p>
             </div>
             <div class="hidden w-px self-stretch bg-neutral-300 min-[1024px]:block" aria-hidden="true"></div>
@@ -344,8 +344,8 @@
             </div>
             <div class="h-[400px] min-w-0 flex-1 rounded-2xl">
               <picture class="block size-full">
-                <source type="image/webp" srcset="/assets/about-equipment-400.webp 400w, /assets/about-equipment-800.webp 800w, /assets/about-equipment-1280.webp 1280w" sizes="(min-width: 1024px) 50vw, calc(100vw - 80px)" />
-                <img class="h-full w-full rounded-2xl object-cover" src="/assets/about-equipment.png" alt="" width="620" height="400" loading="lazy" decoding="async" />
+                <source type="image/webp" srcset="/assets/about-equipment-400.webp 400w, /assets/about-equipment-800.webp 800w, /assets/about-equipment-1280.webp 1280w, /assets/about-equipment-1448.webp 1448w" sizes="(min-width: 1280px) 620px, 540px" />
+                <img class="h-full w-full rounded-2xl object-cover" src="/assets/about-equipment.png" alt="Bobcat T770 drilling a pier on a covered patio, with two workers standing nearby" width="1448" height="1086" loading="lazy" decoding="async" />
               </picture>
             </div>
           </div>
@@ -389,8 +389,8 @@
           <div class="flex flex-col gap-4 min-[1024px]:h-[560px] min-[1024px]:flex-row">
             <div class="relative flex h-[320px] min-w-0 shrink-0 flex-col justify-end rounded-2xl p-6 md:h-[400px] min-[1024px]:h-full min-[1024px]:min-h-0 min-[1024px]:flex-1">
               <picture class="contents">
-                <source type="image/webp" srcset="/assets/about-why-residential-400.webp 400w, /assets/about-why-residential-800.webp 800w, /assets/about-why-residential-1280.webp 1280w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 40px)" />
-                <img class="absolute inset-0 h-full w-full rounded-2xl object-cover" src="/assets/about-why-residential.png" alt="" width="421" height="560" loading="lazy" decoding="async" />
+                <source type="image/webp" srcset="/assets/about-why-residential-400.webp 400w, /assets/about-why-residential-800.webp 800w, /assets/about-why-residential-1086.webp 1086w" sizes="(min-width: 1024px) 33vw, (min-width: 768px) calc(100vw - 80px), calc(100vw - 40px)" />
+                <img class="absolute inset-0 h-full w-full rounded-2xl object-cover" src="/assets/about-why-residential.png" alt="" width="1086" height="1448" loading="lazy" decoding="async" />
               </picture>
               <div class="absolute inset-0 rounded-2xl bg-black/40" aria-hidden="true"></div>
               <div class="relative">
@@ -416,8 +416,8 @@
                 </div>
                 <div class="relative min-h-[180px] min-w-0 rounded-2xl md:h-full md:min-h-0">
                   <picture class="contents">
-                    <source type="image/webp" srcset="/assets/about-why-capabilities-400.webp 400w, /assets/about-why-capabilities-800.webp 800w, /assets/about-why-capabilities-1280.webp 1280w" sizes="(min-width: 1024px) 22vw, (min-width: 768px) 30vw, calc(100vw - 40px)" />
-                    <img class="absolute inset-0 h-full w-full rounded-2xl object-cover" src="/assets/about-why-capabilities.png" alt="" width="270" height="272" loading="lazy" decoding="async" />
+                    <source type="image/webp" srcset="/assets/about-why-capabilities-400.webp 400w, /assets/about-why-capabilities-800.webp 800w, /assets/about-why-capabilities-1086.webp 1086w" sizes="(min-width: 1024px) 22vw, (min-width: 768px) 30vw, calc(100vw - 40px)" />
+                    <img class="absolute inset-0 h-full w-full rounded-2xl object-cover" src="/assets/about-why-capabilities.png" alt="White Bobcat T770 with a concrete placement bucket" width="1086" height="1448" loading="lazy" decoding="async" />
                   </picture>
                 </div>
                 <div class="flex min-w-0 flex-col overflow-hidden rounded-2xl bg-neutral-800 p-6 md:h-full">
@@ -459,7 +459,7 @@
       <div class="mx-auto max-w-[1440px] px-5 py-[100px] md:px-10 md:py-[100px] lg:px-20 lg:py-[100px]">
         <div class="flex flex-col gap-20 md:max-lg:gap-10 lg:flex-row lg:items-start lg:gap-20">
           <div class="max-w-[500px] lg:min-w-0 lg:flex-1">
-            <a class="inline-block w-fit" href="./" aria-label="Affordable Bellbottom Pier Drilling">
+            <a class="inline-block w-fit" href="%BASE_URL%" aria-label="Affordable Bellbottom Pier Drilling">
               <img src="/assets/logo.svg" alt="Affordable Bellbottom Pier Drilling" width="204" height="59" class="h-[77px] w-auto max-w-full" />
             </a>
             <p class="font-header mt-10 text-[36px] font-bold leading-[1.2] md:mt-6 md:text-[42px]">
