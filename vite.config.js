@@ -49,27 +49,27 @@ function siteIndexingPlugin(site) {
         writeFileSync(sitemapPath, sitemap);
         const notFound = readFileSync(notFoundPath, "utf8").replaceAll('href="/"', `href="${site.base}"`);
         writeFileSync(notFoundPath, notFound);
-        if (site.isPages) writeGitHubPagesPierRedirect(outDir, site.siteUrl);
+        if (site.isPages) writeGitHubPagesStraightShaftRedirect(outDir, site.siteUrl);
       },
     },
   };
 }
 
 // GitHub Pages serves this file as HTML. Production hosting is not configured in this repo.
-function writeGitHubPagesPierRedirect(outDir, siteUrl) {
-  const target = "pier-drilling.html";
+function writeGitHubPagesStraightShaftRedirect(outDir, siteUrl) {
+  const target = "straight-shaft-drilling.html";
   const html = `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pier Drilling</title>
+    <title>Straight-Shaft Drilling</title>
     <meta name="robots" content="noindex, follow" />
-    <link rel="canonical" href="${siteUrl}/services/pier-drilling.html" />
+    <link rel="canonical" href="${siteUrl}/services/straight-shaft-drilling.html" />
     <meta http-equiv="refresh" content="0; url=${target}" />
   </head>
   <body>
-    <p>This page has moved. Continue to <a href="${target}">Pier Drilling</a>.</p>
+    <p>This page has moved. Continue to <a href="${target}">Straight-Shaft Drilling</a>.</p>
   </body>
 </html>
 `;
@@ -92,6 +92,8 @@ export default defineConfig({
         about: resolve(root, "about.html"),
         services: resolve(root, "services.html"),
         pierDrilling: resolve(root, "services/pier-drilling.html"),
+        bellbottomPierDrilling: resolve(root, "services/bellbottom-pier-drilling.html"),
+        straightShaftDrilling: resolve(root, "services/straight-shaft-drilling.html"),
         contact: resolve(root, "contact.html"),
         careers: resolve(root, "careers.html"),
       },

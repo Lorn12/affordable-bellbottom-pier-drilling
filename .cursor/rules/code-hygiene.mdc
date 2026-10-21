@@ -12,7 +12,7 @@ This is HTML + Tailwind (Vite), not React. Do not split the homepage into compon
 - Home markup: `index.html`
 - About markup: `about.html`
 - Services markup: `services.html` (accordion in `src/services.js`)
-- Pier Drilling service markup: `services/pier-drilling.html` (quote form in `src/quote-form.js`). GitHub Pages builds also write `services/straight-shaft-pier-drilling.html` as a meta-refresh to this page. Do not add that old address to the sitemap.
+- Pier Drilling service markup was consolidated into `services/bellbottom-pier-drilling.html`. Straight-Shaft lives at `services/straight-shaft-drilling.html`. Both use the quote form in `src/quote-form.js`. `services/pier-drilling.html` is a noindex meta-refresh to the Bellbottom page. GitHub Pages builds also write `services/straight-shaft-pier-drilling.html` as a meta-refresh to the Straight-Shaft page. Do not add either old address to the sitemap. This repo has no production server config, so those HTML refreshes are not HTTP 301s.
 - Contact markup: `contact.html` (quote form in `src/quote-form.js`, FAQ in `src/contact.js`)
 - Careers markup: `careers.html` (apply form in `src/quote-form.js`, FAQ in `src/contact.js`)
 - Shared styles: `src/style.css` (tokens, header, hero overlay, marquee, utilities used in more than one section)
@@ -21,7 +21,7 @@ This is HTML + Tailwind (Vite), not React. Do not split the homepage into compon
 
 ## When inner pages are approved
 
-One HTML file per page. Root files for Home, About, and the Services hub; individual services live under `services/` (`services/pier-drilling.html`). Register each file in `vite.config.js` `build.rollupOptions.input` or the production/GitHub Pages build will omit it. Reuse header/footer markup and `src/main.js` / `src/style.css`. Add a page JS file (and import it only from that page) only if that page needs unique behavior. Do not start a `pages/` or `components/` tree unless asked.
+One HTML file per page. Root files for Home, About, and the Services hub; individual services live under `services/` (`services/bellbottom-pier-drilling.html`, `services/straight-shaft-drilling.html`). Register each file in `vite.config.js` `build.rollupOptions.input` or the production/GitHub Pages build will omit it. Reuse header/footer markup and `src/main.js` / `src/style.css`. Add a page JS file (and import it only from that page) only if that page needs unique behavior. Do not start a `pages/` or `components/` tree unless asked.
 
 ## Always
 

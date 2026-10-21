@@ -29,11 +29,11 @@ if (form) {
     const label = labelText(input).toLowerCase();
     if (input.tagName === "SELECT") {
       if (label === "service needed") return "Select the service you need.";
+      if (label === "position of interest") return "Select a position.";
       return `Select ${label}.`;
     }
     if (label === "full name") return "Enter your full name.";
     if (label === "email address") return "Enter your email address.";
-    if (label === "kind of work") return "Tell us what you do.";
     return `Enter your ${label}.`;
   }
 
@@ -69,7 +69,11 @@ if (form) {
   function mailBody() {
     return [...form.querySelectorAll("input, select, textarea")]
       .filter((input) => !input.matches("[data-quote-hp]") && input.name && input.value.trim())
-      .map((input) => `${labelText(input)}: ${input.value.trim()}`)
+      .map((input) => {
+        const value =
+          input.tagName === "SELECT" ? input.selectedOptions[0]?.textContent.trim() || input.value.trim() : input.value.trim();
+        return `${labelText(input)}: ${value}`;
+      })
       .join("\n");
   }
 

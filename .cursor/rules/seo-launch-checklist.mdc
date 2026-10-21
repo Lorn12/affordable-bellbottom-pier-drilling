@@ -14,7 +14,7 @@ Do **not** start this work during routine homepage visual edits.
 - A form, quote flow, or careers application is added
 - Domain, hosting, or indexing is being set up
 
-Until the rest of the site is ready: keep unfinished menu items as coming soon; do not invent layouts or business facts. Home, About, Services hub, Pier Drilling, Contact, and Careers are live; do not run a full SEO/GEO pass unless asked.
+Until the rest of the site is ready: keep unfinished menu items as coming soon; do not invent layouts or business facts. Home, About, Services hub, Bellbottom Pier Drilling, Straight-Shaft Drilling, Contact, and Careers are live. Pool, Commercial & Residential, and Concrete Pour Assistance are described on the services hub; their detail pages are not built. Do not run a full SEO/GEO pass unless asked.
 
 **Homepage visual matching is complete** (as of 2026-09-15). **Services hub is live** (as of 2026-09-18) from `Services Desktop-V1` `6692:1699`. **Contact is live** (as of 2026-09-21) at `contact.html` from `Contact Desktop-V1` `6838:434`. **Careers is live** (as of 2026-09-22) at `careers.html` from `Careers Desktop-V1` `6994:276`. Quote and apply forms open a mailto draft to `bids@affordablebellbottomdrill.com`. Bring SEO/launch up next when any of these happen: remaining inner pages (individual service pages, Projects), domain/hosting/indexing, or they say they are launching.
 
@@ -22,7 +22,7 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 
 - One unique H1, title, meta description, canonical, and Open Graph set per indexable page (do not reuse homepage metadata)
 - Crawlable `<a href>` for every nav and service item, including a Services dropdown
-- Indexable pages for: Pier Drilling, Belled Pier Drilling, Pool Pier Drilling, Home Foundation Pier Drilling, Concrete Pouring Assistance — plus a Services hub if that is the IA
+- Indexable pages for: Bellbottom Pier Drilling, Straight-Shaft Drilling, Pool Pier Drilling, Commercial & Residential Pier Drilling, Concrete Pour Assistance — plus a Services hub if that is the IA. Pool, Commercial & Residential, and Concrete Pour Assistance currently live as hub sections, not separate URLs.
 - Put those URLs in `public/sitemap.xml`; keep confirmation pages and placeholder Projects on `noindex`
 - Hosting must serve `public/404.html` with a real HTTP 404
 - Production canonical, Open Graph, schema, robots, and sitemap use `https://bellbottompierdrilling.com` (still confirm this domain before launch). GitHub Pages preview builds (`GITHUB_PAGES=true`) use `https://<owner>.github.io/affordable-bellbottom-pier-drilling`, `noindex, nofollow`, and a robots file with `Allow: /` and no sitemap. Page HTML uses `%VITE_SITE_URL%` and `%VITE_ROBOTS%`. Home and logo links use `%BASE_URL%`. Do not hardcode the production origin back into HTML.
@@ -30,7 +30,7 @@ Until the rest of the site is ready: keep unfinished menu items as coming soon; 
 - Keyboard-test desktop Services dropdown (`aria-expanded`, Escape) and mobile menu
 - Homepage a11y leftovers: coming-soon links still in tab order
 
-**Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Do not rewrite the hub when adding remaining individual service pages. Pier Drilling lives at `services/pier-drilling.html`; the hub card and Services dropdown item use that name, and the Explore link is live. The previous address stays out of the sitemap. GitHub Pages builds serve a meta-refresh HTML file there. This repo has no production server config, so a 301 is not set. Remaining hub Explore links stay coming soon. Desktop Services dropdown is live (`aria-expanded`, Escape); remaining dropdown items besides All Services and Pier Drilling stay coming soon.
+**Hub live / still open:** `services.html` has unique title, description, canonical, OG, CollectionPage + ItemList + BreadcrumbList schema, and is in `sitemap.xml`. Do not rewrite the hub layout when adding the remaining detail pages. Straight-Shaft Drilling lives at `services/straight-shaft-drilling.html`. Bellbottom Pier Drilling lives at `services/bellbottom-pier-drilling.html`. The former public address `services/pier-drilling.html` is a noindex meta-refresh to Bellbottom and stays out of the sitemap. GitHub Pages builds serve a meta-refresh from `services/straight-shaft-pier-drilling.html` to the Straight-Shaft page. This repo has no production server config, so those are not HTTP 301s. Pool, Commercial & Residential, and Concrete Pour Assistance Explore links stay coming soon. Desktop Services dropdown is live (`aria-expanded`, Escape) and links Bellbottom and Straight-Shaft to their pages; the other three services link to their hub sections.
 
 **Contact live:** `contact.html` has unique title, description, canonical, OG, ContactPage + BreadcrumbList schema, and is in `sitemap.xml`. Nav Contact is live. Footer Contact shows phone, Greater Houston, and hours. Do not add `LocalBusiness` street address until confirmed.
 

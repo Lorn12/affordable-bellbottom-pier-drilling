@@ -302,22 +302,22 @@ h3 {
   }
 }
 
-/* Pier Drilling Regular Tablet-V1 / Pier Drilling Mobile-V1 (6784:5629) hero is 742 */
-.straight-shaft-hero-inner {
+/* Shared Bellbottom and Straight-Shaft hero. Regular tablet and mobile frames are 742. */
+.service-detail-hero-inner {
   min-height: 742px;
   padding-top: 68px;
   padding-bottom: 80px;
 }
 
 @media (min-width: 768px) {
-  .straight-shaft-hero-inner {
+  .service-detail-hero-inner {
     min-height: calc(742px + 58 * (100vw - 768px) / 512);
     padding-top: 93px;
   }
 }
 
 @media (min-width: 1280px) {
-  .straight-shaft-hero-inner {
+  .service-detail-hero-inner {
     min-height: 800px;
   }
 }
@@ -374,7 +374,8 @@ h3 {
   top: calc(100% + 12px);
   left: 0;
   z-index: 50;
-  min-width: 280px;
+  min-width: 320px;
+  max-width: min(360px, calc(100vw - 32px));
   padding: 8px 0;
   border-radius: 4px;
   background: rgb(11 11 11 / 0.95);
@@ -395,7 +396,7 @@ h3 {
 .nav-dropdown-panel a {
   display: block;
   padding: 10px 16px;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .nav-dropdown-panel a,
@@ -599,10 +600,6 @@ h3 {
   max-width: 620px;
 }
 
-.equipment-lede-wide {
-  display: none;
-}
-
 .equipment-copy {
   width: 100%;
   max-width: 720px;
@@ -688,18 +685,6 @@ h3 {
     width: 131.73%;
   }
 
-}
-
-/* Large Tablet-V1 row (1280 frame) once two columns fit; hamburger still below 1280.
-   Intro copy on that frame names the compact excavator. Desktop-V1 and the stacked frames do not. */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .equipment-lede-compact {
-    display: none;
-  }
-
-  .equipment-lede-wide {
-    display: block;
-  }
 }
 
 @media (min-width: 1024px) {
