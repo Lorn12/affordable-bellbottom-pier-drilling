@@ -310,15 +310,15 @@
 
       <section id="services" class="bg-white px-5 py-20 md:px-10 lg:px-20" aria-labelledby="services-heading">
         <div class="mx-auto max-w-[1280px]">
-          <div class="mb-10 grid w-full gap-5 md:mb-[60px] md:gap-6 min-[1024px]:mb-20 min-[1024px]:grid-cols-2 min-[1024px]:items-baseline min-[1024px]:gap-x-10 min-[1024px]:gap-y-0">
-            <div class="flex flex-col gap-5 md:gap-6 min-[1024px]:contents">
+          <div class="grid w-full gap-6 min-[1024px]:grid-cols-2 min-[1024px]:items-baseline min-[1024px]:gap-x-10 min-[1024px]:gap-y-0">
+            <div class="flex flex-col gap-4 md:gap-6 min-[1024px]:contents">
               <p class="font-header text-xl font-medium leading-[1.4] min-[1024px]:col-start-1 min-[1024px]:row-start-1"><span class="text-lime">●</span> Our Services</p>
               <h2 id="services-heading" class="text-[36px] font-bold leading-[1.2] md:text-[42px] min-[1024px]:col-start-1 min-[1024px]:row-start-2 min-[1024px]:mt-6">
                 Pier Drilling Services in Greater Houston
               </h2>
             </div>
-            <div class="flex flex-col items-start gap-5 md:gap-6 min-[1024px]:col-start-2 min-[1024px]:row-start-2 min-[1024px]:items-end min-[1024px]:gap-1">
-              <p class="text-left leading-[1.75] text-neutral-600 md:max-w-[585px]">
+            <div class="flex min-w-0 flex-col items-start gap-3 min-[1024px]:col-start-2 min-[1024px]:row-start-2 min-[1024px]:items-end">
+              <p class="w-full min-w-0 text-left leading-[1.75] text-neutral-600">
                 We support residential and commercial projects, working directly with customers and as a subcontractor.
               </p>
               <a class="link-cta inline-flex cursor-pointer items-center gap-2 font-medium leading-[1.5] text-lime-dark transition-colors hover:text-ink min-[1024px]:rounded min-[1024px]:px-8 min-[1024px]:py-2.5" href="services.html">
@@ -329,76 +329,129 @@
               </a>
             </div>
           </div>
-          <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:auto-rows-fr md:gap-x-5 md:gap-y-10 min-[1024px]:grid-cols-3 min-[1024px]:gap-5">
-            <a id="straight-shaft-drilling" class="group service-card relative flex w-full min-w-0 flex-col bg-white" href="services/straight-shaft-drilling.html">
-              <div class="service-card-media relative w-full shrink-0">
-                <picture class="absolute inset-0 block size-full">
-                  <source
-                    type="image/webp"
-                    srcset="/assets/service-pier-400.webp 400w, /assets/service-pier-800.webp 800w, /assets/service-pier-1086.webp 1086w"
-                    sizes="(min-width: 1280px) 413px, (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 100px) / 2), calc(100vw - 40px)"
-                  />
-                  <img class="service-card-photo size-full object-cover" src="/assets/service-pier.png" alt="White compact track loader with a vertical auger beside industrial silos, and a worker in a high-visibility shirt clearing soil near railroad tracks" width="1086" height="1448" loading="lazy" decoding="async" />
-                </picture>
-                <span class="icon-arrow-btn pointer-events-none absolute right-[6px] bottom-[9px] z-10" aria-hidden="true">
-                  <img src="/assets/icon-arrow-up-right.svg" alt="" width="52" height="52" />
-                </span>
+          <div class="mt-8 min-[1024px]:mt-12" data-services-carousel>
+            <div class="overflow-hidden" data-services-viewport role="region" aria-roledescription="carousel" aria-label="Pier drilling services">
+              <div class="services-track" data-services-track>
+                <a id="pier-drilling" class="group service-card" href="services.html">
+                  <picture class="block w-full">
+                    <source
+                      type="image/webp"
+                      srcset="/assets/service-pier-400.webp 400w, /assets/service-pier-800.webp 800w, /assets/service-pier-1086.webp 1086w"
+                      sizes="(min-width: 1440px) 413px, (min-width: 1280px) calc((100vw - 200px) / 3), (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 100px) / 2), calc(100vw - 72px)"
+                    />
+                    <img class="service-card-photo" src="/assets/service-pier.png" alt="White compact track loader with a vertical auger beside industrial silos, and a worker in a high-visibility shirt clearing soil near railroad tracks" width="1086" height="1448" loading="lazy" decoding="async" />
+                  </picture>
+                  <div class="service-card-copy">
+                    <div class="service-card-text">
+                      <h3 class="text-2xl font-bold leading-[1.25] text-ink">Pier Drilling</h3>
+                      <p class="leading-[1.75] text-neutral-600">Pier drilling for commercial and residential projects throughout Greater Houston.</p>
+                    </div>
+                    <span class="service-card-link">
+                      View Pier Drilling
+                      <span class="icon-arrow-btn shrink-0" aria-hidden="true">
+                        <img src="/assets/icon-arrow-up-right.svg" alt="" width="44" height="44" />
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <a id="bellbottom-pier-drilling" class="group service-card" href="services/bellbottom-pier-drilling.html">
+                  <picture class="block w-full">
+                    <source
+                      type="image/webp"
+                      srcset="/assets/service-belled-400.webp 400w, /assets/service-belled-800.webp 800w, /assets/service-belled-1086.webp 1086w"
+                      sizes="(min-width: 1440px) 413px, (min-width: 1280px) calc((100vw - 200px) / 3), (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 100px) / 2), calc(100vw - 72px)"
+                    />
+                    <img class="service-card-photo service-card-photo-belled" src="/assets/service-belled.png" alt="White compact track loader with a vertical auger drilling into soil, with trees behind the machine" width="1086" height="1448" loading="lazy" decoding="async" />
+                  </picture>
+                  <div class="service-card-copy">
+                    <div class="service-card-text">
+                      <h3 class="text-2xl font-bold leading-[1.25] text-ink">Bellbottom Pier Drilling</h3>
+                      <p class="leading-[1.75] text-neutral-600">Bellbottom pier drilling for residential and commercial projects in Greater Houston.</p>
+                    </div>
+                    <span class="service-card-link">
+                      View Bellbottom Drilling
+                      <span class="icon-arrow-btn shrink-0" aria-hidden="true">
+                        <img src="/assets/icon-arrow-up-right.svg" alt="" width="44" height="44" />
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <a id="concrete-pour-assistance" class="group service-card" href="services.html#concrete-pour-assistance">
+                  <picture class="block w-full">
+                    <source
+                      type="image/webp"
+                      srcset="/assets/service-pour-400.webp 400w, /assets/service-pour-800.webp 800w, /assets/service-pour-1280.webp 1280w, /assets/service-pour-1536.webp 1536w"
+                      sizes="(min-width: 1440px) 413px, (min-width: 1280px) calc((100vw - 200px) / 3), (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 100px) / 2), calc(100vw - 72px)"
+                    />
+                    <img class="service-card-photo" src="/assets/service-pour.png" alt="Compact track loader pouring concrete from a bucket into a drilled pier with a rebar cage, while two workers in high-visibility vests stand nearby" width="1536" height="1024" loading="lazy" decoding="async" />
+                  </picture>
+                  <div class="service-card-copy">
+                    <div class="service-card-text">
+                      <h3 class="text-2xl font-bold leading-[1.25] text-ink">Concrete Pour Assistance</h3>
+                      <p class="leading-[1.75] text-neutral-600">Assistance with pouring concrete into drilled piers, working alongside the concrete contractor.</p>
+                    </div>
+                    <span class="service-card-link">
+                      View Pour Assistance
+                      <span class="icon-arrow-btn shrink-0" aria-hidden="true">
+                        <img src="/assets/icon-arrow-up-right.svg" alt="" width="44" height="44" />
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <a id="commercial-residential-pier-drilling" class="group service-card" href="services.html#commercial-residential-pier-drilling">
+                  <picture class="block w-full">
+                    <source
+                      type="image/webp"
+                      srcset="/assets/listing-home-400.webp 400w, /assets/listing-home-800.webp 800w, /assets/listing-home-1280.webp 1280w, /assets/listing-home-1448.webp 1448w"
+                      sizes="(min-width: 1440px) 413px, (min-width: 1280px) calc((100vw - 200px) / 3), (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 100px) / 2), calc(100vw - 72px)"
+                    />
+                    <img class="service-card-photo" src="/assets/listing-home.png" alt="Compact track loader drilling through the floor of a covered house patio" width="1448" height="1086" loading="lazy" decoding="async" />
+                  </picture>
+                  <div class="service-card-copy">
+                    <div class="service-card-text">
+                      <h3 class="text-2xl font-bold leading-[1.25] text-ink">Commercial and Residential Pier Drilling</h3>
+                      <p class="leading-[1.75] text-neutral-600">Pier drilling for commercial and residential projects across Greater Houston.</p>
+                    </div>
+                    <span class="service-card-link">
+                      View Project Types
+                      <span class="icon-arrow-btn shrink-0" aria-hidden="true">
+                        <img src="/assets/icon-arrow-up-right.svg" alt="" width="44" height="44" />
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <a id="pool-pier-drilling" class="group service-card" href="services.html#pool-pier-drilling">
+                  <picture class="block w-full">
+                    <source
+                      type="image/webp"
+                      srcset="/assets/listing-pool-400.webp 400w, /assets/listing-pool-800.webp 800w, /assets/listing-pool-1280.webp 1280w, /assets/listing-pool-1448.webp 1448w"
+                      sizes="(min-width: 1440px) 413px, (min-width: 1280px) calc((100vw - 200px) / 3), (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 100px) / 2), calc(100vw - 72px)"
+                    />
+                    <img class="service-card-photo" src="/assets/listing-pool.png" alt="Two workers beside a compact track loader drilling a pier in a residential excavation" width="1448" height="1086" loading="lazy" decoding="async" />
+                  </picture>
+                  <div class="service-card-copy">
+                    <div class="service-card-text">
+                      <h3 class="text-2xl font-bold leading-[1.25] text-ink">Pool Pier Drilling</h3>
+                      <p class="leading-[1.75] text-neutral-600">Pier drilling for pool projects throughout Greater Houston.</p>
+                    </div>
+                    <span class="service-card-link">
+                      View Pool Pier Drilling
+                      <span class="icon-arrow-btn shrink-0" aria-hidden="true">
+                        <img src="/assets/icon-arrow-up-right.svg" alt="" width="44" height="44" />
+                      </span>
+                    </span>
+                  </div>
+                </a>
               </div>
-              <div class="service-card-copy flex flex-1 flex-col px-4">
-                <div class="flex flex-col gap-6">
-                  <h3 class="text-2xl font-bold leading-[1.25] text-ink">Straight-Shaft Drilling</h3>
-                  <p class="leading-[1.75] text-neutral-600">
-                    Straight-shaft drilling for commercial and residential projects throughout Greater Houston.
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a id="bellbottom-pier-drilling" class="group service-card relative flex w-full min-w-0 flex-col bg-white" href="services/bellbottom-pier-drilling.html">
-              <div class="service-card-media relative w-full shrink-0">
-                <picture class="absolute inset-0 block size-full">
-                  <source
-                    type="image/webp"
-                    srcset="/assets/service-belled-400.webp 400w, /assets/service-belled-800.webp 800w, /assets/service-belled-1086.webp 1086w"
-                    sizes="(min-width: 1280px) 413px, (min-width: 1024px) calc((100vw - 120px) / 3), (min-width: 768px) calc((100vw - 100px) / 2), calc(100vw - 40px)"
-                  />
-                  <img class="service-card-photo service-card-photo-belled size-full object-cover" src="/assets/service-belled.png" alt="White compact track loader with a vertical auger drilling into soil, with trees behind the machine" width="1086" height="1448" loading="lazy" decoding="async" />
-                </picture>
-                <span class="icon-arrow-btn pointer-events-none absolute right-[6px] bottom-[9px] z-10" aria-hidden="true">
-                  <img src="/assets/icon-arrow-up-right.svg" alt="" width="52" height="52" />
-                </span>
-              </div>
-              <div class="service-card-copy flex flex-1 flex-col px-4">
-                <div class="flex flex-col gap-6">
-                  <h3 class="text-2xl font-bold leading-[1.25] text-ink">Bellbottom Pier Drilling</h3>
-                  <p class="leading-[1.75] text-neutral-600">
-                    Bellbottom pier drilling for commercial and residential projects, based on provided plans and site conditions.
-                  </p>
-                </div>
-              </div>
-            </a>
-            <a id="concrete-pour-assistance" class="group service-card relative flex w-full min-w-0 flex-col bg-white" href="services.html#concrete-pour-assistance">
-              <div class="service-card-media relative w-full shrink-0">
-                <picture class="absolute inset-0 block size-full">
-                  <source
-                    type="image/webp"
-                    srcset="/assets/service-pour-400.webp 400w, /assets/service-pour-800.webp 800w, /assets/service-pour-1280.webp 1280w, /assets/service-pour-1536.webp 1536w"
-                    sizes="(min-width: 1280px) 600px, (min-width: 1024px) calc((100vw - 120px) / 3 * 1.5504), 540px"
-                  />
-                  <img class="service-card-photo size-full object-cover" src="/assets/service-pour.png" alt="Compact track loader pouring concrete from a bucket into a drilled pier with a rebar cage, while two workers in high-visibility vests stand nearby" width="1536" height="1024" loading="lazy" decoding="async" />
-                </picture>
-                <span class="icon-arrow-btn pointer-events-none absolute right-[6px] bottom-[9px] z-10" aria-hidden="true">
-                  <img src="/assets/icon-arrow-up-right.svg" alt="" width="52" height="52" />
-                </span>
-              </div>
-              <div class="service-card-copy flex flex-1 flex-col px-4">
-                <div class="flex flex-col gap-6">
-                  <h3 class="text-2xl font-bold leading-[1.25] text-ink">Concrete Pour Assistance</h3>
-                  <p class="leading-[1.75] text-neutral-600">
-                    Assistance with pouring concrete into drilled piers, working alongside the concrete contractor.
-                  </p>
-                </div>
-              </div>
-            </a>
+            </div>
+            <div class="mt-6 flex justify-end gap-3">
+              <button class="services-carousel-control" type="button" data-services-prev aria-label="Previous service">
+                <img src="/assets/icon-carousel-prev.svg" alt="" width="20" height="20" />
+              </button>
+              <button class="services-carousel-control" type="button" data-services-next aria-label="Next service">
+                <img src="/assets/icon-carousel-next.svg" alt="" width="20" height="20" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -734,5 +787,6 @@
     </footer>
 
     <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/services-carousel.js"></script>
   </body>
 </html>

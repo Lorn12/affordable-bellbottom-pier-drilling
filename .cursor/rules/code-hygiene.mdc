@@ -9,7 +9,7 @@ This is HTML + Tailwind (Vite), not React. Do not split the homepage into compon
 
 ## Live pages
 
-- Home markup: `index.html`
+- Home markup: `index.html` (Our Services carousel in `src/services-carousel.js`)
 - About markup: `about.html`
 - Services markup: `services.html` (accordion in `src/services.js`)
 - Pier Drilling service markup was consolidated into `services/bellbottom-pier-drilling.html`. Straight-Shaft lives at `services/straight-shaft-drilling.html`. Both use the quote form in `src/quote-form.js`. `services/pier-drilling.html` is a noindex meta-refresh to the Bellbottom page. GitHub Pages builds also write `services/straight-shaft-pier-drilling.html` as a meta-refresh to the Straight-Shaft page. Do not add either old address to the sitemap. This repo has no production server config, so those HTML refreshes are not HTTP 301s.

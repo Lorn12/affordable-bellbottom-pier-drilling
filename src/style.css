@@ -180,7 +180,6 @@ h3 {
 }
 
 .coming-soon[aria-disabled="true"].link-cta,
-.coming-soon[aria-disabled="true"].service-card,
 .coming-soon[aria-disabled="true"].listing-card-photo,
 .coming-soon[aria-disabled="true"].all-services-link {
   cursor: pointer;
@@ -209,33 +208,104 @@ h3 {
   background-color: var(--color-neutral-200);
 }
 
+.services-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 600ms linear;
+}
+
+.services-track.is-instant {
+  transition: none;
+}
+
 .service-card {
-  min-height: 572px;
-  height: 100%;
-  border-radius: 12px;
+  display: flex;
+  flex: 0 0 calc(100% - 32px);
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 16px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
 }
 
-.service-card-media {
-  width: 100%;
-  height: 360px;
+.service-card:focus-visible {
+  outline-offset: -3px;
 }
 
-.service-card .service-card-photo {
+.service-card-photo {
+  display: block;
   width: 100%;
-  height: 100%;
+  aspect-ratio: 413.333 / 300;
+  height: auto;
   object-fit: cover;
-  border-radius: 8px 8px 42px 8px;
+  border-radius: 16px 16px 0 0;
 }
 
-/* Desktop-V1 crop: image is 137.78% tall, top -33.61%, so the loader sits in the frame. */
+/* Card crop: image is 137.78% tall, top -33.61%, so the loader sits in the frame. */
 .service-card .service-card-photo-belled {
   object-position: center 89%;
 }
 
 .service-card-copy {
-  justify-content: flex-start;
-  padding-top: 23px;
-  padding-bottom: 23px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+}
+
+.service-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-card-text h3 {
+  min-height: 60px;
+}
+
+.service-card-text p {
+  min-height: 84px;
+}
+
+.service-card-link {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--color-lime-dark);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.group:hover .service-card-link,
+.group:focus-visible .service-card-link {
+  color: var(--color-ink);
+}
+
+.service-card .icon-arrow-btn,
+.service-card .icon-arrow-btn img {
+  width: 44px;
+  height: 44px;
+}
+
+.services-carousel-control {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid #7c7c7c;
+  border-radius: 9999px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.services-carousel-control:hover,
+.services-carousel-control:focus-visible {
+  background: var(--color-neutral-200);
 }
 
 .who-we-serve h3 {
@@ -243,41 +313,22 @@ h3 {
 }
 
 @media (min-width: 768px) {
-  .service-card {
-    min-height: 588px;
+  .services-track {
+    gap: 20px;
   }
 
-  .service-card-copy {
-    padding-top: 31px;
-    padding-bottom: 31px;
+  .service-card {
+    flex-basis: calc((100% - 20px) / 2);
   }
 }
 
-/* Large Tablet-V1 services (1280 frame) once three cards fit; hamburger still below 1280 */
 @media (min-width: 1024px) {
   .service-card {
-    min-height: 620px;
-    border-radius: 16px;
-  }
-
-  .service-card-media {
-    aspect-ratio: 387 / 400;
-    height: auto;
-  }
-
-  .service-card-copy {
-    justify-content: center;
-    padding-top: 0;
-    padding-bottom: 0;
+    flex-basis: calc((100% - 40px) / 3);
   }
 }
 
 @media (min-width: 1280px) {
-  .service-card-media {
-    height: 400px;
-    aspect-ratio: auto;
-  }
-
   .hero-inner {
     min-height: 824px;
   }
@@ -871,7 +922,8 @@ a.footer-contact-value:focus-visible {
   }
 
   .project-card-scrim,
-  .icon-arrow-btn {
+  .icon-arrow-btn,
+  .services-track {
     transition: none;
   }
 }
