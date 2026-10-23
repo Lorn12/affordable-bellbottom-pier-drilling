@@ -11,6 +11,10 @@ if (carousel && viewport && track && previous && next) {
   const originals = [...track.children];
   const count = originals.length;
   originals.forEach((card) => {
+    card.draggable = false;
+    card.querySelectorAll("img").forEach((img) => {
+      img.draggable = false;
+    });
     const clone = card.cloneNode(true);
     clone.removeAttribute("id");
     clone.setAttribute("aria-hidden", "true");
@@ -27,10 +31,13 @@ if (carousel && viewport && track && previous && next) {
   let inView = false;
   let pointerInside = false;
   let focusInside = false;
-  let pointerStartX = 0;
-  let pointerStartY = 0;
-  let pointerTracking = false;
   let suppressClick = false;
+  let dragPointer = -1;
+  let dragStartX = 0;
+  let dragStartY = 0;
+  let dragDx = 0;
+  let dragAxis = "";
+  let wheelLock = false;
 
   function prefersReduced() {
     return reducedMotion.matches;
@@ -145,27 +152,95 @@ if (carousel && viewport && track && previous && next) {
     schedule();
   });
 
-  viewport.addEventListener("pointerdown", (event) => {
+  const SWIPE_PX = 48;
+
+  function dragTransform(dx) {
+    track.classList.add("is-instant");
+    track.style.transform = `translateX(${-index * stepPx + dx}px)`;
+  }
+
+  function beginDrag(event) {
+    if (dragPointer !== -1) return;
     if (event.pointerType === "mouse" && event.button !== 0) return;
-    pointerTracking = true;
-    pointerStartX = event.clientX;
-    pointerStartY = event.clientY;
-  });
-  viewport.addEventListener("pointerup", (event) => {
-    if (!pointerTracking) return;
-    pointerTracking = false;
-    const dx = event.clientX - pointerStartX;
-    const dy = event.clientY - pointerStartY;
-    if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
-    suppressClick = true;
+    if (animating) {
+      moveId += 1;
+      animating = false;
+      if (index === count) index = 0;
+      paint(false);
+    }
+    dragPointer = event.pointerId;
+    dragStartX = event.clientX;
+    dragStartY = event.clientY;
+    dragDx = 0;
+    dragAxis = "";
+    window.clearTimeout(timer);
+    timer = 0;
+  }
+
+  function moveDrag(event) {
+    if (event.pointerId !== dragPointer) return;
+    const dx = event.clientX - dragStartX;
+    const dy = event.clientY - dragStartY;
+    if (!dragAxis) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+      dragAxis = Math.abs(dx) > Math.abs(dy) ? "x" : "y";
+      if (dragAxis === "x") suppressClick = true;
+    }
+    if (dragAxis !== "x") return;
+    if (index === 0 && dx > 0) index = count;
+    else if (index === count && dx <= 0) index = 0;
+    dragDx = dx;
+    if (event.cancelable) event.preventDefault();
+    try {
+      if (!viewport.hasPointerCapture(event.pointerId)) viewport.setPointerCapture(event.pointerId);
+    } catch {
+      // The pointer can already be gone. Document listeners still track the gesture.
+    }
+    dragTransform(dx);
+  }
+
+  function endDrag(event) {
+    if (event.pointerId !== dragPointer) return;
+    const dx = dragDx;
+    const axis = dragAxis;
+    dragPointer = -1;
+    dragAxis = "";
+    dragDx = 0;
+    try {
+      if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+    } catch {
+      // Capture was not set for this pointer.
+    }
+    if (axis !== "x" || event.type === "pointercancel") {
+      if (axis === "x") move();
+      else schedule();
+      return;
+    }
+    if (Math.abs(dx) < SWIPE_PX) {
+      move();
+      return;
+    }
     go(dx < 0 ? 1 : -1);
-  });
-  viewport.addEventListener("pointercancel", () => {
-    pointerTracking = false;
-  });
-  viewport.addEventListener("click", (event) => {
+  }
+
+  viewport.addEventListener("pointerdown", beginDrag);
+  document.addEventListener("pointermove", moveDrag, { passive: false });
+  document.addEventListener("pointerup", endDrag);
+  document.addEventListener("pointercancel", endDrag);
+  viewport.addEventListener("wheel", (event) => {
+    if (Math.abs(event.deltaX) <= Math.abs(event.deltaY) || Math.abs(event.deltaX) < 8) return;
+    if (event.cancelable) event.preventDefault();
+    if (wheelLock || animating) return;
+    wheelLock = true;
+    window.setTimeout(() => {
+      wheelLock = false;
+    }, SLIDE_MS);
+    go(event.deltaX > 0 ? 1 : -1);
+  }, { passive: false });
+  document.addEventListener("click", (event) => {
     if (!suppressClick) return;
     suppressClick = false;
+    if (!viewport.contains(event.target)) return;
     event.preventDefault();
     event.stopPropagation();
   }, true);

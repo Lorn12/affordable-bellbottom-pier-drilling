@@ -208,6 +208,16 @@ h3 {
   background-color: var(--color-neutral-200);
 }
 
+[data-services-viewport] {
+  touch-action: pan-y;
+  overscroll-behavior-x: contain;
+  user-select: none;
+}
+
+.service-card img {
+  -webkit-user-drag: none;
+}
+
 .services-track {
   display: flex;
   gap: 16px;
